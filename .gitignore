@@ -1,0 +1,15 @@
+# Unity generated folders
+/Library/
+/Temp/
+/Logs/
+/UserSettings/
+/MemoryCaptures/
+/Recordings/
+
+# Local OS/editor files
+.DS_Store
+*.swp
+*.swo
+
+# Local analysis outputs
+/local-evidence/
