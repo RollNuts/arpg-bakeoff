@@ -1,0 +1,30 @@
+name: repo-check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs-gate:
+    name: docs-gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required planning docs
+        run: |
+          test -f README.md
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test -f docs/research/market-fit.md
+            test -f docs/research/visual-audio-benchmark.md
+            test -f docs/research/free-asset-sources.md
+            test -f docs/production/task-split.md
+            test -f docs/production/engine-bakeoff.md
+            test -f docs/production/maya-meshy-gate.md
+          fi
+      - name: Reject obvious copied-reference wording
+        run: |
+          ! grep -RInE "clone Hades|copy Hades|copy V Rising|copy Diablo|copy Path of Exile|copy Final Fantasy|copy Dragon Quest" . \
+            --exclude-dir=.git
+
