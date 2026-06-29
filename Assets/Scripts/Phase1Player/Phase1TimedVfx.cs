@@ -8,6 +8,7 @@ namespace ArpgBakeoff.Phase1
         private float age;
         private float startScale = 1f;
         private float endScale = 1f;
+        private float holdPercent;
         private bool fadeAlpha;
         private Renderer[] renderers;
         private Material[] materials;
@@ -15,10 +16,16 @@ namespace ArpgBakeoff.Phase1
 
         public void Configure(float duration, float scaleFrom, float scaleTo, bool fade)
         {
+            Configure(duration, scaleFrom, scaleTo, fade, 0f);
+        }
+
+        public void Configure(float duration, float scaleFrom, float scaleTo, bool fade, float alphaHold)
+        {
             lifetime = Mathf.Max(0.03f, duration);
             startScale = scaleFrom;
             endScale = scaleTo;
             fadeAlpha = fade;
+            holdPercent = Mathf.Clamp01(alphaHold);
             transform.localScale *= startScale;
             CacheRenderers();
         }
@@ -35,10 +42,12 @@ namespace ArpgBakeoff.Phase1
             transform.localScale = Vector3.one * Mathf.Lerp(startScale, endScale, t);
             if (fadeAlpha && materials != null)
             {
+                float fadeT = Mathf.InverseLerp(holdPercent, 1f, t);
+                float alpha = 1f - (fadeT * fadeT * (3f - (2f * fadeT)));
                 for (int i = 0; i < materials.Length; i++)
                 {
                     Color color = startColors[i];
-                    color.a *= 1f - t;
+                    color.a *= alpha;
                     Phase1VisualUtil.SetColor(materials[i], color);
                 }
             }

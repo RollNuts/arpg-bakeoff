@@ -55,8 +55,8 @@ Verification command:
 ## Current Gaps
 
 - The hero is still a procedural low-poly commercial prototype, not final character art.
-- The floor still has visible tile repetition and needs stronger sculpted stone breakup.
-- The HUD needs stronger iconography and typography before it reads like shipped UI.
+- The floor has been broken up with irregular slabs and soot washes, but still needs authored stone texture/decal work.
+- The HUD now has a compact crest, HP rail, and skill-slot silhouettes, but still needs authored icon art.
 - There is no real audio pass yet.
 - The slice still needs a short captured gameplay video after the next visual pass.
 

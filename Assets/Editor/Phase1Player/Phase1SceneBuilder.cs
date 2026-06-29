@@ -23,7 +23,7 @@ namespace ArpgBakeoff.Phase1.Editor
             RenderSettings.fog = true;
             RenderSettings.fogColor = new Color(0.035f, 0.03f, 0.035f, 1f);
             RenderSettings.fogMode = FogMode.ExponentialSquared;
-            RenderSettings.fogDensity = 0.022f;
+            RenderSettings.fogDensity = 0.014f;
 
             var root = new GameObject("Phase 1 cathedral combat slice");
             BuildFloor(root.transform);
@@ -62,6 +62,7 @@ namespace ArpgBakeoff.Phase1.Editor
             directional.shadows = LightShadows.Soft;
 
             CreatePointLight("hero cyan rim light", new Vector3(-1.6f, 2.2f, -2.1f), new Color(0.18f, 0.85f, 1f, 1f), 2.8f, 5.5f);
+            CreatePointLight("hero warm silhouette fill", new Vector3(1.4f, 1.45f, -1.0f), new Color(1f, 0.42f, 0.18f, 1f), 1.45f, 3.1f);
             CreatePointLight("warm candle cluster left", new Vector3(-3.7f, 1.3f, 1.9f), new Color(1f, 0.46f, 0.18f, 1f), 3.4f, 4.2f);
             CreatePointLight("warm candle cluster right", new Vector3(3.7f, 1.3f, 1.9f), new Color(1f, 0.46f, 0.18f, 1f), 3.4f, 4.2f);
 
@@ -80,26 +81,40 @@ namespace ArpgBakeoff.Phase1.Editor
         {
             var floorRoot = new GameObject("dense gothic stone floor, readable center").transform;
             floorRoot.SetParent(root, false);
-            var baseStone = Phase1VisualUtil.CreateMaterial("varied dark cathedral stone", new Color(0.17f, 0.18f, 0.20f, 1f), 0f, 0.38f);
-            var darkStone = Phase1VisualUtil.CreateMaterial("dark cracked stone", new Color(0.075f, 0.075f, 0.088f, 1f), 0f, 0.28f);
+            var baseStone = Phase1VisualUtil.CreateMaterial("continuous dark cathedral base stone", new Color(0.105f, 0.112f, 0.128f, 1f), 0f, 0.34f);
+            var darkStone = Phase1VisualUtil.CreateMaterial("dark cracked stone", new Color(0.058f, 0.058f, 0.07f, 1f), 0f, 0.28f);
             var carpet = Phase1VisualUtil.CreateMaterial("worn oxblood runner carpet", new Color(0.32f, 0.018f, 0.035f, 1f), 0f, 0.72f);
             var gold = Phase1VisualUtil.CreateMaterial("thin muted gold inlay", new Color(0.62f, 0.39f, 0.13f, 1f), 0.35f, 0.5f);
             var sigil = Phase1VisualUtil.CreateMaterial("nearly hidden cyan floor etching", new Color(0.02f, 0.36f, 0.48f, 0.055f), 0f, 0.5f, new Color(0f, 0.08f, 0.12f, 1f), true);
             var blood = Phase1VisualUtil.CreateMaterial("old dry blood stains", new Color(0.18f, 0.015f, 0.018f, 0.68f), 0f, 0.25f, null, true);
 
-            for (int x = -5; x <= 5; x++)
+            Phase1VisualUtil.MeshObject(
+                "continuous underfloor stone field",
+                Phase1VisualUtil.BeveledBox("Continuous floor field", new Vector3(11.7f, 0.04f, 11.7f), 0.035f),
+                baseStone,
+                floorRoot,
+                new Vector3(0f, -0.025f, 0f),
+                Quaternion.identity,
+                Vector3.one);
+
+            for (int x = -4; x <= 4; x++)
             {
-                for (int z = -5; z <= 5; z++)
+                for (int z = -4; z <= 4; z++)
                 {
-                    float tint = Mathf.PerlinNoise((x + 13) * 0.31f, (z + 7) * 0.37f) * 0.09f;
-                    var mat = Phase1VisualUtil.CreateMaterial($"stone tile {x},{z}", new Color(0.13f + tint, 0.14f + tint, 0.16f + tint, 1f), 0f, 0.35f);
+                    float noise = Mathf.PerlinNoise((x + 13) * 0.41f, (z + 7) * 0.49f);
+                    float tint = noise * 0.055f;
+                    float width = 1.18f + Mathf.PerlinNoise(x * 0.77f + 4.2f, z * 0.31f + 1.1f) * 0.36f;
+                    float depth = 1.1f + Mathf.PerlinNoise(x * 0.29f + 3.7f, z * 0.83f + 5.2f) * 0.42f;
+                    float xOffset = (Mathf.PerlinNoise(x * 1.3f + 8.1f, z * 0.6f + 2.4f) - 0.5f) * 0.22f;
+                    float zOffset = (Mathf.PerlinNoise(x * 0.4f + 9.7f, z * 1.1f + 7.1f) - 0.5f) * 0.22f;
+                    var mat = Phase1VisualUtil.CreateMaterial($"irregular stone slab {x},{z}", new Color(0.105f + tint, 0.112f + tint, 0.13f + tint, 1f), 0f, 0.32f);
                     var tile = Phase1VisualUtil.MeshObject(
-                        $"uneven stone slab {x},{z}",
-                        Phase1VisualUtil.BeveledBox("Stone slab", new Vector3(1.04f, 0.055f, 1.04f), 0.045f),
+                        $"offset stone slab {x},{z}",
+                        Phase1VisualUtil.BeveledBox("Stone slab", new Vector3(width, 0.045f, depth), 0.026f),
                         mat,
                         floorRoot,
-                        new Vector3(x * 1.02f, 0f, z * 1.02f),
-                        Quaternion.Euler(0f, ((x + z) % 4) * 90f, 0f),
+                        new Vector3((x * 1.22f) + xOffset, 0.005f, (z * 1.22f) + zOffset),
+                        Quaternion.Euler(0f, (((x * 17) + (z * 11)) % 7 - 3) * 1.7f, 0f),
                         Vector3.one);
                     tile.isStatic = true;
                 }
@@ -119,6 +134,7 @@ namespace ArpgBakeoff.Phase1.Editor
                 Vector3 size = i % 5 == 0 ? new Vector3(RandomRange(0.35f, 0.9f), 0.014f, RandomRange(0.12f, 0.34f)) : new Vector3(RandomRange(0.5f, 1.6f), 0.016f, RandomRange(0.035f, 0.07f));
                 Phase1VisualUtil.MeshObject($"floor grime crack or stain {i}", Phase1VisualUtil.BeveledBox("Floor scar", size, 0.01f), material, floorRoot, new Vector3(x, 0.105f, z), Quaternion.Euler(0f, i * 37f, 0f), Vector3.one);
             }
+
         }
 
         private static void BuildWorldDressing(Transform root)

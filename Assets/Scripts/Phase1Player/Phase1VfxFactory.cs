@@ -31,7 +31,7 @@ namespace ArpgBakeoff.Phase1
             }
 
             var timed = root.AddComponent<Phase1TimedVfx>();
-            timed.Configure(0.22f, 1.0f, 1.18f, true);
+            timed.Configure(0.34f, 1.05f, 1.34f, true, 0.34f);
             return root;
         }
 
@@ -54,7 +54,7 @@ namespace ArpgBakeoff.Phase1
                     Quaternion.LookRotation(side + Vector3.up * 0.35f, Vector3.up) * Quaternion.Euler(70f, 0f, 0f),
                     Vector3.one);
                 var timed = spark.AddComponent<Phase1TimedVfx>();
-                timed.Configure(Random.Range(0.16f, 0.28f), 1.0f, Random.Range(1.2f, 1.9f), true);
+                timed.Configure(Random.Range(0.2f, 0.34f), 1.08f, Random.Range(1.35f, 2.05f), true, 0.22f);
             }
         }
 
@@ -75,7 +75,7 @@ namespace ArpgBakeoff.Phase1
                     Random.rotation,
                     Vector3.one);
                 var timed = shard.AddComponent<Phase1TimedVfx>();
-                timed.Configure(Random.Range(0.55f, 0.9f), 1.0f, Random.Range(1.6f, 2.8f), true);
+                timed.Configure(Random.Range(0.65f, 1.05f), 1.0f, Random.Range(1.75f, 3.0f), true, 0.28f);
             }
         }
 
@@ -93,7 +93,7 @@ namespace ArpgBakeoff.Phase1
                     rotation * Quaternion.Euler(62f, 0f, 180f),
                     Vector3.one * (1f - i * 0.16f));
                 var timed = trail.AddComponent<Phase1TimedVfx>();
-                timed.Configure(0.18f + i * 0.04f, 1.0f, 1.18f, true);
+                timed.Configure(0.2f + i * 0.04f, 1.0f, 1.2f, true, 0.2f);
             }
         }
     }

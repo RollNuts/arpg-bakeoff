@@ -74,7 +74,7 @@ namespace ArpgBakeoff.Phase1.Editor
 
         private static void RenderCamera(Camera camera, string path, int width, int height)
         {
-            var target = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);
+            var target = new RenderTexture(width, height, 24, RenderTextureFormat.ARGBHalf);
             var previousTarget = camera.targetTexture;
             var previousActive = RenderTexture.active;
             camera.targetTexture = target;
