@@ -4,9 +4,8 @@ Status: superseded historical visual research.
 Date: 2026-06-30.
 
 This sheet is retained as visual research and part-library evidence only. It is
-not the active product direction. The active product is the cooperative
-top-down fantasy action game in
-`docs/product/game-definition-relic-runebound.md`.
+not the active product direction. The active product is `色喰いの王冠` in
+`docs/product/game-definition-color-eater-crown.md`.
 
 The useful lesson is still valid: do not sell only a weapon silhouette. Sell a
 role, a world, and a screen that looks commercial.

@@ -1,84 +1,92 @@
 # Task Split
 
-Status: first task map for cooperative commercial fantasy action production.
+Status: first task map for `色喰いの王冠` commercial vertical-slice production.
 
 Active source of truth:
-`docs/product/game-definition-relic-runebound.md`.
+`docs/product/game-definition-color-eater-crown.md`.
 
 ## Milestone 0: Repository And Review Gate
 
 - [ ] M0-T01: Confirm branch protection and required `docs-gate` check.
 - [ ] M0-T02: Convert this plan into issue backlog.
-- [ ] M0-T03: Define PR order for product bible, asset gate, engine setup,
-  camera/control, reliquary, tools, enemies, ritual, capture, and polish.
+- [ ] M0-T03: Define PR order for product bible, asset gate, Unity project,
+  player, color system, red theatre, enemies, boss, capture, and polish.
 - [ ] M0-T04: Maintain required asset ledger format.
 
 ## Milestone 1: Product And Visual Direction
 
-- [x] M1-T00: Restore `Relic Runebound` / `聖櫃の巡礼隊` as the active product
-  direction.
-- [x] M1-T01: Define the cooperative top-down fantasy action product bible.
-- [ ] M1-T02: Create the first commercial final-frame brief: two pilgrims,
-  reliquary, sacred fire, weapon stand, incoming imps/spirits, readable temple.
-- [ ] M1-T03: Build a commercially legal asset shortlist for pilgrims, tools,
-  reliquary, temple kit, enemies, VFX, UI, and audio.
+- [x] M1-T00: Set `色喰いの王冠` as the active product direction.
+- [x] M1-T01: Define the color-drain dark fantasy ARPG product bible.
+- [ ] M1-T02: Create the first commercial final-frame brief: Lucien, red
+  theatre, color core, color drain, UI, and Red Duchess silhouette.
+- [ ] M1-T03: Build a commercially legal asset shortlist for player, red theatre
+  kit, enemies, boss, VFX, UI, audio, and animation.
 - [ ] M1-T04: Create a visual mood board with licensed sources and rejection
-  notes.
-- [ ] M1-T05: Define the 30-second cooperative capture checklist.
-- [ ] M1-T06: Create pilgrim/tool silhouette sheets.
-- [ ] M1-T07: Create the Sealing Temple one-stage layout brief.
-- [ ] M1-T08: Create the Blind Guardian and final ritual briefs.
+  notes for "dark but vivid".
+- [ ] M1-T05: Define the 30-second color-drain capture checklist.
+- [ ] M1-T06: Create player/color silhouette sheets.
+- [ ] M1-T07: Create the Red Theatre vertical-slice layout brief.
+- [ ] M1-T08: Create the Red Duchess boss brief.
 
-## Milestone 2: Unreal-First Vertical Slice Setup
+## Milestone 2: Unity Project And Scene Setup
 
-- [ ] M2-T01: Create fresh Unreal project without copying the hotel project.
-- [ ] M2-T02: Add legal asset ledger and initial approved asset import.
-- [ ] M2-T03: Build a small dressed temple entrance with lighting, fog, stone
-  material layers, weapon stand, reliquary, and no graybox/default-sky accepted
-  frame.
-- [ ] M2-T04: Add 3D top-down oblique camera with same-screen player framing.
-- [ ] M2-T05: Add two local players plus solo test control.
+- [ ] M2-T01: Add Unity project settings and package manifest, documenting Unity
+  version and package approvals.
+- [ ] M2-T02: Add `Assets/Design` source docs for game, art, animation, audio,
+  enemy, and boss design.
+- [ ] M2-T03: Add scene folders for Title, AtelierHub, RedTheatre, and
+  Boss_RedDuchess.
+- [ ] M2-T04: Add initial Red Theatre blockout with dressed commercial art
+  direction placeholders, not gray boxes.
+- [ ] M2-T05: Add title-screen art target evidence.
 - [ ] M2-T06: Capture first screenshot evidence and improve at least one
   mock-looking area before completion.
 
-## Milestone 3: Core Cooperation Slice
+## Milestone 3: Player And Color System
 
-- [ ] M3-T01: Implement pickup/drop/hold tool system.
-- [ ] M3-T02: Implement sword, shield, axe, torch, and ritual implement basics.
-- [ ] M3-T03: Add holy reliquary durability, movement/activation, and runaway
-  gauge.
-- [ ] M3-T04: Add sacred fire range, torch lighting, and visible safety zones.
-- [ ] M3-T05: Capture gameplay-distance and close-action evidence.
+- [ ] M3-T01: Implement `PlayerController`: movement, jump, dodge, camera,
+  lock-on hooks.
+- [ ] M3-T02: Implement `PlayerCombat`: normal combo, heavy attack, parry,
+  hitboxes, hit stop hooks.
+- [ ] M3-T03: Implement `ColorInventory`: three color slots, stacking, switching,
+  color gauge.
+- [ ] M3-T04: Implement `ColorDrainSystem`: color layer break, drain-ready state,
+  execution trigger, HP restore, color gain.
+- [ ] M3-T05: Implement first color skills: red, blue, purple.
+- [ ] M3-T06: Capture playable combat/color-drain evidence.
 
-## Milestone 4: Enemy And Pressure Slice
+## Milestone 4: Enemies And Exploration
 
-- [ ] M4-T01: Add imp enemy with reliquary/player targeting, hit reaction, death,
-  and audio.
-- [ ] M4-T02: Add spirit enemy that reacts to sacred fire, torch, and holy bell.
-- [ ] M4-T03: Add closed gate/blocker solved by axe or alternate route.
-- [ ] M4-T04: Add HP/durability/runaway/fire/tool UI in the final visual
-  direction.
-- [ ] M4-T05: Capture a 10-second playable cooperation proof.
+- [ ] M4-T01: Implement masked actor enemy with HP, color layer, telegraph, hit,
+  drain, and death.
+- [ ] M4-T02: Implement red dancer enemy.
+- [ ] M4-T03: Implement stage executioner enemy.
+- [ ] M4-T04: Implement red seal thread, blue memory platform, and purple
+  illusion wall.
+- [ ] M4-T05: Add HUD: HP, color slots, color gauge, enemy HP, enemy color layer,
+  drain marker.
+- [ ] M4-T06: Capture a 10-second playable red-theatre proof.
 
-## Milestone 5: First Stage Proof
+## Milestone 5: Red Duchess Boss Proof
 
-- [ ] M5-T01: Build Sealing Temple path: entrance, closed gate, mist corridor,
-  bell courtyard, broken bridge, altar.
-- [ ] M5-T02: Add blind guardian: sound response, charge, shield block, bell
-  lure, and inefficient kill option.
-- [ ] M5-T03: Add final ritual: light braziers, chant, suppress surge, success
-  and failure.
-- [ ] M5-T04: Add result screen and fast retry.
+- [ ] M5-T01: Build Red Theatre path: stage entrance, backstage, shortcut,
+  color-gated side room, save point, boss arena.
+- [ ] M5-T02: Add `緋幕の公爵夫人`: entrance, phase 1, phase 2, boss HP, boss
+  color layer, red drain window, defeat.
+- [ ] M5-T03: Add boss music and phase transition.
+- [ ] M5-T04: Add reward: `血華`, theatre key, memory fragment, atelier return.
 - [ ] M5-T05: Capture 30-second Steam-facing gameplay and five store-screenshot
   candidates.
 
 ## Milestone 6: Commercial Completion Roadmap
 
-- [ ] M6-T01: Tune solo clear path without making co-op trivial.
-- [ ] M6-T02: Tune 2-player main balance.
-- [ ] M6-T03: Add 3-4 player scaling hooks.
-- [ ] M6-T04: Save/settings/localization/achievements/performance checklist.
-- [ ] M6-T05: Steam page asset checklist.
+- [ ] M6-T01: Build `青硝子の記憶図書館`.
+- [ ] M6-T02: Build `緑毒の温室宮`.
+- [ ] M6-T03: Build `金箔の裁判宮`.
+- [ ] M6-T04: Build `紫月の夢宮`.
+- [ ] M6-T05: Build final `色喰いの王冠` area and endings.
+- [ ] M6-T06: Save/settings/localization/achievements/performance checklist.
+- [ ] M6-T07: Steam page asset checklist.
 
 ## Work Rules
 
@@ -88,4 +96,5 @@ Active source of truth:
 - Every visible asset PR needs source/license notes.
 - Every visual PR needs screenshot evidence.
 - Every gameplay PR needs a playtest note or capture.
-- If the screen looks like a prototype, fix presentation before adding scope.
+- If the screen looks gray, generic, or prototype-like, fix presentation before
+  adding scope.

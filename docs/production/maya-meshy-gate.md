@@ -5,10 +5,11 @@ Status: active production gate.
 ## Product Gate Precondition
 
 New 3D generation is paused until the active product direction in
-`docs/product/game-definition-relic-runebound.md` is accepted by PR review.
+`docs/product/game-definition-color-eater-crown.md` is accepted by PR review.
 
 Maya and Meshy should not be used to rescue vague fantasy props or a weak mock.
-They are useful only after an asset proves a specific cooperative screen promise.
+They are useful only after an asset proves a specific color-drain screen
+promise.
 
 ## Allowed Use
 
@@ -17,7 +18,7 @@ Maya:
 - inspect FBX/OBJ/GLB files
 - fix scale, pivot, orientation, and material slots
 - clean rigs or sockets
-- split tools and readable parts
+- split sword, mantle, color organ, masks, dress blades, and hard-surface parts
 - retopo or simplify if needed
 - export engine-ready FBX
 
@@ -39,7 +40,6 @@ Do not spend API credits on:
 - decals
 - small debris
 - UI frames
-- slash sprites
 - generic hit sparks
 - filler props
 - background clutter
@@ -47,33 +47,32 @@ Do not spend API credits on:
 
 ## First Candidate If Needed
 
-The first generated asset should prove the cooperative Relic Runebound promise.
+The first generated asset should prove the `色喰いの王冠` promise.
 
 Preferred order:
 
-1. holy reliquary hero prop
-2. readable tool stand with sword/shield/axe/torch/bell/ritual implement
-3. pilgrim body with swappable carried tools
-4. imp enemy
-5. blind guardian blockout
+1. Lucien player body with left-arm `彩槽`
+2. color-drain enemy color-core/execution test target
+3. Red Duchess dress/blade boss blockout
+4. red theatre hero prop set: mask, curtain blade, color vessel, stage light
+5. red/blue/purple color VFX source plates
 
 The first body candidate must be:
 
-- cooperative top-down fantasy pilgrim
-- readable from oblique gameplay camera
-- original sealed-temple expedition costume language
-- readable head, shoulders, carried tool, and facing cues
-- broad value blocking, not tiny detail dependence
-- game-ready low/mid-poly target
+- solo dark fantasy color mortician
+- readable from third-person gameplay camera
+- original royal-court costume language
+- readable head, one-sided mantle, thin sword, left-arm glass organ, and facing
+  cues
+- broad value blocking with vivid color accents
 - no known franchise resemblance
 - usable in a Steam screenshot after cleanup, lighting, and material pass
 
 Failure means:
 
-- generic armor NPC
-- unreadable at gameplay camera scale
-- tool too thin or hidden
-- facing unclear
-- job identity unclear
+- generic dark knight
+- unreadable black blob
+- no visible color system
+- weapon or color organ too thin/hidden
 - famous-character resemblance
 - requires changing the game direction to justify it

@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Small cooperative fantasy action production task
+about: Small Color-Eater Crown production task
 title: ""
 labels: task
 assignees: ""

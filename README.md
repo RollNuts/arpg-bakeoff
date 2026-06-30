@@ -1,7 +1,7 @@
-# Relic Runebound Production
+# 色喰いの王冠 Production
 
-Public planning and review repo for a Steam-facing 3D top-down cooperative
-fantasy action game.
+Public planning and review repo for a Steam-facing 3D solo dark fantasy action
+RPG.
 
 This repository exists to keep the next work clean:
 
@@ -14,28 +14,30 @@ This repository exists to keep the next work clean:
 
 ## Current Objective
 
-Build the smallest commercial-quality vertical slice for `Relic Runebound`
-(`聖櫃の巡礼隊`):
+Build the smallest commercial-quality vertical slice for `色喰いの王冠`:
 
-1. two readable same-screen pilgrims, with solo test/clear support
-2. 3D top-down oblique camera
-3. movement, attack, dodge/step, pickup/drop, interact, and special tool action
-4. one dressed ancient-temple route, not a graybox
-5. weapon/tool stands that create role changes
-6. holy reliquary durability and magic-runaway pressure
-7. sacred fire, spirits, imps, and one blind guardian pressure beat
-8. final altar ritual with victory/defeat outcome
-9. screenshots and 30-second capture that look like a real Steam product
+1. one readable player character, `リュシアン`, the last `彩葬師`
+2. third-person 3D camera with lock-on and readable enemy telegraphs
+3. sword combat, dodge, jump, guard/parry, color skills, and color drain
+4. a dressed `赤絨毯の劇場` stage, not a graybox
+5. enemy color layers and color cores
+6. color drain execution that fills three `彩槽` slots
+7. red, blue, and purple color abilities in the first vertical slice
+8. exploration gates using color: red seal threads, blue memory platforms, and
+   purple illusion walls
+9. boss fight against `緋幕の公爵夫人`
+10. screenshots and 30-second capture that sell "dark but vivid color-eating
+    fantasy"
 
 The active product definition is
-[`docs/product/game-definition-relic-runebound.md`](docs/product/game-definition-relic-runebound.md).
+[`docs/product/game-definition-color-eater-crown.md`](docs/product/game-definition-color-eater-crown.md).
 
 ## Ground Rules
 
 - Do not copy existing game characters, UI, logos, costumes, silhouettes, named
   systems, bosses, maps, or weapon designs.
-- Use references only for quality bars, readability, pacing, cooperation
-  pressure, combat feel, and store presentation patterns.
+- Use references only for quality bars, readability, pacing, combat feel, color
+  language, and store presentation patterns.
 - Prefer commercially legal free or already-owned assets before paid or
   API-generated assets.
 - Use Maya as an inspection, cleanup, conversion, rigging, or export tool, not
@@ -44,3 +46,10 @@ The active product definition is
 - Screenshots and video cannot be accepted if they show gray boxes, default
   floors, default skies, mannequin-only characters, debug UI, or unapproved
   asset-store pileups.
+
+## Unity Assumption
+
+`ProjectSettings/ProjectVersion.txt` is not present in this planning branch, so
+Unity version is assumed to be `2021.3 LTS` until a real Unity project is added.
+`Packages/manifest.json` is also not present, so no new package dependency is
+approved by this branch.

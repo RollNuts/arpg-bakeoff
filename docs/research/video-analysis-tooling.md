@@ -144,15 +144,16 @@ ffmpeg \
 
 For each reference trailer/gameplay clip:
 
-- first readable player/team frame time
+- first readable player frame time
 - first enemy-threat frame time
 - first hit/impact frame time
-- first objective/reliquary frame time
-- first sacred-fire or role-tool frame time
-- first guardian/ritual pressure frame time
+- first color-system frame time
+- first color-drain frame time
+- first exploration-gate frame time
+- first boss/elite frame time
 - camera distance and character screen-height percentage
-- top-down player/tool readability
-- objective/player/enemy scale contrast
+- third-person player/color-core readability
+- player/enemy/color-VFX scale contrast
 - screen center occupancy by character/enemy/VFX vs empty floor
 - audio presence in first 3 seconds
 - mean/max loudness from `volumedetect`
@@ -161,11 +162,10 @@ For each reference trailer/gameplay clip:
 For our own capture:
 
 - reject silent clips for store-facing evidence
-- reject clips where players, held tools, or reliquary are not readable in
-  extracted frames
+- reject clips where Lucien, color state, enemy color core, or color slots are
+  not readable in extracted frames
 - reject clips where the first 5 seconds show only floor/idle motion
-- reject clips where the camera hides the reliquary, sacred fire, enemy pressure,
-  or tool roles
+- reject clips where the camera hides enemy telegraphs or the color drain
 - reject clips whose best frame cannot support a Steam screenshot
 - always produce a contact sheet and a waveform alongside any video PR
 
