@@ -19,6 +19,8 @@ Status: first PR task map for Veripsa/Core review.
 - [ ] M1-T04: Define 30-second storyboard acceptance checklist.
 - [x] M1-T05: Create gameplay mock showing world rule, hub payoff, and one
   combat beat before any Meshy/Maya spend.
+- [x] M1-T06: Create 30-second trailer beatboard from the accepted world
+  contact sheet.
 
 ## Milestone 2: Engine Bakeoff
 
