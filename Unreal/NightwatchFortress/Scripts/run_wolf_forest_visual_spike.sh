@@ -10,6 +10,24 @@ PROJECT="$PROJECT_ROOT/Unreal/NightwatchFortress/NightwatchFortress.uproject"
 BUILDER="$SCRIPT_DIR/build_wolf_forest_visual_spike.py"
 LOG="$PROJECT_ROOT/local-evidence/nightwatch_unreal_spike_abs.log"
 
+cleanup_unreal_autoconfig() {
+  local config="$PROJECT_ROOT/Unreal/NightwatchFortress/Config/DefaultEngine.ini"
+  local tmp="$config.tmp.$$"
+
+  if [[ ! -f "$config" ]]; then
+    return
+  fi
+
+  awk '
+    /^\[\/Script\/AndroidFileServerEditor\.AndroidFileServerRuntimeSettings\]$/ { skip = 1; next }
+    /^\[/ { skip = 0 }
+    !skip { print }
+  ' "$config" > "$tmp"
+
+  mv "$tmp" "$config"
+  perl -0pi -e 's/\n+\z/\n/' "$config"
+}
+
 if [[ ! -x "$UE_CMD" ]]; then
   echo "UnrealEditor-Cmd not found or not executable: $UE_CMD" >&2
   exit 1
@@ -33,6 +51,7 @@ echo "Project: $PROJECT"
 echo "Builder: $BUILDER"
 echo "Log: $LOG"
 
+status=0
 "$UE_CMD" "$PROJECT" \
   -run=pythonscript \
   -script="$BUILDER" \
@@ -44,4 +63,7 @@ echo "Log: $LOG"
   -stdout \
   -FullStdOutLogOutput \
   -abslog="$LOG" \
-  "$@"
+  "$@" || status=$?
+
+cleanup_unreal_autoconfig
+exit "$status"

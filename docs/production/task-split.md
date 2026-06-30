@@ -34,7 +34,7 @@ Active source of truth:
 
 - [ ] M2-T01: Add Unity project settings and package manifest, documenting Unity
   version and package approvals.
-- [ ] M2-T01B: Add Unreal visual-spike project, launch runners, and run the
+- [x] M2-T01B: Add Unreal visual-spike project, launch runners, and run the
   `狼森` first-screen builder against UE 5.8.
 - [ ] M2-T02: Add `Assets/Design` source docs for game, art, animation, audio,
   enemy, boss, and weapon design.

@@ -85,12 +85,16 @@ MAT = {
 
 
 def actor(name, mesh, loc, scale, mat, rot=(0, 0, 0)):
-    spawned = unreal.EditorLevelLibrary.spawn_actor_from_object(mesh, unreal.Vector(*loc), unreal.Rotator(*rot))
+    # Avoid spawn_actor_from_object here. In UE 5.8 commandlet/nullrhi runs it
+    # routes through the placement subsystem and can crash without a viewport.
+    spawned = unreal.EditorLevelLibrary.spawn_actor_from_class(unreal.StaticMeshActor, unreal.Vector(*loc), unreal.Rotator(*rot))
     spawned.set_actor_label(name)
     spawned.set_actor_scale3d(unreal.Vector(*scale))
     comp = spawned.get_component_by_class(unreal.StaticMeshComponent)
-    if comp and mat:
-        comp.set_material(0, mat)
+    if comp:
+        comp.set_static_mesh(mesh)
+        if mat:
+            comp.set_material(0, mat)
     return spawned
 
 
@@ -103,6 +107,11 @@ def point_light(name, loc, color, intensity, radius):
     comp.set_editor_property("attenuation_radius", radius)
     comp.set_editor_property("cast_shadows", True)
     return light
+
+
+def get_editor_world():
+    editor_subsystem = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem)
+    return editor_subsystem.get_editor_world()
 
 
 def build_level():
@@ -190,11 +199,11 @@ def build_level():
     camera.set_actor_rotation(direction.rotator(), False)
     cam_comp = camera.get_cine_camera_component()
     cam_comp.set_editor_property("current_focal_length", 26.0)
-    unreal.EditorLevelLibrary.set_level_viewport_camera_info(camera.get_actor_location(), camera.get_actor_rotation())
+    # Keep the camera as a scene actor. Do not call viewport camera APIs here;
+    # commandlet runs do not have a level viewport.
 
     unreal.EditorAssetLibrary.make_directory("/Game/Maps")
-    unreal.EditorLevelLibrary.save_current_level()
-    unreal.EditorLoadingAndSavingUtils.save_map(unreal.EditorLevelLibrary.get_editor_world(), MAP_PATH)
+    unreal.EditorLoadingAndSavingUtils.save_map(get_editor_world(), MAP_PATH)
     unreal.log(f"Built {MAP_PATH}")
 
 

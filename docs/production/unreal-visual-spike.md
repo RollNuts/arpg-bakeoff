@@ -71,8 +71,8 @@ bash Unreal/NightwatchFortress/Scripts/open_nightwatch_unreal_editor.sh
 
 The CLI runner uses `UnrealEditor-Cmd`, writes its absolute log to
 `local-evidence/nightwatch_unreal_spike_abs.log`, and passes extra arguments
-through to Unreal. The manual editor runner is the fallback when the commandlet
-does not reach the Python script from Codex shell.
+through to Unreal. The manual editor runner opens `/Game/Maps/WolfForestVisualSpike`
+by default so the first visual pass can be inspected immediately.
 
 ## Pass Gate
 
@@ -91,8 +91,8 @@ and no Unity work should be deleted.
 
 ## Current Verification Status
 
-The project scaffold and Python scene builder are present, but a captured
-Unreal image has not been produced yet.
+The project scaffold, launch runners, Python scene builder, generated materials,
+and `/Game/Maps/WolfForestVisualSpike` map asset are present.
 
 Observed from this Codex shell:
 
@@ -105,10 +105,15 @@ Observed from this Codex shell:
 - Older local UE logs under the same UE 5.8 install show that the Python
   commandlet can reach script execution on this machine. That makes the current
   blocker a launch/project-startup issue, not a reason to reject Unreal.
+- The launch runner now reaches Python, builds `/Game/Maps/WolfForestVisualSpike`,
+  and exits with `Success - 0 error(s), 0 warning(s)`.
+- A macOS `screencapture` attempt after opening the editor produced a black
+  3840x2160 image, so it is not accepted as visual evidence.
 
-This means the engine decision is not complete. The next required step is to
-open the project in the local Unreal Editor UI, run or repair the scene builder,
-and capture the resulting viewport.
+This means the Unreal setup is no longer blocked at commandlet execution.
+The engine decision is still not complete. The next required step is to open the
+generated map in the local Unreal Editor UI and capture the resulting viewport
+from an actual visible editor/game window.
 
 ## Next Visual Proof
 
