@@ -1,13 +1,14 @@
 # Game Definition: 色喰いの王冠
 
-Status: active product source of truth.
+Status: historical, superseded.
 Date: 2026-06-30.
 English working title: `The Color-Eater Crown`.
 
-This document supersedes the cooperative `Relic Runebound`, `Threadlight
-Pilgrimage`, and earlier generic solo ARPG directions. Keep prior images and
-Meshy/Maya outputs as part-library evidence only. Do not let those older
-concepts define the game.
+Active product source of truth:
+[`docs/product/game-definition-nightwatch-fortress.md`](game-definition-nightwatch-fortress.md).
+
+This document is preserved as design history only. Do not use it as the current
+implementation target.
 
 ## One-Line Pitch
 

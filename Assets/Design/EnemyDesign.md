@@ -1,86 +1,58 @@
-# EnemyDesign: 色喰いの王冠
+# EnemyDesign: 夜番の砦
 
-Status: first vertical-slice enemy design.
+Status: active enemy list for `狼森`.
 
-## Shared Enemy Requirements
+## Enemy Rules
 
-Every enemy has:
+- The player should understand the enemy role from silhouette.
+- Every attack needs a readable wind-up.
+- Enemies should interact with weapons: dropping them, being interrupted by
+  them, or exposing why a weapon type matters.
+- Enemies need HP and posture, not just HP.
 
-- HP
-- color layer
-- color core
-- alert state
-- attack telegraph
-- hit reactions
-- color-layer break reaction
-- drain-ready state
-- color-drain death
-- normal death
+## SmallWolf
 
-## MaskedActor
+Role: fast pressure.
 
-Purpose:
+- attacks in short lunges
+- weak to quick sword or dagger-style attacks
+- can be staggered by torch
+- should teach dodge and lock-on
 
-- teaches lock-on, basic attack, color layer, and color drain.
+## HornedBeast
 
-Read:
+Role: charge-stopper tutorial.
 
-- pale mask
-- black theatre costume
-- red color core in chest or mask
-- stage prop blade
+- lowers head before charge
+- spear hit or spear throw can stop charge
+- horn can be broken later
+- posture damage is high when interrupted
 
-Attacks:
+## Goblin
 
-- bow slash
-- short thrust
-- red stage-step lunge
+Role: weapon economy enemy.
 
-Drain:
+- visibly carries a weapon
+- drops a usable weapon on death
+- may pick up a nearby weapon in later versions
+- teaches that enemy weapons are resources
 
-- after color-layer break, mask cracks and red core glows.
+## ShieldGoblin
 
-## RedDancer
+Role: frontal defense.
 
-Purpose:
+- hard from the front
+- exposes back after attack
+- posture can be broken by hammer/shield pressure
+- later variants support axe shield break
 
-- teaches dodge and tracking fast enemies.
+## Large Target Prototype
 
-Read:
+Before full Garm, create a large beast test target that supports:
 
-- flowing red ribbon/dress line
-- dark body
-- red core near waist or heart
+- embedded spear point
+- posture break
+- part health
+- weapon pull-out reaction
 
-Attacks:
-
-- spin slash
-- ribbon arc
-- leap step
-
-Drain:
-
-- ribbons desaturate and collapse like wet cloth.
-
-## StageExecutioner
-
-Purpose:
-
-- teaches heavy telegraph, parry, and color-layer pressure.
-
-Read:
-
-- execution hood/mask
-- large blade
-- heavy black body
-- red color core in torso
-
-Attacks:
-
-- overhead chop
-- floor drag sweep
-- execution slam
-
-Drain:
-
-- blade drops, core opens, body becomes colorless stage prop.
+This prevents building the boss before the weapon-hook mechanics work.

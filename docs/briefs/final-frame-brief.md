@@ -1,97 +1,47 @@
-# Final Frame Brief
+# Final Frame Brief: 夜番の砦
 
-## Purpose
+Status: active commercial screenshot target for the first vertical slice.
 
-Define one commercial screenshot target for the first `色喰いの王冠` vertical
-slice.
+## Target Frame
 
-Evaluation target:
+The screenshot should read as:
 
-- Steam screenshot strength
-- dark-but-vivid color identity
-- player silhouette and left-arm `彩槽` readability
-- enemy color-core and color-drain clarity
-- Red Theatre environment identity
-- UI quality
-- VFX and lighting density without hiding telegraphs
+`A lone nightwatch hunter fights a huge wolf in a moonlit forest, surrounded by weapons that can be picked up, thrown, broken, and pulled from the beast.`
 
-## Frame Composition
+## Must Show
 
-Player:
+- leather-armored nightwatch player with lantern and visible current weapon
+- Wolf Forest environment: moonlight, torches, trees, mist, hunter debris
+- weapon rack or fallen weapons in frame
+- at least one embedded spear or thrown weapon in the enemy/boss
+- clear weapon pickup/durability HUD
+- enemy posture or boss part-break UI
+- warm torch light plus cool moonlight
 
-- Lucien in black formal combat clothing
-- one-sided mantle visible
-- left-arm glass color organ glowing with current color
-- black-silver sword in hand or mid-swing
-- color-drain or color-skill pose
+## Reject If
 
-Enemy/Boss:
+- it looks like a generic sword duel
+- no weapon pickup/swap/throw is visible
+- the scene is just gray forest fog
+- the player silhouette reads as a default mannequin
+- weapons are too small to identify
+- UI is debug text
 
-- masked actor, red dancer, or stage executioner with visible color core
-- Red Duchess silhouette or curtain/blade stage threat in background if possible
-- color layer broken or near break
+## 30-Second Trailer Beat
 
-Environment:
+1. `0-3s`: fort gate at night, weapon rack, hunter takes two weapons.
+2. `3-7s`: Wolf Forest movement, torch and moonlight.
+3. `7-11s`: first enemy, weapon durability drops.
+4. `11-15s`: player picks up dropped spear or axe and swaps instantly.
+5. `15-19s`: thrown weapon sticks into an enemy.
+6. `19-23s`: Garm appears, spear stops a charge.
+7. `23-27s`: hammer head stagger or tail part break.
+8. `27-30s`: near-broken weapon throw opens weak point, title frame.
 
-- `赤絨毯の劇場`
-- red carpet, black seats, gold ornament, giant curtain, stage light
-- masked audience silhouettes
-- wet black floor reflection
-- no default sky, default floor, graybox blocks, or unadjusted material spam
+## Screenshot Checklist
 
-UI:
-
-- HP
-- three `彩槽` slots
-- current color gauge
-- enemy HP and enemy color layer
-- color drain marker
-- boss HP only if Duchess is active in frame
-- ornate but readable court/dark-fantasy visual language
-
-VFX:
-
-- color ribbon draining from enemy core into left arm
-- red slash or blue/purple skill effect
-- enemy body losing color
-- short impact core, particles, and afterglow
-- no full-screen glow that hides enemy windup
-
-Camera:
-
-- third-person 3D camera
-- enough distance to read player, enemy, and color effect
-- action in central 65% of frame
-- theatre architecture visible enough to sell setting
-
-## 30-Second Capture Outline
-
-1. `0-3s`: title/temple-to-theatre reveal, Lucien and red theatre read.
-2. `3-6s`: movement, lock-on, first masked actor threat.
-3. `6-10s`: normal combo/heavy attack damages HP and color layer.
-4. `10-14s`: color layer breaks, color drain execution fills a slot.
-5. `14-18s`: red skill changes weapon/VFX and opens red seal thread.
-6. `18-22s`: blue or purple exploration gate proves color is not only combat.
-7. `22-27s`: Red Duchess entrance or boss-phase attack.
-8. `27-30s`: strongest color-drain/boss-impact frame, title/CTA.
-
-## Acceptance Checklist
-
-- [ ] Screenshot reads as color-draining dark fantasy ARPG at thumbnail size.
-- [ ] Player, enemy, color core, current color, and danger are readable.
-- [ ] Environment is clearly red theatre, not generic dungeon.
-- [ ] UI is not default white debug text.
-- [ ] All visible assets are ledger-approved.
-- [ ] Frame does not copy a known game costume, weapon, UI, boss, map, or
-      composition.
-- [ ] One mock-looking area was identified and improved before completion.
-
-## Rejection Checklist
-
-- [ ] Default floor, default sky, mannequin, graybox, or unlit asset pile.
-- [ ] Screen is dark gray with no vivid color identity.
-- [ ] Color drain is not visible.
-- [ ] VFX covers enemy telegraph or player.
-- [ ] UI looks like placeholder text.
-- [ ] Screenshot could be mistaken for a generic sword ARPG.
-- [ ] Asset provenance or commercial-use rights are unresolved.
+- [ ] Reads as solo night-hunter ARPG at thumbnail size.
+- [ ] Shows local weapons as the central hook.
+- [ ] Uses dark but readable lighting.
+- [ ] Shows at least one warm and one cool light source.
+- [ ] Avoids copied IP silhouettes, UI, logos, and boss designs.

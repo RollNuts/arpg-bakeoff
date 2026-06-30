@@ -1,56 +1,32 @@
-# Unity Production Ownership
+# Engine Bakeoff Ownership
 
-Status: proposed PR ownership plan.
+Status: PR ownership map for `夜番の砦`.
 
-## Scope
+## PR Order
 
-The project is Unity-first under the current repository rules. Split work by
-production proof, not by engine bakeoff.
+1. Product Direction: active Nightwatch Fortress bible and docs.
+2. Asset Gate: legal source list and asset ledger updates.
+3. Unity Setup: ProjectSettings, package manifest, first scene folders.
+4. Player Core: movement, camera, dodge, jump, lock-on hook.
+5. Weapon Core: weapon data, durability, pickup/drop/swap.
+6. Throw/Embed: thrown weapons, sticking, pull-out interaction.
+7. Combat Core: attacks, heavy attacks, guard, parry, posture, hit stop.
+8. Wolf Forest: dressed first route and weapon racks.
+9. Enemies: wolf, horned beast, goblin, shield goblin.
+10. Garm: boss arena, part breaks, spear stop, hammer stagger.
+11. Capture: 30-second proof and contact sheet.
+12. Polish: lighting, HUD, SFX, VFX, input feel.
 
-## PR Ownership
+## Merge Rule
 
-- PR-Product: product bible, scope, done criteria, and anti-copy rules.
-- PR-Asset-Gate: asset ledger format, legal source shortlist, Maya/Meshy gate.
-- PR-Unity-Setup: Unity version, package manifest, project settings, folders,
-  scene stubs.
-- PR-Design-Assets: `Assets/Design` docs for game, art, animation, audio, enemy,
-  and boss design.
-- PR-Player-Core: movement, jump, dodge, camera, lock-on scaffold.
-- PR-Combat-Core: normal combo, heavy attack, parry, hit stop, hit reactions.
-- PR-Color-System: color inventory, color layer, color drain, red/blue/purple
-  skills.
-- PR-Red-Theatre: dressed stage, color gates, save point, shortcut.
-- PR-Enemies: masked actor, red dancer, stage executioner.
-- PR-Boss: Red Duchess entrance, phases, color layer, defeat.
-- PR-Capture: 10-second and 30-second capture evidence plus screenshot set.
+Merge product and system foundation PRs before visual polish PRs. Do not merge a
+visual scene that proves the wrong game hook. The first implementation must
+show local weapons, not just sword combat.
 
-## Evidence Requirements Per Gameplay PR
+## Review Focus
 
-Every gameplay PR must include:
-
-- gameplay screenshot
-- close readability screenshot where relevant
-- short capture or playtest note
-- asset ledger changes for visible assets
-- known placeholder/mock-looking areas and what was improved
-
-## Merge Order Request
-
-The preferred order is:
-
-1. Product
-2. Asset-Gate
-3. Unity-Setup
-4. Design-Assets
-5. Player-Core
-6. Combat-Core
-7. Color-System
-8. Red-Theatre
-9. Enemies
-10. Boss
-11. Capture
-
-If multiple PRs are open, merge order should preserve this dependency chain:
-product direction before asset decisions, package/project setup before scripts,
-player/combat before enemy tuning, color system before exploration gates and
-boss color-layer design.
+- Does this PR make `現地武器` more true?
+- Can the player see and use weapons on the ground?
+- Does the screen read as night fantasy but not gray?
+- Are asset/license notes present for any imported media?
+- Is there screenshot or playtest evidence when visuals/gameplay change?

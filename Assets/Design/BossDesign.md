@@ -1,88 +1,88 @@
-# BossDesign: 緋幕の公爵夫人
+# BossDesign: 大狼ガルム
 
-Status: first vertical-slice boss design.
+Status: active first boss brief.
 
 ## Product Role
 
-The Red Duchess is the first store-facing boss. She must prove that
-`色喰いの王冠` is not generic sword combat:
+Garm proves that `夜番の砦` is not just a sword combat game. The fight must show
+that local weapons change tactics:
 
-- red theatre identity
-- color-layer boss structure
-- color drain as boss strategy
-- stage transformation
-- vivid dark fantasy spectacle
+- spear stops charge
+- hammer creates head stagger
+- bow can tag a weak point
+- large shield can survive a charge
+- near-broken weapon throw opens a weak-point window
+- tail break changes the moveset
 
 ## Visual Read
 
-- giant red dress
-- white mask
-- thin arms
-- applauding hands on back
-- blade-like dress hem
-- red trail on the floor
-- stage lights and curtain framing
+- huge wolf
+- glowing eyes
+- large head and jaws
+- long tail
+- scarred hide
+- readable legs
+- moonlit back silhouette
+- torch rim from arena supplies
 
-## Entrance
+## Arena
 
-1. Player enters center stage.
-2. Masked audience applauds.
-3. Curtain rises.
-4. Duchess bows.
-5. Waltz becomes battle music.
+The den should contain:
+
+- weapon rack before entry
+- two throwing spears
+- one great hammer
+- one large shield
+- arrow bundle
+- torch stand
+- broken cart with extra weapon
+- small heal
+
+## Intro
+
+1. Player enters den.
+2. Forest noise drops.
+3. Garm steps into moonlight.
+4. It howls.
+5. Weapon rack and local supplies are still readable before control returns.
 
 ## Phase 1
 
-Attacks:
+- bite
+- leap
+- charge
+- tail sweep
+- roar
 
-- triple dance slash
-- red fan slash
-- dress spin
-- thrust lunge
-- applause shockwave
+Counterplay:
 
-Color mechanic:
-
-- after major attacks, the dress color core flashes.
-- attacking color core reduces color layer faster.
-- breaking color layer opens red drain window.
+- dodge leap
+- spear into leg during charge
+- hammer head after missed bite
+- shield charge if timed well
 
 ## Phase 2
 
-Trigger:
+Triggered at 50% HP or after a major part break.
 
-- HP 50%.
+- faster charge chain
+- double leap
+- stronger roar
+- wider tail sweep unless tail was broken
 
-Changes:
+## Part Breaks
 
-- stage rotates
-- curtain blades fall
-- more hands appear
-- attack speed increases
-
-Additional attacks:
-
-- curtain drop
-- stage rotation slash
-- red clone dance
-- all-direction applause shockwave
-
-## Strategy
-
-- Red drain strips dress defense.
-- Blue helps read stage rotation timing.
-- Purple helps reach her back.
+- Leg: slows charge temporarily when spear embeds.
+- Head: hammer stagger opens large damage window.
+- Tail: weakens spin/tail attacks.
 
 ## Defeat
 
-- red drains from the dress.
-- dress becomes white cloth.
-- mask cracks.
-- applause stops.
-- Lucien receives strong red.
+Garm collapses, the forest wind calms, torches stop flickering wildly, and the
+sky begins to brighten toward morning.
 
-Reward:
+## Rewards
 
-- red skill `血華`
-- theatre key
-- Duchess memory fragment
+- Garm fang material
+- strong spear or wolf-blade prototype
+- next request unlocked at the fort

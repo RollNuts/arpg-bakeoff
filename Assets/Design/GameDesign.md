@@ -1,26 +1,29 @@
-# GameDesign: 色喰いの王冠
+# GameDesign: 夜番の砦
 
 Status: active Unity design source for the first vertical slice.
 
 ## Core Loop
 
-1. Explore the red theatre.
-2. Fight a color-bearing enemy.
-3. Break the enemy color layer.
-4. Drain color into one of three `彩槽` slots.
-5. Use color to change weapon, skill, and traversal.
-6. Open a color gate.
-7. Reach and defeat `緋幕の公爵夫人`.
-8. Return to `無色のアトリエ` with reward and memory fragment.
+1. Start at `夜番の砦`.
+2. Choose two carry-in weapons from a rack.
+3. Enter `狼森` at night.
+4. Fight enemies while weapon durability falls.
+5. Pick up, swap, drop, throw, and recover local weapons.
+6. Open a shortcut with terrain or weapon interaction.
+7. Resupply before the boss den.
+8. Fight `大狼ガルム` using spear embed, hammer stagger, shield guard, bow shot,
+   and broken-weapon throw.
+9. Defeat the boss and show morning returning.
+10. Return to the fort for upgrades and next request.
 
 ## Vertical Slice Scope
 
 Scene targets:
 
 - `Title`
-- `AtelierHub`
-- `RedTheatre`
-- `Boss_RedDuchess`
+- `NightwatchFort`
+- `WolfForest`
+- `Boss_Garm`
 
 Player abilities:
 
@@ -29,57 +32,71 @@ Player abilities:
 - lock-on
 - jump
 - dodge
-- normal attack 1/2/3
+- normal attack
 - heavy attack
+- guard
 - parry
-- color drain
-- red skill
-- blue skill
-- purple skill
+- pickup weapon
+- drop weapon
+- throw weapon
+- weapon swap
+- torch use
+- item use
 - interact
 
-Systems:
+Core systems:
 
 - HP
-- color gauge
-- three color slots
+- stamina
+- two equipped weapon slots
+- weapon pickup prompt
+- weapon durability state
+- weapon throw
+- weapon embed
+- weapon pull
 - enemy HP
-- enemy color layer
-- color-drain-ready state
-- color gate activation
-- save point
+- enemy posture
+- enemy weapon drop
+- boss part break
 - boss phase transition
 
-## Color Types
+## First Weapons
 
-| Color | Combat | Exploration |
-| --- | --- | --- |
-| Red | close damage, HP steal, blood-flower burst | cut red seal threads |
-| Blue | counter, delayed blade, slow line | reveal memory platform |
-| Purple | dodge warp, clone, back attack | pass illusion wall |
-
-Green, gold, black, and white remain designed but not required for the first
-vertical-slice gameplay pass.
+| Weapon | Role |
+| --- | --- |
+| One-handed sword | baseline fast weapon, guard/parry capable |
+| Spear | reach, throw, charge stop, Garm leg embed |
+| Great hammer | posture damage, armor/head stagger |
+| Bow | weak-point poke, ranged pressure |
+| Torch | light, frighten small night monsters, ignite oil |
+| Large shield | charge stop, guard, shove, shield break |
 
 ## First Enemies
 
-- `MaskedActor`: first readable red enemy, teaches color layer.
-- `RedDancer`: fast pressure, teaches dodge/lock-on.
-- `StageExecutioner`: heavy telegraph, teaches parry and color-layer break.
+- `SmallWolf`: fast pack pressure, teaches dodge and quick weapon use.
+- `HornedBeast`: charging enemy, teaches spear stop.
+- `Goblin`: weapon carrier, drops usable weapons.
+- `ShieldGoblin`: teaches axe/hammer/shield-breaking logic later; first slice
+  can expose posture and back-angle counterplay.
 
 ## First Boss
 
-`緋幕の公爵夫人`
+`大狼ガルム`
 
-- phase 1: dance slashes, fan slash, dress spin, thrust, applause shockwave
-- phase 2 at 50% HP: rotating stage, curtain blades, red clone dance
-- red color drain strips dress defense
+- phase 1: bite, leap, charge, tail sweep
+- phase 2: faster chain attacks and roar pressure
+- spear in leg slows charge windows
+- hammer to head creates large stagger
+- tail break weakens spin attack
+- near-broken weapon throw opens a short weak-point window
 
 ## Done For First Playable
 
-- One playable route from theatre entrance to boss.
-- Three enemies can be damaged, color-layer-broken, drained, and killed.
-- Red, blue, and purple abilities each change either combat or traversal.
-- Boss can be defeated.
-- UI communicates HP, color slots, color gauge, enemy HP, and color layer.
-- Capture can show color drain within 30 seconds.
+- One playable route from fort gate into Wolf Forest and to Garm's den.
+- At least four local weapons can be picked up, dropped, thrown, damaged, and
+  recovered.
+- At least one enemy drops a usable weapon.
+- One large target supports embedded weapon and pull-out interaction.
+- HUD communicates HP, stamina, equipped weapons, durability, enemy HP, posture,
+  pickup prompt, and boss parts.
+- Capture can show weapon pickup/swap/throw within 30 seconds.

@@ -4,7 +4,7 @@ Status: superseded historical trailer planning proof.
 Date: 2026-06-30.
 
 This beatboard is retained as historical research only. It must not drive the
-current `色喰いの王冠` trailer. The active trailer direction is defined by
+current `夜番の砦` trailer. The active trailer direction is defined by
 `docs/research/visual-audio-benchmark.md` and
 `docs/capture/30-second-acceptance.md`.
 

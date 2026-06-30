@@ -1,4 +1,4 @@
-# ProjectStructure: 色喰いの王冠
+# ProjectStructure: 夜番の砦
 
 Status: intended Unity project layout.
 
@@ -16,14 +16,24 @@ Assets/
       Bosses/
       NPC/
     Environment/
-      RedTheatre/
-      BlueLibrary/
-      GreenGreenhouse/
-      GoldCourt/
-      PurplePalace/
-      FinalCrown/
+      NightwatchFort/
+      WolfForest/
+      IronMine/
+      SwampFort/
+      MoonCastle/
+      CapitalWall/
     Props/
+      WeaponRacks/
+      Torches/
+      Carts/
+      OilJars/
     Weapons/
+      Sword/
+      Spear/
+      Hammer/
+      Bow/
+      Shield/
+      Torch/
     Materials/
     Textures/
     VFX/
@@ -35,11 +45,13 @@ Assets/
     Player/
     Enemies/
     Bosses/
+    Weapons/
   Scripts/
     Core/
     Player/
     Combat/
-    ColorSystem/
+    Weapons/
+    Durability/
     Enemies/
     Bosses/
     UI/
@@ -48,9 +60,9 @@ Assets/
     VFX/
   Scenes/
     Title/
-    AtelierHub/
-    RedTheatre/
-    Boss_RedDuchess/
+    NightwatchFort/
+    WolfForest/
+    Boss_Garm/
   UI/
     HUD/
     Menus/
