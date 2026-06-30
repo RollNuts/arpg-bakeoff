@@ -28,14 +28,14 @@ Status: research input for PR review.
 
 ## First 30 Seconds Storyboard
 
-1. `0-2s`: hero alone on dark readable floor, weapon/identity visible.
-2. `2-6s`: diagonal movement, first hit, dodge, enemy death, drop feedback.
-3. `6-10s`: first signature skill with a clear shape.
-4. `10-15s`: enemies enter from edges; keep a readable player pocket.
-5. `15-20s`: medium enemy or mini-boss with size, color, and telegraph.
-6. `20-24s`: reward/build choice, three options maximum.
-7. `24-28s`: chosen upgrade immediately changes the combat shape.
-8. `28-30s`: highest-density frame, then title/CTA.
+1. `0-2s`: surveyor lights a thread route on a dark readable floor.
+2. `2-6s`: diagonal movement, hidden danger revealed, first dodge and hit.
+3. `6-10s`: threadlight tool binds or anchors one route/enemy.
+4. `10-15s`: light-moth or knot enemy attacks the route; keep player readable.
+5. `15-20s`: medium enemy or mini-boss with bell/banner telegraph.
+6. `20-24s`: rescued memory or route seal returns to the caravan.
+7. `24-28s`: boss landmark wakes and changes the room rule.
+8. `28-30s`: highest-readability combat frame, then title/CTA.
 
 ## Audio Direction
 
@@ -43,7 +43,7 @@ Music:
 
 - low drone
 - metal or skin percussion
-- short string/guitar/synth motif
+- short thread pluck, string, or hammered-loom motif
 - optional low choir for boss pressure
 - SFX-forward mix with space in the 2-5 kHz range
 
@@ -53,7 +53,8 @@ Combat SFX:
 - dodge = short cloth/leather/air burst, 0.2-0.4 seconds
 - enemy death = short collapse plus soul/ember tail
 - player death = low drop, breath/heartbeat stop, momentary BGM duck
-- reward = rarity-coded stings, not long fanfares
+- threadlight route tool = taut pluck + lantern glass click + latch
+- reward = memory chime, not long fanfares
 
 Minimum audio set:
 
@@ -71,4 +72,3 @@ Minimum audio set:
 - inconsistent UI fonts, frames, or icon resolution
 - no knockback, hit stop, death reaction, or reward feedback
 - 30 seconds of the same enemy, same attack, same floor
-

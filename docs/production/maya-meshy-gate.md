@@ -2,6 +2,14 @@
 
 Status: active production gate.
 
+## World Gate Precondition
+
+New character generation is paused until the world direction in
+`docs/product/game-definition-threadlight.md` is accepted or replaced.
+
+Maya and Meshy should not be used to rescue a vague fantasy character. They are
+only useful after the asset proves a specific game promise on screen.
+
 ## Allowed Use
 
 Maya:
@@ -33,10 +41,19 @@ Do not spend API credits on:
 
 ## First Candidate If Needed
 
-The only next permitted new generation target is one playable hero candidate:
+The next permitted generated asset is not a fully polished hero. Use one
+low-cost preview only after the world contact sheet and gameplay mock exist.
 
-- top-down action RPG playable hero
-- original dark fantasy magic swordsman
+Preferred order:
+
+1. threadlight route tool
+2. light-moth enemy
+3. surveyor body blockout
+
+The first playable body candidate must be:
+
+- top-down action RPG surveyor
+- original threadlight repair-pilgrimage field worker
 - readable head, shoulders, cape, weapon
 - asymmetrical facing cues
 - broad color blocking
@@ -47,8 +64,8 @@ Failure means:
 
 - generic armor NPC
 - unreadable at camera scale
-- weapon too thin
+- tool or weapon too thin
 - facing unclear
+- job identity unclear
 - famous-character resemblance
 - requires changing the game direction to justify it
-

@@ -11,10 +11,14 @@ Status: first PR task map for Veripsa/Core review.
 
 ## Milestone 1: Visual Target Without Engine Lock
 
+- [ ] M1-T00: Accept or replace `Threadlight Pilgrimage` as the concrete world
+  and store-facing promise.
 - [ ] M1-T01: Create one-page final-frame brief.
 - [ ] M1-T02: Build free/CC0 asset shortlist for hero, enemy, floor, and props.
 - [ ] M1-T03: Create visual mood board using only licensed links and notes.
 - [ ] M1-T04: Define 30-second storyboard acceptance checklist.
+- [ ] M1-T05: Create gameplay mock showing world rule, hub payoff, and one
+  combat beat before any Meshy/Maya spend.
 
 ## Milestone 2: Engine Bakeoff
 
@@ -47,4 +51,3 @@ Status: first PR task map for Veripsa/Core review.
 - Do not mix market research, engine setup, gameplay, and art import in one PR.
 - Every asset PR needs source/license notes.
 - Every visual PR needs screenshot evidence.
-
