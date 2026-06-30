@@ -30,6 +30,15 @@ Judgement order:
 | H06 | Star-Eater Chain Monk | Circular back-chain halo, small head | Weighted chain ring | Black cloth, bronze, sparse white star dots | Constant visible circular orbit | Deep purple; pull/area control | Space wizard, zodiac ornament spam |
 | H07 | White-Charcoal Judgement Axe | One giant arm, axe head wider than shoulders | One-sided execution axe | Charcoal body, white ash cracks, dark red cloth | Long charge, kneels after slam | White ash; stun/shatter | Barbarian cliche, muscle-only design |
 | H08 | Navy-Lantern Threadbinder | Floating small lantern overhead, threads outward | Thread spool ring and fingertip blades | Navy cloth, black lacquer, pale lantern white | Body stays calm; threads move first | Blue-white; traps/remote cuts | Puppet-master cliche, invisible thin threads |
+| H09 | Veiled Oath Relic Duelist | Hooded mantle, heavy beads, broad reliquary greatblade | Broken cathedral-slab greatblade | Charcoal hood, slate mantle, bone-white blade edge, brass beads | Guarded forward stance, heavy sweeping cuts | Cyan seam plus iron censer sparks | Key-shaped weapon, star charm, black zipper coat, recognizable franchise read |
+
+## Heroine Pattern Cards
+
+| ID | Concept | Silhouette Hook | Weapon | Material/Value Bands | Animation Identity | VFX Role | Reject If |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| F01 | Ash-Veil Halberd Matron | Tall ash veil crest, broad shoulders | Crescent halberd with thick blade | Charcoal armor, ash-white veil, oxblood sash, dull brass | Guarded spear stance, deliberate sweeping control | Pale ash plus warm steel sparks | Bikini armor, generic valkyrie, tiny spear, face-detail focus |
+| F02 | Glass-Moth Duelist | Broken glass moth-wing back shape | Paired broad crescent daggers | Dark leather, pale glass-blue blade edges, muted teal cloth | Low lateral cuts, glass afterimage shatters | Pale blue crit/dodge shards | Ninja costume, fairy wings, thin daggers, cyber glow |
+| F03 | Bell-Root Hex Huntress | Broken bell shoulder mantle, root cords | Crescent sickle-staff with bronze bells | Black-green leather, bone mask crest, tarnished bronze | Trap-setting stance, bell-root summon gestures | Green-black roots plus bronze pulse | Sexy witch, pointed hat, tiny charms, cultural stereotype symbols |
 
 ## Enemy Pattern Cards
 
@@ -237,17 +246,54 @@ from all angles, no tiny shield, no ornate unreadable engraving
 | H02 Pincer Knight | High | High | Medium | Medium | Strong melee identity |
 | H07 Judgement Axe | Medium | Very high | Low-medium | Low-medium | Strong hit-stop demo |
 | H08 Threadbinder | High | Medium | High | High | Unique but risky |
+| H09 Relic Duelist | High | High | Medium | Medium | Strong hooded relic-weapon identity |
+| F01 Halberd Matron | Medium-high | High | Low-medium | Medium | Strong female melee/control read |
+| F02 Glass Moth | Medium-high | Medium | High | Medium | Visually strong, risks thin-wing/ninja read |
+| F03 Bell Root | High | Medium-high | Medium | Medium-high | Strong caster/enemy-boss crossover |
 | H01 Lantern Pilgrim | Medium-high | Medium | Medium | Medium | Strong world identity |
 | H03 Glass Scout | Medium | Medium-low | High | Medium | Risks thin unreadable blades |
 | H04 Mud-Crown Hexer | Medium | Medium | Medium | Medium | Better as NPC/enemy first |
 | H05 Execution Medic | Medium | Medium | Medium | Medium | IP/cliche risk if too plague-doctor |
 | H06 Chain Monk | High | Medium | High | High | VFX-dependent, risky first hero |
 
-Recommendation for first generation round:
+Recommendation after first concept-sheet generation round:
 
-1. H07 `White-Charcoal Judgement Axe`
-2. H02 `Black-Iron Pincer Knight`
-3. H08 `Navy-Lantern Threadbinder`
+1. H09 `Veiled Oath Relic Duelist`
+2. F01 `Ash-Veil Halberd Matron`
+3. H07 `White-Charcoal Judgement Axe`
+4. F03 `Bell-Root Hex Huntress`
 
-Generate these as low-cost previews only, compare them as 64-128 px grayscale
-thumbnails, then pick one. Do not spend on texture/refine before that.
+Keep H02, H08, and F02. Do not discard them:
+
+- H02 can become a heavy enemy elite, armor skin, or alternate melee class.
+- H08 can become a trap-focused class after thread/VFX readability is proven.
+- F02 can become a rogue class or enemy assassin, but avoid the ninja/fairy read.
+
+Generate Meshy previews only after comparing these as 64-128 px grayscale
+thumbnails. Do not spend on texture/refine before that.
+
+## Generated Concept Sheets
+
+Generated with built-in `image_gen` as pre-Meshy 2D concept exploration:
+
+- `docs/character/concepts/h07-white-charcoal-judgement-axe-sheet.png`
+- `docs/character/concepts/h02-black-iron-pincer-knight-sheet.png`
+- `docs/character/concepts/h08-navy-lantern-threadbinder-sheet.png`
+- `docs/character/concepts/h09-veiled-oath-relic-duelist-sheet.png`
+- `docs/character/concepts/f01-ash-veil-halberd-matron-sheet.png`
+- `docs/character/concepts/f02-glass-moth-duelist-sheet.png`
+- `docs/character/concepts/f03-bell-root-hex-huntress-sheet.png`
+- `docs/character/concepts/concept-comparison-contact-sheet.png`
+- `docs/character/concepts/concept-silhouette-strip.png`
+
+Current verdict:
+
+| Candidate | Verdict | Reason |
+| --- | --- | --- |
+| H09 Relic Duelist | Primary hero candidate | Strong hooded relic silhouette while avoiding key/star/franchise specifics. |
+| F01 Halberd Matron | Primary heroine candidate | Strong top-down halberd read and practical silhouette. |
+| H07 Judgement Axe | Strong backup | Most readable impact/weight, but less novel than H09. |
+| F03 Bell Root | Strong alternate | Could be heroine, elite enemy, or boss-adjacent caster. |
+| H02 Pincer Knight | Keep for reuse | Strong silhouette, but leans heavily armored/monster; better as elite or alternate class. |
+| H08 Threadbinder | Keep for later | Novel, but thread readability and production risk are high. |
+| F02 Glass Moth | Keep with caution | Good image, but wing/ninja/fairy read risks IP/generic drift and thin silhouette issues. |
