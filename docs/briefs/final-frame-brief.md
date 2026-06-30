@@ -2,91 +2,84 @@
 
 ## Purpose
 
-Define one commercial screenshot target for the first cooperative top-down
-fantasy action vertical slice.
+Define one commercial screenshot target for the first `色喰いの王冠` vertical
+slice.
 
 Evaluation target:
 
 - Steam screenshot strength
-- same-screen cooperative readability
-- reliquary and sacred fire objective clarity
-- tool-role silhouettes
-- enemy pressure readability
+- dark-but-vivid color identity
+- player silhouette and left-arm `彩槽` readability
+- enemy color-core and color-drain clarity
+- Red Theatre environment identity
 - UI quality
-- lighting, VFX, and environment density
+- VFX and lighting density without hiding telegraphs
 
 ## Frame Composition
 
-Players:
+Player:
 
-- two pilgrims visible at gameplay scale
-- one holding a shield or sword near the reliquary
-- one holding torch, axe, bow, bell, or ritual implement
-- carried tools read without labels
-- solo variant may show one pilgrim near a tool stand with clear role-swap path
+- Lucien in black formal combat clothing
+- one-sided mantle visible
+- left-arm glass color organ glowing with current color
+- black-silver sword in hand or mid-swing
+- color-drain or color-skill pose
 
-Objective:
+Enemy/Boss:
 
-- holy reliquary is central and obviously important
-- durability/runaway state is visible through UI and visual cracks/glow
-- sacred fire circle or brazier range is readable on the floor
-
-Enemies:
-
-- imps approaching reliquary or player
-- spirit near mist/fire boundary, if fire system is in frame
-- blind guardian or sealed courtyard landmark in background if available
-- telegraphs visible through pose, ground mark, sound cue VFX, or charge line
+- masked actor, red dancer, or stage executioner with visible color core
+- Red Duchess silhouette or curtain/blade stage threat in background if possible
+- color layer broken or near break
 
 Environment:
 
-- Sealing Temple stone floor with cracks, moss/dust, and lit edges
-- weapon/tool stand at entrance or side
-- broken pillars, hanging cloth, chains, bell, altar, or sealed door
-- fog and magical light kept readable
+- `赤絨毯の劇場`
+- red carpet, black seats, gold ornament, giant curtain, stage light
+- masked audience silhouettes
+- wet black floor reflection
 - no default sky, default floor, graybox blocks, or unadjusted material spam
 
 UI:
 
-- reliquary durability
-- magic runaway gauge
-- sacred fire remaining
-- current objective
-- player tool icons
-- ritual progress if in altar frame
-- stone/metal/parchment/magic-mark visual language
+- HP
+- three `彩槽` slots
+- current color gauge
+- enemy HP and enemy color layer
+- color drain marker
+- boss HP only if Duchess is active in frame
+- ornate but readable court/dark-fantasy visual language
 
 VFX:
 
-- sacred fire range with warm edge
-- blue-white magic leak from reliquary
-- hit effect with core, debris, and short afterglow
-- enemy telegraph shape that shows avoid/block/lure timing
-- restrained camera impulse; no unreadable screen shake
+- color ribbon draining from enemy core into left arm
+- red slash or blue/purple skill effect
+- enemy body losing color
+- short impact core, particles, and afterglow
+- no full-screen glow that hides enemy windup
 
 Camera:
 
-- fixed-ish 3D top-down oblique camera
-- objective and players in central 70% of frame
-- enough surrounding space to read incoming threats
-- no occlusion over players, reliquary, fire, or telegraphs
+- third-person 3D camera
+- enough distance to read player, enemy, and color effect
+- action in central 65% of frame
+- theatre architecture visible enough to sell setting
 
 ## 30-Second Capture Outline
 
-1. `0-3s`: temple entrance, weapon stand, two pilgrims, reliquary read.
-2. `3-6s`: players pick tools and activate/push reliquary.
-3. `6-10s`: imps attack; sword/shield response with hit/block feedback.
-4. `10-15s`: closed gate or mist corridor shows tool objective pressure.
-5. `15-20s`: torch/fire or axe/bow solution while reliquary pressure rises.
-6. `20-26s`: blind guardian, spirit surge, or final altar ritual pressure.
-7. `26-30s`: strongest cooperative save, ritual success/failure beat, title/CTA.
+1. `0-3s`: title/temple-to-theatre reveal, Lucien and red theatre read.
+2. `3-6s`: movement, lock-on, first masked actor threat.
+3. `6-10s`: normal combo/heavy attack damages HP and color layer.
+4. `10-14s`: color layer breaks, color drain execution fills a slot.
+5. `14-18s`: red skill changes weapon/VFX and opens red seal thread.
+6. `18-22s`: blue or purple exploration gate proves color is not only combat.
+7. `22-27s`: Red Duchess entrance or boss-phase attack.
+8. `27-30s`: strongest color-drain/boss-impact frame, title/CTA.
 
 ## Acceptance Checklist
 
-- [ ] Screenshot reads as a cooperative fantasy action game at thumbnail size.
-- [ ] Players, held tools, reliquary, enemies, and danger are readable.
-- [ ] Objective is clearer than generic combat.
-- [ ] Environment has at least three visible material/detail/light layers.
+- [ ] Screenshot reads as color-draining dark fantasy ARPG at thumbnail size.
+- [ ] Player, enemy, color core, current color, and danger are readable.
+- [ ] Environment is clearly red theatre, not generic dungeon.
 - [ ] UI is not default white debug text.
 - [ ] All visible assets are ledger-approved.
 - [ ] Frame does not copy a known game costume, weapon, UI, boss, map, or
@@ -96,8 +89,9 @@ Camera:
 ## Rejection Checklist
 
 - [ ] Default floor, default sky, mannequin, graybox, or unlit asset pile.
-- [ ] Camera hides the reliquary, fire, players, or incoming enemy.
-- [ ] VFX covers the objective.
+- [ ] Screen is dark gray with no vivid color identity.
+- [ ] Color drain is not visible.
+- [ ] VFX covers enemy telegraph or player.
 - [ ] UI looks like placeholder text.
-- [ ] Screenshot could be mistaken for a tutorial sandbox rather than a product.
+- [ ] Screenshot could be mistaken for a generic sword ARPG.
 - [ ] Asset provenance or commercial-use rights are unresolved.

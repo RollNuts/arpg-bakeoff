@@ -4,9 +4,8 @@ Status: superseded historical direction.
 Date: 2026-06-30.
 
 This document is retained as visual and research history only. Do not use it as
-the current product source of truth. The active product is the cooperative
-top-down fantasy action game defined in
-`docs/product/game-definition-relic-runebound.md`.
+the current product source of truth. The active product is `色喰いの王冠`,
+defined in `docs/product/game-definition-color-eater-crown.md`.
 
 ## One-Line Pitch
 

@@ -1,6 +1,6 @@
 # Market Fit Notes
 
-Status: research input for cooperative commercial fantasy action production.
+Status: research input for `色喰いの王冠` commercial production.
 
 ## Reference Set
 
@@ -10,47 +10,44 @@ named systems.
 
 | Game | Why It Matters | Absorb | Do Not Copy |
 | --- | --- | --- | --- |
-| Unrailed | Cooperation under moving-object pressure. | Shared objective, tool roles, escalating chaos, readable lanes. | Train premise, voxel look, track-building identity. |
-| Overcooked 2 | Strong local co-op communication pressure. | Short sessions, simultaneous tasks, natural player callouts. | Kitchen theme, order UI, cooking verbs, comic tone. |
-| Lovers in a Dangerous Spacetime | Same-screen role swapping and station pressure. | One shared object, players rotate roles under threat. | Spaceship/station layout, neon identity. |
-| It Takes Two | Commercial co-op clarity and spectacle. | Pair-dependent moments, varied verbs, readable split responsibilities. | Characters, story, camera language, specific set pieces. |
-| Helldivers 2 | Co-op chaos and friendly role dependence. | Communication, danger calls, objective pressure. | Military sci-fi, extraction framing, stratagem identity. |
-| V Rising | Readable dark fantasy combat and lighting separation. | Player/enemy value separation, gothic readability. | Vampire premise, castle/base-building identity. |
-| No Rest for the Wicked | Premium ARPG visual craft benchmark. | Material richness, hit weight, dark-but-readable scenes. | Cerim/Isola Sacra identity and Moon Studios art language. |
-| Ravenswatch | Co-op/top-down action readability. | Role clarity, objectives, enemy readability. | Folklore hero roster and corrupted fairy-tale framing. |
+| Lies of P | Dark ornate city fantasy with strong production polish. | Wet streets, aristocratic decay, readable action, lavish materials. | Puppet premise, Belle Epoque identity, UI/costume silhouettes. |
+| Bloodborne | Gothic action mood and aggressive combat pressure. | Horror elegance, readable transformations, weapon impact. | Hunter outfit, trick weapons, Great One/lore identity. |
+| No Rest for the Wicked | Premium ARPG material craft benchmark. | Dense materials, heavy hit feel, dark-but-readable scenes. | Cerim/Isola Sacra art language. |
+| Kena: Bridge of Spirits | Strong colorful fantasy VFX clarity. | Saturated magical effects that stay readable. | Rot companions, masks, character proportions. |
+| Hades II | Character/color identity and instant store readability. | Strong color-coded powers and readable protagonist silhouette. | Greek myth cast, UI, god boon structure. |
+| Blasphemous 2 | Religious grotesque visual memory. | Ornate body horror, boss iconography, ritual mood. | Catholic-specific iconography and 2D identity. |
+| Devil May Cry 5 | Stylish action feel and combo spectacle. | Responsive attacks, visual flourish, player fantasy. | Characters, weapons, modern style, ranking UI. |
 
 ## Recommended Position
 
 Small commercial target:
 
-- cooperative 3D top-down fantasy action
-- one polished 8-12 minute stage first
-- local same-screen 2-player first, Steam Remote Play friendly
-- solo clearable but not solo-only
-- roles created by picked-up tools, not classes
-- objective pressure around reliquary, sacred fire, blockers, and ritual
+- solo 3D dark fantasy action RPG
+- vivid color-drain system as the central hook
+- semi-open royal city with a strong hub
+- first vertical slice: red theatre, three enemies, one boss
 - premium indie positioning, not endless live-service scope
 
 Active product definition:
 
-> Two to four pilgrims carry an ancient holy reliquary through a sealed temple,
-> swap tools from weapon stands, defend the sacred flame, repel monsters, and
-> complete a sealing ritual before the relic breaks or its magic runs wild.
+> A lone color mortician tears colors from monsters in a decayed royal kingdom,
+> stores them in a glass arm organ, reshapes their sword and magic with those
+> colors, opens color-locked paths, and exposes boss weak points by stripping
+> their color layers.
 
-See `docs/product/game-definition-relic-runebound.md`.
+See `docs/product/game-definition-color-eater-crown.md`.
 
 ## First Store-Facing Promise
 
 The first screenshot/video must show:
 
-- two readable pilgrims or one solo pilgrim with an obvious role-swap path
-- 3D top-down oblique camera
-- holy reliquary as the central objective
-- weapon/tool stand or visible carried tools
-- sacred fire and readable safe zones
-- diagonal motion through a stone temple
-- one enemy interacting with relic/fire pressure
-- one medium guardian threat tied to sound, fire, or route blockers
-- one visible ritual or altar payoff
-- dark setting with readable foreground action
+- Lucien as a readable protagonist, not a mannequin
+- vivid color in a dark courtly space
+- visible left-arm `彩槽`
+- enemy color core or color layer
+- color drain ribbon entering the arm
+- red theatre identity: carpet, black seats, gold ornament, curtain, masks
+- one color exploration gate
+- Red Duchess silhouette or boss threat
+- UI for HP, three color slots, enemy HP, and color layer
 - no graybox, default floor, default sky, debug UI, or unapproved asset pileup
