@@ -1,81 +1,56 @@
-# Visual And Audio Benchmark
+# Visual And Audio Benchmark: 夜番の砦
 
-Status: research input for `色喰いの王冠` commercial production.
+Status: research input for the active `夜番の砦` direction.
 
-## Video Patterns
+## Visual Benchmark
 
-- Show the game promise in the first 1-3 seconds: black royal theatre, vivid
-  color, Lucien, color core, or color drain.
-- Use third-person camera motion that keeps player, enemy telegraph, color core,
-  and exploration gate readable.
-- Keep the player separated with black formal silhouette plus active color glow.
-- Show movement, sword hit, color-layer break, color drain, color ability, and
-  a boss/elite threat within 30 seconds.
-- VFX must have shape, not just glow: ribbons, liquid streams, mirror shards,
-  red petals, purple afterimages, color slots filling, and core fractures.
+Good frame:
 
-## Screenshot Patterns
+- one clear hunter silhouette
+- weapons visible on body, ground, or boss
+- warm torch light and cool moonlight
+- readable enemy telegraph
+- forest/fort identity in the background
+- UI communicates weapon state without clutter
 
-- A strong screenshot has one clear subject: color drain, red theatre combat,
-  color gate, or Red Duchess threat.
-- Combat screenshots separate player, enemy, color core, attack direction,
-  danger, HP, and color layer state.
-- The floor has at least three layers: black/wet base material, red carpet or
-  theatre detail, and colored lighting/reflection information.
-- Edges carry world detail: masks, curtains, gold ornament, stage lights, old
-  paintings, candles, broken seats, or stained glass.
-- Boss screenshots sell through costume shape, stage rule, and color-layer
-  exposure, not size alone.
+Bad frame:
 
-## First 30 Seconds Storyboard
+- generic sword duel
+- gray forest fog
+- no pickup/throw object visible
+- boss has no readable parts
+- player looks like a placeholder mannequin
 
-1. `0-3s`: title or red theatre reveal, Lucien silhouette and left-arm color.
-2. `3-6s`: third-person movement and lock-on against masked actor.
-3. `6-10s`: sword combo/heavy attack cracks enemy color layer.
-4. `10-14s`: color drain execution pulls red into `彩槽`.
-5. `14-18s`: red skill changes sword and opens red seal thread.
-6. `18-22s`: blue memory platform or purple illusion wall proves exploration.
-7. `22-27s`: Red Duchess enters or attacks with curtain/dress blade.
-8. `27-30s`: strongest color-drain or boss-impact frame, title/CTA.
+## Color And Lighting
 
-## Audio Direction
+Use contrast:
 
-Music:
+- torch orange against moon blue
+- blood red against forest green
+- iron highlights against dark leather
+- warm fort lights behind the starting area
 
-- distorted court waltz
-- harpsichord or celesta fragments
-- string quartet tension
-- low choir
-- broken music-box accents
-- deep percussion on boss/phase pressure
+Do not use darkness as a substitute for art direction.
 
-Combat/Color SFX:
+## Audio Benchmark
 
-- sword attack = sharp air + refined steel/body contact
-- heavy attack = deeper cut + color-layer crack
-- color layer break = glass/paint membrane split
-- color drain = liquid ribbon pull + glass organ fill
-- red = wet slash, petals, heat spark
-- blue = mirror shards, ripple, cold glass
-- purple = smoke, afterimage, moon pulse
-- boss = applause, curtain blade, dress metal, distorted waltz accent
+The weapon hook needs unique sounds:
 
-Minimum audio set:
+- weapon pickup: fast and satisfying
+- drop: physical clatter
+- throw: strong release
+- embed: heavy stick/impact
+- pull: friction and enemy pain
+- durability warning: tense but not annoying
+- break: decisive
 
-- 3 loopable music beds: theatre exploration, combat layer, boss
-- one 30-second trailer arrangement
-- 40-60 combat/color SFX
-- 15-20 UI/reward/warning SFX
-- 5-8 ambience loops
+Music should support danger and momentum, not slow the action into pure horror.
 
-## Mock Smell To Reject
+## Capture Benchmark
 
-- gray dungeon with only red particles added
-- player, enemies, VFX, and floor at the same value
-- color core too small to read
-- color drain hidden by camera or particles
-- inconsistent UI fonts, frames, or icon resolution
-- no knockback, hit stop, color-layer break, or drain feedback
-- 30 seconds of only sword fighting with no color drain/exploration gate
-- camera hides enemy telegraph or color core
-- audio feels like generic fantasy with no color-drain identity
+Every captured clip should answer:
+
+`Why did picking a different weapon matter here?`
+
+If the answer is unclear, tune level layout, enemy behavior, UI, or weapon
+feedback before adding new areas.

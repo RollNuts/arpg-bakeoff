@@ -1,53 +1,54 @@
-# Market Fit Notes
+# Market Fit: 夜番の砦
 
-Status: research input for `色喰いの王冠` commercial production.
+Status: research input for the active `夜番の砦` direction.
 
-## Reference Set
+## Positioning
 
-Use these games as market and quality references only. Do not copy their
-characters, UI, logos, costumes, palettes, silhouettes, lore, weapons, maps, or
-named systems.
+The commercial hook is simple enough for a Steam capsule/trailer:
 
-| Game | Why It Matters | Absorb | Do Not Copy |
-| --- | --- | --- | --- |
-| Lies of P | Dark ornate city fantasy with strong production polish. | Wet streets, aristocratic decay, readable action, lavish materials. | Puppet premise, Belle Epoque identity, UI/costume silhouettes. |
-| Bloodborne | Gothic action mood and aggressive combat pressure. | Horror elegance, readable transformations, weapon impact. | Hunter outfit, trick weapons, Great One/lore identity. |
-| No Rest for the Wicked | Premium ARPG material craft benchmark. | Dense materials, heavy hit feel, dark-but-readable scenes. | Cerim/Isola Sacra art language. |
-| Kena: Bridge of Spirits | Strong colorful fantasy VFX clarity. | Saturated magical effects that stay readable. | Rot companions, masks, character proportions. |
-| Hades II | Character/color identity and instant store readability. | Strong color-coded powers and readable protagonist silhouette. | Greek myth cast, UI, god boon structure. |
-| Blasphemous 2 | Religious grotesque visual memory. | Ornate body horror, boss iconography, ritual mood. | Catholic-specific iconography and 2D identity. |
-| Devil May Cry 5 | Stylish action feel and combo spectacle. | Responsive attacks, visual flourish, player fantasy. | Characters, weapons, modern style, ranking UI. |
+`A solo nightwatch hunter survives by changing weapons found on the battlefield.`
 
-## Recommended Position
+This is clearer than a lore-heavy premise. The player immediately understands:
 
-Small commercial target:
+- night is dangerous
+- monsters threaten villages and forts
+- weapons on the ground matter
+- the boss can be fought differently depending on what is picked up
 
-- solo 3D dark fantasy action RPG
-- vivid color-drain system as the central hook
-- semi-open royal city with a strong hub
-- first vertical slice: red theatre, three enemies, one boss
-- premium indie positioning, not endless live-service scope
+## Reference Structures, Not Copies
 
-Active product definition:
+Use external games only for structural learning:
 
-> A lone color mortician tears colors from monsters in a decayed royal kingdom,
-> stores them in a glass arm organ, reshapes their sword and magic with those
-> colors, opens color-locked paths, and exposes boss weak points by stripping
-> their color layers.
+- third-person action readability
+- fast pickup/swap UX
+- weapon impact and durability communication
+- boss part-break telegraphing
+- readable night lighting
+- short trailer pacing
 
-See `docs/product/game-definition-color-eater-crown.md`.
+Do not copy characters, monsters, UI, icons, maps, logos, named systems, or boss
+designs.
 
-## First Store-Facing Promise
+## Store-Page Differentiators
 
-The first screenshot/video must show:
+- combat built around local weapons, not a fixed build
+- weapons can be thrown, embedded, pulled, and broken
+- boss parts react to specific weapon types
+- simple night-hunter fantasy that needs little explanation
+- dark fantasy that uses torch orange, moon blue, forest green, blood red, and
+  iron highlights instead of flat gray
 
-- Lucien as a readable protagonist, not a mannequin
-- vivid color in a dark courtly space
-- visible left-arm `彩槽`
-- enemy color core or color layer
-- color drain ribbon entering the arm
-- red theatre identity: carpet, black seats, gold ornament, curtain, masks
-- one color exploration gate
-- Red Duchess silhouette or boss threat
-- UI for HP, three color slots, enemy HP, and color layer
-- no graybox, default floor, default sky, debug UI, or unapproved asset pileup
+## First Trailer Promise
+
+Within 30 seconds show:
+
+1. weapon rack choice
+2. night forest
+3. weapon break/chip
+4. pickup/swap under pressure
+5. thrown spear embeds
+6. Garm charge interrupted
+7. part break or posture collapse
+
+If the first capture does not show weapon swapping, the project is missing its
+own hook.

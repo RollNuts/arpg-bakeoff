@@ -1,87 +1,102 @@
-# ArtBible: 色喰いの王冠
+# ArtBible: 夜番の砦
 
-Status: active art direction for the first vertical slice.
+Status: active visual direction.
 
-## Core Phrase
+## Art Promise
 
-`鮮やかな闇`
+The screen must immediately read as:
 
-The screen must be dark but vivid. Avoid gray fantasy. Use poisonous saturation
-against black, wet, royal materials.
+- a night kingdom
+- one hunter outside the walls
+- monsters on the road
+- weapons on racks, bodies, carts, and the ground
+- a huge beast fight that uses those weapons
 
-## Primary Materials
+Darkness is the premise, not the palette. Avoid a flat gray image.
 
-- black marble
-- gold leaf
-- red carpet
-- blue stained glass
-- green greenhouse glass
-- purple velvet
-- white porcelain
-- wet wood
-- old oil painting
-- candle wax
-- silk masks
-- colored liquid
+## Palette
+
+- torch orange
+- moon blue
+- blood red
+- iron highlights
+- leather brown
+- forest green
+- wet black soil
+- fort-fire amber
+- old stone blue-gray only as a supporting color
 
 ## Player
 
-Lucien:
+The nightwatch fighter needs a practical heroic silhouette:
 
-- slim androgynous swordfighter
-- black formal combat clothing
-- one-sided long mantle
-- thin black-silver sword
-- brush dagger at waist
-- left-arm glass `彩槽`
-- eye, arm, sword, and mantle lining change with current color
+- leather armor
+- cloth cloak
+- shoulder lantern
+- gloves, boots, belt, pouches
+- waist dagger
+- back weapon
+- visible weapon holders
+- readable silhouette for sword, spear, hammer, bow, torch, and shield
 
-Reject:
+The character should be cool and usable, not chosen-one ornate.
 
-- generic dark knight
-- copied hunter silhouette
-- gray leather-only outfit
-- invisible color organ
+## Weapons
 
-## Red Theatre
+Each weapon type needs readable silhouettes and durability states:
 
-Required first-screen reads:
+- fresh
+- normal
+- chipped
+- near-broken
+- broken
 
-- red carpet
-- black audience seats
-- gold ornament
-- giant curtain
-- stage light
-- white masks
-- wet black floor reflection
-- red color liquid or thread seals
+Weapon models must be large enough to read during play. Near-broken weapons need
+visible cracks or loose bindings so the player understands why throwing them is
+valuable.
 
-Lighting:
+## Wolf Forest
 
-- warm red theatre light
-- hard spotlight cones
-- black shadow masses
-- gold highlights
-- color VFX kept brighter than background but not opaque enough to hide attacks
+First area visual kit:
 
-## Enemy Art Rule
+- moonlit tree trunks
+- dark green foliage
+- low ground mist
+- hunter shack
+- broken cart
+- fallen trees
+- stream crossing
+- torch stands
+- oil jars
+- weapon racks
+- animal bones
+- claw marks
+- warm fort light visible behind the start
 
-Enemies are former court professions, not generic monsters.
+## Enemies
 
-Each enemy needs:
+- Small wolf: fast, lean, low silhouette.
+- Horned beast: clear horn and lowered charge posture.
+- Goblin: small weapon carrier; weapon must be visible.
+- Shield goblin: readable shield front and vulnerable back.
 
-- profession read
-- visible color core
-- attack telegraph pose
-- color-loss death state
+## Garm
 
-## Boss Art Rule
+`大狼ガルム` must be memorable in one screenshot:
 
-`緋幕の公爵夫人` must be recognizable in one screenshot:
+- huge wolf body
+- bright eyes
+- scarred hide
+- long tail for break target
+- readable legs for spear embed
+- head and jaw large enough for hammer stagger read
+- moon backlight and torch rim
 
-- huge red dress
-- blade-like hem
-- white mask
-- applauding hands
-- stage/court framing
-- phase 2 makes the stage itself hostile
+## Visual Rejects
+
+- gray forest with no warm light
+- default capsule player
+- weapons too small to identify
+- boss with no visible part targets
+- UI that looks like debug text
+- generic asset-store forest with no weapon-rack/combat staging

@@ -1,54 +1,53 @@
-# AnimationList: 色喰いの王冠
+# AnimationList: 夜番の砦
 
-Status: first vertical-slice animation checklist.
+Status: active animation checklist for the first vertical slice.
 
-## Player
+## Player Core
 
 - Idle
 - Walk
 - Run
-- Stop
-- Turn
+- Dash
 - Jump
 - Land
-- Dodge
-- PurpleDodge
-- NormalAttack1
-- NormalAttack2
-- NormalAttack3
-- HeavyAttack
-- ChargedHeavyAttack
-- AirAttack
-- FallingAttack
+- DodgeStep
 - Guard
 - Parry
-- ParryCounter
+- ParrySuccess
 - HitSmall
 - HitLarge
 - Knockdown
 - GetUp
 - Death
-- ColorDrain
-- RedSkill
-- BlueSkill
-- PurpleSkill
-- InteractDoor
-- PaintSeal
-- ItemPickup
-- SavePointUse
+- Respawn
 
-## Color Drain Signature
+## Weapon Handling
 
-The color-drain animation is the product signature.
+- PickupWeapon
+- DropWeapon
+- SwapWeapon
+- ThrowWeapon
+- PullEmbeddedWeapon
+- WeaponBreakReaction
+- UseItem
+- RaiseTorch
 
-Required beats:
+## Weapon Attacks
 
-1. Lucien reaches toward the enemy color core with left arm or brush dagger.
-2. Enemy body locks in color-drain-ready pose.
-3. Color exits as liquid/ribbon light.
-4. Color flows into the glass `彩槽`.
-5. Sword, eye, and mantle flash with the acquired color.
-6. Enemy collapses as desaturated remains.
+- SwordLight1
+- SwordLight2
+- SwordLight3
+- SwordHeavy
+- SpearThrust
+- SpearHeavyPierce
+- SpearThrow
+- HammerLight
+- HammerHeavySlam
+- BowAim
+- BowShoot
+- TorchSwing
+- ShieldGuard
+- ShieldBash
 
 ## Enemies
 
@@ -62,25 +61,32 @@ Each first enemy requires:
 - HeavyAttack or SpecialAttack
 - HitSmall
 - HitLarge
-- ColorLayerBreak
-- DrainReady
+- PostureBreak
+- WeaponDrop
 - Death
-- DrainDeath
 
-## Red Duchess
+## Garm
 
-- EntranceBow
-- Phase1Idle
-- TripleDanceSlash
-- FanSlash
-- DressSpin
-- ThrustLunge
-- ApplauseShockwave
+- EntranceHowl
+- PhaseOneIdle
+- Walk
+- Bite
+- Leap
+- Charge
+- TailSweep
+- Roar
+- LegSpearEmbedded
+- HeadStagger
+- TailBreak
 - PhaseTransition
-- CurtainDrop
-- StageSpinSlash
-- RedCloneDance
-- AllDirectionApplause
-- ColorLayerBreak
-- DrainVulnerable
+- PhaseTwoChainAttack
+- WeakPointOpenedByThrow
 - Defeat
+
+## Quality Notes
+
+- Weapon pickup/swap must be short and readable.
+- Heavy weapon motion must show weight.
+- Dagger/sword/spear/hammer cannot share the same body timing.
+- Embedded weapon pull needs a satisfying tug and enemy reaction.
+- Feet must not slide during attacks or dodges.

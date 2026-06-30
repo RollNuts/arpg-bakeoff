@@ -1,4 +1,4 @@
-# 色喰いの王冠 Production
+# 夜番の砦 Production
 
 Public planning and review repo for a Steam-facing 3D solo dark fantasy action
 RPG.
@@ -14,23 +14,31 @@ This repository exists to keep the next work clean:
 
 ## Current Objective
 
-Build the smallest commercial-quality vertical slice for `色喰いの王冠`:
+Build the smallest commercial-quality vertical slice for `夜番の砦`:
 
-1. one readable player character, `リュシアン`, the last `彩葬師`
-2. third-person 3D camera with lock-on and readable enemy telegraphs
-3. sword combat, dodge, jump, guard/parry, color skills, and color drain
-4. a dressed `赤絨毯の劇場` stage, not a graybox
-5. enemy color layers and color cores
-6. color drain execution that fills three `彩槽` slots
-7. red, blue, and purple color abilities in the first vertical slice
-8. exploration gates using color: red seal threads, blue memory platforms, and
-   purple illusion walls
-9. boss fight against `緋幕の公爵夫人`
-10. screenshots and 30-second capture that sell "dark but vivid color-eating
-    fantasy"
+1. one readable player character, a practical `夜番` with leather armor, cloak,
+   lantern, weapon holders, gloves, boots, and a clear adventurer silhouette
+2. third-person camera behind and above the player, readable for enemies,
+   weapons, footing, dodge direction, and pickups
+3. fast, satisfying solo ARPG combat with attack, heavy attack, dodge, jump,
+   guard, parry, lock-on, item use, and interaction
+4. the core hook: picking up, dropping, throwing, breaking, and swapping local
+   weapons during combat
+5. weapon states: fresh, normal, chipped, near-broken, broken
+6. weapon racks, dropped enemy weapons, embedded weapons, and boss-room weapon
+   supplies
+7. first vertical-slice weapons: one-handed sword, spear, great hammer, bow,
+   torch, and large shield hooks
+8. first area: `狼森`, with moonlit forest, hunter shack, fallen trees, stream,
+   weapon racks, torch stands, shortcut, and boss den
+9. first enemies: small wolf, horned beast, goblin, shield goblin
+10. first boss: `大狼ガルム`, with spear-into-leg stop, head stagger, tail
+    break, phase change, and defeat sequence
+11. screenshots and 30-second capture that sell "one person hunting monsters at
+    night while surviving by changing weapons on the ground"
 
 The active product definition is
-[`docs/product/game-definition-color-eater-crown.md`](docs/product/game-definition-color-eater-crown.md).
+[`docs/product/game-definition-nightwatch-fortress.md`](docs/product/game-definition-nightwatch-fortress.md).
 
 ## Ground Rules
 

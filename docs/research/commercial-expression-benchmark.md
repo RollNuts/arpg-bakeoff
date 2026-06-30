@@ -1,73 +1,49 @@
-# Commercial Expression Benchmark
+# Commercial Expression Benchmark: 夜番の砦
 
-Status: market-facing expression research for `色喰いの王冠`.
-Date: 2026-06-30.
+Status: market-facing expression research for `夜番の砦`.
 
-Use references as market evidence only. Do not copy their characters, costumes,
-UI, worlds, palettes, trailers, logos, music, weapons, maps, or named systems.
+## Store Promise
 
-## Core Finding
+Lead with direct language:
 
-Commercial action RPGs do not sell a weapon first. They sell a role, a world,
-and a rule that makes the screen instantly recognizable.
+- Hunt monsters at night.
+- Pick up whatever weapon you can find.
+- Throw broken weapons into beasts.
+- Pull spears from giant bosses.
+- Survive until morning.
 
-For this project, the store-facing promise is:
+Avoid explaining dense lore first. The weapon action sells the game.
 
-- become the last `彩葬師`
-- enter a poisonous courtly dark fantasy kingdom
-- tear color from enemies
-- store three colors in a glass arm organ
-- reshape the sword and magic through color
-- use color to open paths and expose boss weak points
-- hunt the cursed crown that devoured the kingdom
+## Best First Screenshots
 
-Weapon art matters only when it clarifies the color system.
+1. Nightwatch at fort weapon rack before leaving.
+2. Wolf Forest fight with visible ground weapons.
+3. Spear embedded in a charging beast.
+4. Garm boss with tail/head/leg part targets.
+5. Morning return after boss defeat.
 
-## Trailer And Screenshot Patterns
+## Trailer Rhythm
 
-- First 3-5 seconds show the rule: color being stolen, not lore text.
-- Strong trailers alternate world, combat, color drain, color exploration gate,
-  boss reveal, and title.
-- HUD should show color slots when the system is being sold.
-- The hero needs a dark silhouette with a vivid active-color accent.
-- Hit impact should include color-layer fracture, enemy color splash, and a
-  readable drain state.
-- A boss screenshot should show a courtly monster, not only a large creature.
-- A screenshot should expose the world rule: colored core, sealed color gate,
-  drained enemy, or color-filled arm.
+Alternate:
 
-## Audio Patterns
+- preparation at fort
+- traversal through night
+- weapon pickup
+- weapon throw
+- enemy reaction
+- boss part interaction
+- victory/morning
 
-The sound identity should be describable in one line:
+Do not spend the first 30 seconds on menu, lore, or empty walking.
 
-> distorted court waltz, glass organ color fill, wet black marble, color-layer
-> cracking, and poisonous vivid magic.
+## UI Expression
 
-Avoid generic cinematic fantasy. Sword, color layer, drain, skill, UI, and boss
-phase sounds need separate layers.
+The UI should be practical and rugged:
 
-## Implications For This Project
+- iron frame
+- leather strap
+- small weapon silhouettes
+- durability chips/cracks
+- torch/lantern accent light
 
-The previous generated concepts often skewed toward rugged combat. That can
-support enemy, boss, or impact references, but it is not enough to define this
-game.
-
-The current product needs:
-
-- Lucien readable at gameplay scale
-- a visible color organ and color slots
-- enemies with readable color cores
-- color-drain animation as the signature moment
-- red theatre art that is luxurious, wet, black, gold, and red
-- UI/audio/VFX that make color state obvious
-- screenshots where the game cannot be mistaken for generic dark fantasy
-
-## Sources
-
-- Lies of P Steam: https://store.steampowered.com/app/1627720/Lies_of_P/
-- Bloodborne official site: https://www.playstation.com/en-us/games/bloodborne/
-- No Rest for the Wicked Steam: https://store.steampowered.com/app/1371980/No_Rest_for_the_Wicked/
-- Kena: Bridge of Spirits Steam: https://store.steampowered.com/app/1954200/Kena_Bridge_of_Spirits/
-- Hades II Steam: https://store.steampowered.com/app/1145350/Hades_II/
-- Blasphemous 2 Steam: https://store.steampowered.com/app/2114740/Blasphemous_2/
-- Devil May Cry 5 Steam: https://store.steampowered.com/app/601150/Devil_May_Cry_5/
+Avoid ornate magic UI unless it supports the nightwatch/weapon fantasy.

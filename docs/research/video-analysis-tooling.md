@@ -1,179 +1,46 @@
-# Video Analysis Tooling
+# Video Analysis Tooling: 夜番の砦
 
-Status: local free-tool setup note.
+Status: capture-analysis checklist for weapon-swap gameplay.
 
-## Installed Tool
+## Measurements
 
-Installed with Homebrew:
+For every candidate gameplay clip, record:
 
-```bash
-brew install ffmpeg
-```
+- first readable weapon rack frame
+- first pickup/swap frame
+- first durability-state frame
+- first weapon throw frame
+- first embed frame
+- first pull/recover frame
+- first boss part reaction frame
+- first frame where the hook is understandable without narration
 
-Verified tools:
+## Reject Clip If
 
-- `ffmpeg 8.1.2`
-- `ffprobe 8.1.2`
+- the weapon on the ground is not visible
+- pickup prompt is unreadable
+- weapon swap takes too long
+- thrown weapon does not read as physical
+- embed/pull does not have a clear reaction
+- boss part break is hidden by camera or particles
+- lighting hides weapons or enemies
 
-`ffmpeg` is the baseline free tool for trailer/gameplay evidence work:
+## Useful Free Tooling
 
-- read video metadata
-- extract exact frames
-- generate contact sheets
-- extract audio
-- measure volume
-- generate spectrogram/waveform evidence
-- transcode Unity/Unreal captures to reviewable MP4
+- OBS for capture
+- ffmpeg for frame extraction
+- ImageMagick or Python/Pillow for contact sheets
+- Unity `ScreenCapture` for deterministic screenshots
 
-Do not commit downloaded commercial reference videos to the repository. Store
-temporary analysis inputs under `/tmp` or another ignored local evidence
-folder, and cite the source URL in research docs.
+## Contact Sheet Requirement
 
-## Smoke Test Performed
+Every visual PR should include a contact sheet with at least:
 
-Created a one-second synthetic video and audio test:
-
-```bash
-ffmpeg -y \
-  -f lavfi -i testsrc2=duration=1:size=960x540:rate=24 \
-  -f lavfi -i sine=frequency=440:duration=1 \
-  -pix_fmt yuv420p \
-  -shortest \
-  /tmp/arpg-ffmpeg-smoke.mp4
-```
-
-Read metadata:
-
-```bash
-ffprobe -v error \
-  -show_entries format=duration:stream=index,codec_type,width,height,r_frame_rate,sample_rate \
-  -of default=noprint_wrappers=1 \
-  /tmp/arpg-ffmpeg-smoke.mp4
-```
-
-Extracted one frame:
-
-```bash
-ffmpeg -y \
-  -ss 0.5 \
-  -i /tmp/arpg-ffmpeg-smoke.mp4 \
-  -frames:v 1 \
-  -update 1 \
-  /tmp/arpg-ffmpeg-smoke-frame.png
-```
-
-Measured volume:
-
-```bash
-ffmpeg \
-  -i /tmp/arpg-ffmpeg-smoke.mp4 \
-  -af volumedetect \
-  -f null -
-```
-
-Observed output included:
-
-- video stream: 960x540, 24 fps
-- audio stream: 44.1 kHz
-- duration: 1.000000 seconds
-- mean volume: about `-21.2 dB`
-- max volume: about `-17.7 dB`
-
-## Reference Trailer Analysis Commands
-
-For local, permitted trailer/gameplay files:
-
-Metadata:
-
-```bash
-ffprobe -v error \
-  -show_entries format=duration,bit_rate:stream=index,codec_type,width,height,r_frame_rate,sample_rate \
-  -of json \
-  /path/to/reference.mp4
-```
-
-One frame every two seconds:
-
-```bash
-mkdir -p /tmp/arpg-reference-frames
-ffmpeg -y \
-  -i /path/to/reference.mp4 \
-  -vf fps=1/2,scale=1280:-2 \
-  /tmp/arpg-reference-frames/frame_%03d.png
-```
-
-Contact sheet from extracted frames:
-
-```bash
-ffmpeg -y \
-  -pattern_type glob \
-  -i "/tmp/arpg-reference-frames/*.png" \
-  -vf "scale=320:-2,tile=4x3" \
-  /tmp/arpg-reference-contact-sheet.png
-```
-
-Audio waveform image:
-
-```bash
-ffmpeg -y \
-  -i /path/to/reference.mp4 \
-  -filter_complex "aformat=channel_layouts=mono,showwavespic=s=1600x300:colors=cyan" \
-  -frames:v 1 \
-  /tmp/arpg-reference-waveform.png
-```
-
-Audio spectrogram image:
-
-```bash
-ffmpeg -y \
-  -i /path/to/reference.mp4 \
-  -lavfi showspectrumpic=s=1600x900:legend=disabled \
-  /tmp/arpg-reference-spectrogram.png
-```
-
-Volume:
-
-```bash
-ffmpeg \
-  -i /path/to/reference.mp4 \
-  -af volumedetect \
-  -f null -
-```
-
-## What To Measure For This Game
-
-For each reference trailer/gameplay clip:
-
-- first readable player frame time
-- first enemy-threat frame time
-- first hit/impact frame time
-- first color-system frame time
-- first color-drain frame time
-- first exploration-gate frame time
-- first boss/elite frame time
-- camera distance and character screen-height percentage
-- third-person player/color-core readability
-- player/enemy/color-VFX scale contrast
-- screen center occupancy by character/enemy/VFX vs empty floor
-- audio presence in first 3 seconds
-- mean/max loudness from `volumedetect`
-- waveform density during attacks vs downtime
-
-For our own capture:
-
-- reject silent clips for store-facing evidence
-- reject clips where Lucien, color state, enemy color core, or color slots are
-  not readable in extracted frames
-- reject clips where the first 5 seconds show only floor/idle motion
-- reject clips where the camera hides enemy telegraphs or the color drain
-- reject clips whose best frame cannot support a Steam screenshot
-- always produce a contact sheet and a waveform alongside any video PR
-
-## Tooling Gaps
-
-`ffmpeg` is enough for immediate free analysis. Optional later tools:
-
-- `yt-dlp`: free downloader/metadata extractor for public video URLs, but use
-  only where source terms and rights permit local analysis.
-- Python OpenCV: useful for automated frame statistics, but not required before
-  we have local video captures and reference files.
+1. player idle/readability
+2. weapon rack
+3. pickup prompt
+4. weapon throw
+5. embed/recover
+6. enemy posture/part reaction
+7. boss or large target
+8. improved frame after removing the most mock-looking area

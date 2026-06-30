@@ -1,50 +1,52 @@
-# Engine Direction
+# Engine Bakeoff
 
-Status: Unity-first planning note.
+Status: Unity-first production note for `夜番の砦`.
 
-## Decision
+## Current Decision
 
-This repository is treated as a Unity project by AGENTS.md. Until
-`ProjectSettings/ProjectVersion.txt` exists, Unity version is assumed to be
-`2021.3 LTS`.
+Use Unity for the first vertical slice unless a specific blocker appears.
 
-The first `色喰いの王冠` vertical slice should therefore be planned as a Unity
-project unless a later approved exception memo replaces the engine.
+Reason:
 
-## Current Engine Facts
+- third-person character control can be built quickly
+- physics overlaps and rigid-body style weapon interaction are straightforward
+- editor tooling can generate weapon-rack and Wolf Forest test scenes
+- local weapon pickup/drop/throw/embed can be iterated without a full content
+  pipeline first
 
-- `ProjectSettings/ProjectVersion.txt` is missing.
-- `Packages/manifest.json` is missing.
-- No `Assets/**/*.asmdef` files exist.
-- `Assets/Resources` exists, but no production assets are present in this
-  planning branch.
+## Required First Proof
 
-## Non-Reuse Rule
+Do not count the engine setup as meaningful until a playable scene proves:
 
-- Do not copy the existing old Unity mock scene, prefabs, scripts, or asset
-  placement into the new vertical slice.
-- Do not reuse the existing first-person Unreal hotel project as the ARPG base.
-- Prior work may be used only as research history or failure evidence.
+- player movement
+- weapon pickup
+- weapon swap
+- weapon throw
+- weapon durability state
+- thrown weapon embedding in a large target
+- weapon pull/recover
+- enemy posture or part reaction
+- HUD for HP, stamina, weapon slots, durability, pickup prompt
 
-## Unity Acceptance Evidence
+## Visual Gate
 
-The first Unity production PR stack must produce:
+The first scene must be dressed enough to read as `狼森`:
 
-- project version and package manifest
-- gameplay-distance screenshot showing Lucien, red theatre, enemy, and color
-  state
-- close action/readability screenshot for color drain
-- 10-second playable movement/combat/color-drain capture
-- asset ledger for visible assets
-- note identifying at least one mock-looking area that was improved before
-  completion
+- moonlight
+- torch light
+- trees
+- hunter debris
+- weapon rack
+- ground weapons
+- no default floor/sky/graybox acceptance
+
+## Unity Version Rule
+
+`ProjectSettings/ProjectVersion.txt` is the source of truth once created. Until
+then, AGENTS.md requires assuming `2021.3 LTS` and marking that as an assumption.
 
 ## Package Rule
 
-No package may be added without an approval memo covering:
-
-- official documentation
-- license
-- alternative options
-- removal method
-- why the package is required for the vertical slice
+`Packages/manifest.json` is the package source of truth. No package beyond the
+manifest may be added without an approval memo covering official docs, license,
+alternatives, and removal method.

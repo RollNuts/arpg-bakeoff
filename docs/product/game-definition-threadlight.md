@@ -4,8 +4,8 @@ Status: superseded historical direction.
 Date: 2026-06-30.
 
 This document is retained as visual and research history only. Do not use it as
-the current product source of truth. The active product is `色喰いの王冠`,
-defined in `docs/product/game-definition-color-eater-crown.md`.
+the current product source of truth. The active product is `夜番の砦`,
+defined in `docs/product/game-definition-nightwatch-fortress.md`.
 
 ## One-Line Pitch
 

@@ -45,13 +45,15 @@ Explicitly rejected from H09:
 
 Before Meshy preview:
 
-1. Accept `docs/product/game-definition-color-eater-crown.md`.
-2. Create Lucien, red/blue/purple color states, masked actor, red dancer, stage
-   executioner, and Red Duchess concept sheets.
+1. Accept `docs/product/game-definition-nightwatch-fortress.md`.
+2. Create nightwatch player, held-weapon silhouette, sword, spear, hammer, bow,
+   shield, torch, small wolf, horned beast, goblin, shield goblin, and Garm
+   concept sheets.
 3. Run 64-128 px thumbnail and third-person gameplay crop tests.
 4. Choose no more than two assets that prove the first Steam screenshot.
-5. Prefer Lucien's left-arm `彩槽` and a color-drain enemy core before broad
-   area decoration if they prove the color system faster.
+5. Prefer weapon rack, visible durability states, and Garm embed/part-break
+   targets before broad area decoration if they prove the local-weapon hook
+   faster.
 6. Run only Meshy preview/draft first.
 7. Do not refine, HD texture, rig, or animate until the preview survives the
    game-camera and IP-safety test.
