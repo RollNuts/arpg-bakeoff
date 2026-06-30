@@ -24,27 +24,30 @@ characters, UI, logos, costumes, palettes, silhouettes, lore, or named systems.
 
 Small commercial target:
 
-- 3D top-down dark fantasy survivor ARPG
+- top-down action roguelite / compact ARPG
 - manual movement, dodge, and melee timing
-- semi-automatic magic, cursed relics, traps, or summons layered on top
-- 15-25 minute runs
+- one exploration tool that changes navigation and combat
+- short expeditions with retreat/deeper pressure
+- a visible hub that grows after successful runs
 - one clear boss or elite moment in the first short capture
 - low-to-mid price premium indie positioning
 
-The store hook should be:
+Current product definition:
 
-> dodge through a cursed cathedral, stack forbidden relics, and turn one
-> readable melee hero into a screen-clearing build within minutes.
+> Enter frayed provinces as a lantern-thread surveyor, read the traces of a
+> broken land, bind its monsters and routes with threadlight, and bring lost
+> memories back to a growing pilgrimage caravan.
+
+See `docs/product/game-definition-threadlight.md`.
 
 ## First Store-Facing Promise
 
 The first screenshot/video must show:
 
-- one readable hero
+- one readable surveyor
+- a thread route, lantern mark, or repaired path
 - diagonal motion
-- enemy density rising from edges
-- one strong skill shape
-- one medium enemy or boss threat
-- one reward/build choice
+- one enemy interacting with light/thread
+- one medium enemy or boss threat tied to the world rule
+- one visible hub or rescued-memory payoff
 - dark setting with readable foreground action
-

@@ -1,11 +1,29 @@
 # Character Pattern Cards
 
-Status: divergent character concept set. Use this before spending Meshy/API
-credits or polishing the current procedural hero.
+Status: paused as final protagonist direction. Use these concepts as part
+library and risk evidence before spending Meshy/API credits.
 
 ## Why This Exists
 
 The current Phase 1 character is not worth polishing as the final direction.
+However, the first generated concept round skewed too rugged: armored bodies,
+large weapons, and grim combat silhouettes are not enough to sell the game.
+
+The current product direction is `Threadlight Pilgrimage`; see
+`docs/product/game-definition-threadlight.md`. Character work should now start
+from role, world rule, hub, and emotional promise. Weapons are only supporting
+props.
+
+Preserve useful parts:
+
+- H09: hooded field-worker mass and relic weight.
+- F01: pale veil/crest and polearm readability.
+- F03: bell-root ecology and occult support shape.
+- H08: lantern/thread action language.
+- H02/H07: enemy, guard, elite, or boss mass.
+
+Do not adopt any generated sheet wholesale as the first hero.
+
 Before generating or modeling, compare several readable silhouettes at gameplay
 camera distance. Reject weak patterns early.
 
@@ -13,7 +31,7 @@ Judgement order:
 
 1. black silhouette at tiny size
 2. grayscale value separation
-3. weapon/readability from top-down
+3. job tool, facing, and action readability from top-down
 4. attack pose and telegraph
 5. material identity
 6. only then texture detail
@@ -53,14 +71,15 @@ Judgement order:
 | Miniboss | Furnace-Back Execution Bug | Large oval body, glowing back furnace, axe legs | Furnace brightens in three stages, axe legs lift | Black body, orange furnace danger meter | Furnace hum, steam vent | Just a bigger fodder, hidden weak point |
 | Boss | Abyssal Crown Tree | Central crown trunk, radial root arms | Each root pulses white, then tears floor | Low-value trunk, white crown, red-black attack roots | Heartbeat plus heavy wood split | Generic tentacle boss, full-screen unreadable telegraphs |
 
-## First Three Hero Candidates
+## Historical Hero Candidate Notes
 
-These three are best for an early Meshy/Maya preview round because their
-silhouettes should survive top-down camera distance.
+These notes were useful before the world direction was defined. They are no
+longer direct Meshy/Maya targets.
 
 ### H02 Black-Iron Pincer Knight
 
-Use if the game wants brutal melee identity.
+Use as enemy, guard, or heavy alternate silhouette if the game needs brutal
+melee identity.
 
 Pass condition:
 
@@ -70,7 +89,8 @@ Pass condition:
 
 ### H07 White-Charcoal Judgement Axe
 
-Use if the game wants heavy hit-stop and clear impact.
+Use as boss, elite, or backup combat readability reference if the game needs
+heavy hit-stop and clear impact.
 
 Pass condition:
 
@@ -80,7 +100,8 @@ Pass condition:
 
 ### H08 Navy-Lantern Threadbinder
 
-Use if the game wants a more unique hook than a knight.
+Use as threadlight tool reference. Do not keep the thin magical loops without a
+physical survey device.
 
 Pass condition:
 
@@ -90,8 +111,8 @@ Pass condition:
 
 ## First Enemy Pack
 
-Use these for the first 30-second slice because they create readable combat
-roles without needing many assets.
+Use these only as historical combat-role references. The first Threadlight
+enemy set is defined in `docs/product/game-definition-threadlight.md`.
 
 1. `Soot-Split Crawler`: fodder; teaches basic hit/death.
 2. `Spineback Rammer`: charger; creates dodge pressure.
@@ -102,10 +123,11 @@ roles without needing many assets.
 Do not add all eight enemy patterns at once. Five is already enough for the
 first enemy readability test.
 
-## Meshy Preview Prompt Patterns
+## Historical Meshy Preview Prompt Patterns
 
-These prompts are for preview only. Do not run refine, HD texture, rig, or
-animation until a preview passes the top-down thumbnail test.
+These prompts are archived. Do not run them as-is. New prompts must start from
+the Threadlight Surveyor, route tool, light-moth, or loom-gate language in
+`docs/product/game-definition-threadlight.md`.
 
 ### Hero Preview: Black-Iron Pincer Knight
 
@@ -256,7 +278,7 @@ from all angles, no tiny shield, no ornate unreadable engraving
 | H05 Execution Medic | Medium | Medium | Medium | Medium | IP/cliche risk if too plague-doctor |
 | H06 Chain Monk | High | Medium | High | High | VFX-dependent, risky first hero |
 
-Recommendation after first concept-sheet generation round:
+Historical recommendation after first concept-sheet generation round:
 
 1. H09 `Veiled Oath Relic Duelist`
 2. F01 `Ash-Veil Halberd Matron`
@@ -269,8 +291,9 @@ Keep H02, H08, and F02. Do not discard them:
 - H08 can become a trap-focused class after thread/VFX readability is proven.
 - F02 can become a rogue class or enemy assassin, but avoid the ninja/fairy read.
 
-Generate Meshy previews only after comparing these as 64-128 px grayscale
-thumbnails. Do not spend on texture/refine before that.
+Do not generate Meshy previews from these sheets directly. First create the
+Threadlight world contact sheet and gameplay mock, then choose at most two
+assets that prove the new world rule.
 
 ## Generated Concept Sheets
 
@@ -286,14 +309,14 @@ Generated with built-in `image_gen` as pre-Meshy 2D concept exploration:
 - `docs/character/concepts/concept-comparison-contact-sheet.png`
 - `docs/character/concepts/concept-silhouette-strip.png`
 
-Current verdict:
+Current reuse verdict:
 
 | Candidate | Verdict | Reason |
 | --- | --- | --- |
-| H09 Relic Duelist | Primary hero candidate | Strong hooded relic silhouette while avoiding key/star/franchise specifics. |
-| F01 Halberd Matron | Primary heroine candidate | Strong top-down halberd read and practical silhouette. |
-| H07 Judgement Axe | Strong backup | Most readable impact/weight, but less novel than H09. |
-| F03 Bell Root | Strong alternate | Could be heroine, elite enemy, or boss-adjacent caster. |
+| H09 Relic Duelist | Part library | Keep hooded field-worker mass and relic weight; do not keep weapon-first identity. |
+| F01 Halberd Matron | Part library | Keep pale veil/crest and polearm readability; convert armor into field uniform. |
+| H07 Judgement Axe | Enemy/boss backup | Most readable impact/weight, but too rugged for first hero. |
+| F03 Bell Root | Strong region motif | Use bell-root ecology for NPC, elite enemy, or boss-adjacent caster. |
 | H02 Pincer Knight | Keep for reuse | Strong silhouette, but leans heavily armored/monster; better as elite or alternate class. |
 | H08 Threadbinder | Keep for later | Novel, but thread readability and production risk are high. |
 | F02 Glass Moth | Keep with caution | Good image, but wing/ninja/fairy read risks IP/generic drift and thin silhouette issues. |
