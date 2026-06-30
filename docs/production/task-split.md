@@ -17,7 +17,7 @@ Status: first PR task map for Veripsa/Core review.
 - [ ] M1-T02: Build free/CC0 asset shortlist for hero, enemy, floor, and props.
 - [ ] M1-T03: Create visual mood board using only licensed links and notes.
 - [ ] M1-T04: Define 30-second storyboard acceptance checklist.
-- [ ] M1-T05: Create gameplay mock showing world rule, hub payoff, and one
+- [x] M1-T05: Create gameplay mock showing world rule, hub payoff, and one
   combat beat before any Meshy/Maya spend.
 
 ## Milestone 2: Engine Bakeoff
