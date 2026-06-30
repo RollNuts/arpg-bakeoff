@@ -1,10 +1,12 @@
 # Threadlight 30-Second Trailer Beatboard
 
-Status: trailer planning proof built from the world contact sheet assets.
+Status: superseded historical trailer planning proof.
 Date: 2026-06-30.
 
-This beatboard uses only the assets from the world-contact-sheet PR. No extra
-image generation was used for the beatboard.
+This beatboard is retained as historical research only. It must not drive the
+current solo fantasy ARPG trailer. The active trailer direction is defined by
+`docs/research/visual-audio-benchmark.md` and
+`docs/capture/30-second-acceptance.md`.
 
 ## Final Sheet
 

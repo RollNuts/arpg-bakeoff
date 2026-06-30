@@ -1,11 +1,11 @@
 # Game Definition: Threadlight Pilgrimage
 
-Status: proposed product direction after market-expression research.
+Status: superseded historical direction.
 Date: 2026-06-30.
 
-This document replaces weapon-first character exploration as the current
-creative gate. Character, Meshy, Maya, Unreal, and Unity work should serve this
-definition until it is intentionally changed.
+This document is retained as visual and research history only. Do not use it as
+the current product source of truth. The active product is the solo fantasy
+ARPG defined in `docs/product/game-definition-solo-fantasy-arpg.md`.
 
 ## One-Line Pitch
 

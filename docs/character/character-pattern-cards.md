@@ -1,322 +1,89 @@
 # Character Pattern Cards
 
-Status: paused as final protagonist direction. Use these concepts as part
-library and risk evidence before spending Meshy/API credits.
+Status: active character direction for the solo fantasy ARPG.
 
-## Why This Exists
+The current product direction is
+`docs/product/game-definition-solo-fantasy-arpg.md`.
 
-The current Phase 1 character is not worth polishing as the final direction.
-However, the first generated concept round skewed too rugged: armored bodies,
-large weapons, and grim combat silhouettes are not enough to sell the game.
+Previous Threadlight and rugged weapon-first concepts are retained as
+part-library evidence only. Do not adopt any old generated sheet wholesale as
+the protagonist.
 
-The current product direction is `Threadlight Pilgrimage`; see
-`docs/product/game-definition-threadlight.md`. Character work should now start
-from role, world rule, hub, and emotional promise. Weapons are only supporting
-props.
+## Judgement Order
 
-Preserve useful parts:
-
-- H09: hooded field-worker mass and relic weight.
-- F01: pale veil/crest and polearm readability.
-- F03: bell-root ecology and occult support shape.
-- H08: lantern/thread action language.
-- H02/H07: enemy, guard, elite, or boss mass.
-
-Do not adopt any generated sheet wholesale as the first hero.
-
-Before generating or modeling, compare several readable silhouettes at gameplay
-camera distance. Reject weak patterns early.
-
-Judgement order:
+Before generation, modeling, rigging, or animation spend, judge in this order:
 
 1. black silhouette at tiny size
-2. grayscale value separation
-3. job tool, facing, and action readability from top-down
-4. attack pose and telegraph
-5. material identity
-6. only then texture detail
+2. rear three-quarter gameplay readability
+3. grayscale value separation
+4. weapon direction and facing
+5. attack, dodge, guard, hit, and death pose readability
+6. material identity
+7. only then texture detail
 
-## Hero Pattern Cards
+## Protagonist Identity
 
-| ID | Concept | Silhouette Hook | Weapon | Material/Value Bands | Animation Identity | VFX Role | Reject If |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| H01 | Lantern-Coffin Pilgrim | Tall coffin box on back, one-shoulder cloak | Hooked spear with candle head | Black cloth, dark wood, dull gold, bright face area | Heavy steps, flame jumps only on attack | Amber; cleanse/heal | Angel wings, cross overload, generic paladin |
-| H02 | Black-Iron Pincer Knight | Asymmetric huge shoulder pincers | One-handed great shears plus short shield blade | Black iron, rust red, white scar lines | Side-stepping, opens wide before clamping | Red-black; bind/bleed | Literal crab/insect, robot read |
-| H03 | Ash-Glass Scout | Slim body, broken glass blade-fan on back | Reverse-grip twin daggers | Gray leather, transparent glass, silver edges | Low sliding motion, afterimage shatters after attack | Pale blue; dodge/critical | Ninja costume, cyber glow |
-| H04 | Mud-Crown Hexer | Huge clay crown, round body mass | Bone staff and hanging jar | Dry clay, bone white, black cords | Swaying chant, jar lags behind body | Green-brown; poison/summon | Real-world tribal mimicry, tiny symbols |
-| H05 | Silver-Needle Execution Medic | Long beak mask, needle bundle on back | Telescoping injection spear | Black leather, dull silver, dirty white cloth | Small footwork, body becomes a straight thrust line | Sick yellow-green; weaken/drain | Direct plague doctor copy, medical clutter |
-| H06 | Star-Eater Chain Monk | Circular back-chain halo, small head | Weighted chain ring | Black cloth, bronze, sparse white star dots | Constant visible circular orbit | Deep purple; pull/area control | Space wizard, zodiac ornament spam |
-| H07 | White-Charcoal Judgement Axe | One giant arm, axe head wider than shoulders | One-sided execution axe | Charcoal body, white ash cracks, dark red cloth | Long charge, kneels after slam | White ash; stun/shatter | Barbarian cliche, muscle-only design |
-| H08 | Navy-Lantern Threadbinder | Floating small lantern overhead, threads outward | Thread spool ring and fingertip blades | Navy cloth, black lacquer, pale lantern white | Body stays calm; threads move first | Blue-white; traps/remote cuts | Puppet-master cliche, invisible thin threads |
-| H09 | Veiled Oath Relic Duelist | Hooded mantle, heavy beads, broad reliquary greatblade | Broken cathedral-slab greatblade | Charcoal hood, slate mantle, bone-white blade edge, brass beads | Guarded forward stance, heavy sweeping cuts | Cyan seam plus iron censer sparks | Key-shaped weapon, star charm, black zipper coat, recognizable franchise read |
+One fixed unnamed swordfighter.
 
-## Heroine Pattern Cards
+| Area | Requirement |
+| --- | --- |
+| Role | Lone swordfighter entering an ancient sealed kingdom. |
+| Camera Read | Rear three-quarter third-person, not pure top-down. |
+| Core Shape | Readable head/shoulders, cloak or torso value mark, obvious weapon line. |
+| Material | Weathered metal, dark cloth/leather, pale sacred-light accent, restrained brass/stone details. |
+| Animation | Deliberate footwork, readable windup, grounded dodge, heavy contact recovery. |
+| Reject If | Generic horned dark knight, copied franchise costume, face-detail-first design, unreadable black blob, oversized clutter. |
 
-| ID | Concept | Silhouette Hook | Weapon | Material/Value Bands | Animation Identity | VFX Role | Reject If |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| F01 | Ash-Veil Halberd Matron | Tall ash veil crest, broad shoulders | Crescent halberd with thick blade | Charcoal armor, ash-white veil, oxblood sash, dull brass | Guarded spear stance, deliberate sweeping control | Pale ash plus warm steel sparks | Bikini armor, generic valkyrie, tiny spear, face-detail focus |
-| F02 | Glass-Moth Duelist | Broken glass moth-wing back shape | Paired broad crescent daggers | Dark leather, pale glass-blue blade edges, muted teal cloth | Low lateral cuts, glass afterimage shatters | Pale blue crit/dodge shards | Ninja costume, fairy wings, thin daggers, cyber glow |
-| F03 | Bell-Root Hex Huntress | Broken bell shoulder mantle, root cords | Crescent sickle-staff with bronze bells | Black-green leather, bone mask crest, tarnished bronze | Trap-setting stance, bell-root summon gestures | Green-black roots plus bronze pulse | Sexy witch, pointed hat, tiny charms, cultural stereotype symbols |
+## Weapon Family Cards
 
-## Enemy Pattern Cards
+| Weapon | Silhouette Hook | Animation Identity | VFX/SFX Role | Reject If |
+| --- | --- | --- | --- | --- |
+| One-Handed Sword | Clean side blade line and compact stance. | Baseline attack timing, reliable recovery. | Bright steel core, small dust/spark contact. | Generic toy sword, hidden in body, too thin. |
+| Greatsword | Blade mass wider/longer than torso. | Slow anticipation, committed sweep, strong recovery. | Larger hit stop, low thump, debris burst. | Anime slab copy, impossible grip, unreadable in camera. |
+| Spear | Long forward line and clear point. | Spacing, thrust, retreat step. | Linear trail and sharp impact tick. | Vanishes in perspective, looks like a staff only. |
+| Sword And Shield | Shield front plane plus short blade. | Guard, perfect guard, counter. | Heavy block ring, guard flash, short counter spark. | Shield hides facing, copied crest, invincible-looking silhouette. |
 
-| Role | Concept | Top-Down Silhouette Hook | Telegraph | Color/Value Role | Audio Cue | Reject If |
+## First Enemy Cards
+
+| Role | Concept | Silhouette Hook | Telegraph | Color/Value Role | Audio Cue | Reject If |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fodder | Soot-Split Crawler | Small black teardrop, one long claw side | Claw side glows pale and half-steps | Low value body, claw marks facing | Dry claw scrape | Generic zombie, detail noise |
-| Charger | Spineback Rammer | Thick triangle head and straight back-spine | Drops head, red line shadow appears | Dark red mid-value, high-contrast head | Low inhale into burst | Literal bull/boar, unreadable curved charge |
-| Ranged | Lamp-Eye Shellgun | Round body plus one long arm cannon | Cannon tip point-light, impact circle appears | Cold blue-white, projectile brightest | Short glass pluck | Human archer, bullet same value as body |
-| Summoner | Womb-Bell Conductor | Bell robe with small satellite shards | Shards stop spinning, summon sigil appears | Purple mid-value, pale gold sigil | Distant bell, reversed whisper | Wizard hat, unclear summon point |
-| Tank | Black-Shield Gravekeeper | Huge half-moon front shield, tiny rear legs | Shield rim lights, front cone hardens | Black shield, bright metal rim | Dull metal scrape | Omnidirectional invincible read, unclear shield facing |
-| Elite | Twin-Blade Shadow Priest | Thin cross shape, long blade sleeves left/right | Sleeves open, cross slash range appears | Black plus green poison light, bright blade tips | Cloth snap into metal hit | Ninja/reaper copy, instant attack |
-| Miniboss | Furnace-Back Execution Bug | Large oval body, glowing back furnace, axe legs | Furnace brightens in three stages, axe legs lift | Black body, orange furnace danger meter | Furnace hum, steam vent | Just a bigger fodder, hidden weak point |
-| Boss | Abyssal Crown Tree | Central crown trunk, radial root arms | Each root pulses white, then tears floor | Low-value trunk, white crown, red-black attack roots | Heartbeat plus heavy wood split | Generic tentacle boss, full-screen unreadable telegraphs |
-
-## Historical Hero Candidate Notes
-
-These notes were useful before the world direction was defined. They are no
-longer direct Meshy/Maya targets.
-
-### H02 Black-Iron Pincer Knight
-
-Use as enemy, guard, or heavy alternate silhouette if the game needs brutal
-melee identity.
-
-Pass condition:
-
-- pincer shoulder and shears read in a 96 px thumbnail
-- attack telegraph can open/close clearly
-- body does not become a crab/robot
-
-### H07 White-Charcoal Judgement Axe
-
-Use as boss, elite, or backup combat readability reference if the game needs
-heavy hit-stop and clear impact.
-
-Pass condition:
-
-- giant arm and axe head read as one bold silhouette
-- white ash cracks separate hero from floor
-- attack anticipation is readable in a still frame
-
-### H08 Navy-Lantern Threadbinder
-
-Use as threadlight tool reference. Do not keep the thin magical loops without a
-physical survey device.
-
-Pass condition:
-
-- floating lantern and thread field remain visible without becoming noise
-- thread attacks are thick enough to read
-- body stays distinguishable from trap/VFX layer
-
-## First Enemy Pack
-
-Use these only as historical combat-role references. The first Threadlight
-enemy set is defined in `docs/product/game-definition-threadlight.md`.
-
-1. `Soot-Split Crawler`: fodder; teaches basic hit/death.
-2. `Spineback Rammer`: charger; creates dodge pressure.
-3. `Black-Shield Gravekeeper`: tank; teaches facing/positioning.
-4. `Womb-Bell Conductor`: summoner; creates priority target.
-5. `Furnace-Back Execution Bug`: miniboss; creates trailer frame.
-
-Do not add all eight enemy patterns at once. Five is already enough for the
-first enemy readability test.
-
-## Historical Meshy Preview Prompt Patterns
-
-These prompts are archived. Do not run them as-is. New prompts must start from
-the Threadlight Surveyor, route tool, light-moth, or loom-gate language in
-`docs/product/game-definition-threadlight.md`.
-
-### Hero Preview: Black-Iron Pincer Knight
-
-```text
-dark fantasy top-down ARPG hero character, full body, centered, neutral A-pose,
-asymmetric black iron pincer knight, one huge shoulder pincer silhouette,
-one-handed great shears weapon, short shield blade, oversized gauntlets and
-boots, rust red cloth accents, pale scar edge lines, stylized realistic game
-character, clean separate armor shapes, strong readable silhouette for
-isometric camera, Maya-ready 3D asset
-```
-
-Reject:
-
-```text
-no literal crab body, no robot armor, no tiny scissors, no hidden weapon, no
-long cape hiding legs, no excessive spikes, no merged hands, no extra arms, no
-realistic face focus, no gore
-```
-
-Maya cleanup expected:
-
-- separate shears, shield blade, shoulders, body, and cloth
-- thicken the shears so they read from top-down
-- reduce tiny armor shards
-- add clear top-facing value bands
-
-### Hero Preview: White-Charcoal Judgement Axe
-
-```text
-dark fantasy top-down ARPG hero character, full body, centered, neutral A-pose,
-white-charcoal execution axe warrior, one oversized arm, huge one-sided axe
-head wider than shoulders, charcoal black body, white ash cracks, dark red
-cloth, heavy readable silhouette, stylized realistic proportions, broad upper
-body, game-ready 3D character, Maya-ready asset
-```
-
-Reject:
-
-```text
-no generic barbarian, no bodybuilder focus, no tiny axe, no symmetrical normal
-arms, no horned viking look, no long fur cape, no fused weapon hand, no gore
-```
-
-Maya cleanup expected:
-
-- separate axe mesh and hand socket
-- exaggerate axe top plane and white cracks
-- simplify muscles into readable armor/body masses
-- pose-test charge, impact, and recovery silhouette
-
-### Hero Preview: Navy-Lantern Threadbinder
-
-```text
-dark fantasy top-down ARPG hero character, full body, centered, neutral A-pose,
-navy lantern threadbinder, small pale lantern floating above head, dark navy
-cloth, black lacquer armor pieces, visible thick magical thread loops around
-hands, compact body silhouette, finger blade shapes, stylized game character,
-readable from isometric camera, Maya-ready 3D asset
-```
-
-Reject:
-
-```text
-no puppet master cliche, no tiny invisible threads, no huge robe blob, no
-multiple dolls, no anime school outfit, no cyber wires, no wings, no face detail
-focus
-```
-
-Maya cleanup expected:
-
-- make thread loops separate, thick, and optional
-- lantern must stay above head without hiding body
-- split cloth layers so legs and facing remain clear
-- keep VFX/trap geometry separate from body mesh
-
-### Enemy Preview: Soot-Split Crawler
-
-```text
-dark top-down ARPG fodder enemy, small soot-black crawling creature, teardrop
-body silhouette, one side has one long pale claw, hunched low stance, simple
-large forms, readable facing direction from top-down, dark fantasy game enemy,
-Maya-ready 3D model
-```
-
-Reject:
-
-```text
-no generic zombie, no exposed gore, no many tiny fingers, no realistic human
-face, no fully black silhouette, no thin unreadable claw
-```
-
-### Enemy Preview: Spineback Rammer
-
-```text
-dark top-down ARPG charger enemy, thick triangular head, straight spine ridge
-on back, compact heavy body, dark red hide, high contrast head plate, low
-aggressive stance, readable charging silhouette, stylized dark fantasy creature,
-Maya-ready 3D asset
-```
-
-Reject:
-
-```text
-no literal bull, no boar copy, no realistic animal, no curved unreadable horns,
-no thin legs, no cluttered spikes
-```
-
-### Enemy Preview: Black-Shield Gravekeeper
-
-```text
-dark top-down ARPG shield tank enemy, huge half-moon black shield on front,
-small legs visible behind shield, gravekeeper armor, bright worn metal rim,
-clear front-facing silhouette, dark fantasy dungeon enemy, stylized game-ready
-3D character, Maya-ready asset
-```
-
-Reject:
-
-```text
-no full round turtle shell, no hero knight read, no shield covering entire body
-from all angles, no tiny shield, no ornate unreadable engraving
-```
-
-## Preview Spend Rules
-
-- One preview per pattern per review round.
-- No refine unless the preview passes 64-128 px readability.
-- No rig/animation until Maya cleanup scope is written.
-- Store task id, prompt, negative prompt, export format, credit cost, and
-  preview verdict in the asset ledger.
-- Kill patterns quickly. Weak silhouette is not fixed by texture quality.
-
-## Selection Matrix
-
-| Candidate | Differentiation | Gameplay Readability | Meshy Risk | Maya Cleanup Risk | First Slice Fit |
-| --- | --- | --- | --- | --- | --- |
-| H02 Pincer Knight | High | High | Medium | Medium | Strong melee identity |
-| H07 Judgement Axe | Medium | Very high | Low-medium | Low-medium | Strong hit-stop demo |
-| H08 Threadbinder | High | Medium | High | High | Unique but risky |
-| H09 Relic Duelist | High | High | Medium | Medium | Strong hooded relic-weapon identity |
-| F01 Halberd Matron | Medium-high | High | Low-medium | Medium | Strong female melee/control read |
-| F02 Glass Moth | Medium-high | Medium | High | Medium | Visually strong, risks thin-wing/ninja read |
-| F03 Bell Root | High | Medium-high | Medium | Medium-high | Strong caster/enemy-boss crossover |
-| H01 Lantern Pilgrim | Medium-high | Medium | Medium | Medium | Strong world identity |
-| H03 Glass Scout | Medium | Medium-low | High | Medium | Risks thin unreadable blades |
-| H04 Mud-Crown Hexer | Medium | Medium | Medium | Medium | Better as NPC/enemy first |
-| H05 Execution Medic | Medium | Medium | Medium | Medium | IP/cliche risk if too plague-doctor |
-| H06 Chain Monk | High | Medium | High | High | VFX-dependent, risky first hero |
-
-Historical recommendation after first concept-sheet generation round:
-
-1. H09 `Veiled Oath Relic Duelist`
-2. F01 `Ash-Veil Halberd Matron`
-3. H07 `White-Charcoal Judgement Axe`
-4. F03 `Bell-Root Hex Huntress`
-
-Keep H02, H08, and F02. Do not discard them:
-
-- H02 can become a heavy enemy elite, armor skin, or alternate melee class.
-- H08 can become a trap-focused class after thread/VFX readability is proven.
-- F02 can become a rogue class or enemy assassin, but avoid the ninja/fairy read.
-
-Do not generate Meshy previews from these sheets directly. First create the
-Threadlight world contact sheet and gameplay mock, then choose at most two
-assets that prove the new world rule.
-
-## Generated Concept Sheets
-
-Generated with built-in `image_gen` as pre-Meshy 2D concept exploration:
-
-- `docs/character/concepts/h07-white-charcoal-judgement-axe-sheet.png`
-- `docs/character/concepts/h02-black-iron-pincer-knight-sheet.png`
-- `docs/character/concepts/h08-navy-lantern-threadbinder-sheet.png`
-- `docs/character/concepts/h09-veiled-oath-relic-duelist-sheet.png`
-- `docs/character/concepts/f01-ash-veil-halberd-matron-sheet.png`
-- `docs/character/concepts/f02-glass-moth-duelist-sheet.png`
-- `docs/character/concepts/f03-bell-root-hex-huntress-sheet.png`
-- `docs/character/concepts/concept-comparison-contact-sheet.png`
-- `docs/character/concepts/concept-silhouette-strip.png`
-
-Current reuse verdict:
-
-| Candidate | Verdict | Reason |
+| Small Fiend | Basic melee enemy. | Small hunched body, one bright claw or horn side. | Shoulder/claw pulls back, foot plants. | Dark body, pale attack edge. | Dry scrape into wet/cloth hit. | Generic zombie, unclear facing, instant lunge. |
+| Shield Soldier | Teaches facing and side/back attacks. | Half-moon shield front, smaller rear body. | Shield raises, weapon arm draws. | Shield rim bright, body lower value. | Metal scrape, shield thud. | Omnidirectional block, player cannot read weak side. |
+| Spear Dead Soldier | Spacing enemy. | Long spear point creates line. | Spear tip lowers then thrusts. | Pale spear tip, muted body. | Short inhale, point whistle. | Invisible tip, unfair instant poke. |
+| Archer | Forces movement. | Bow arc and side stance. | Bow draw visible, ground mark at target. | Projectile brightest. | Bow creak, string snap. | Projectile same value as floor. |
+| Spirit | Magic/altar enemy. | Floating torn-cloth mass, bright core. | Core pulses before dash/cast. | Cool light core, dark edges. | Breath/choir reverse. | Reads as fog only. |
+
+## Boss Cards
+
+| Boss | Product Role | Silhouette Hook | Telegraph Rule | Screenshot Requirement |
+| --- | --- | --- | --- | --- |
+| Sealing Guardian | First mastery check. | Tall stone/armor guardian with sealed chest light. | Weapon and chest light pulse before attack. | Small hero, large readable attack arc, altar/gate behind. |
+| Forest Guardian | Area 2 spacing boss. | Root/stone beast with clear limb masses. | Roots glow before slam or vine line. | Green ruin identity, readable floor hazard. |
+| Fortress Knight | Area 3 discipline boss. | Heavy shield/weapon knight with broad front plane. | Counter stance and shield angle are clear. | Strong metal silhouette, bridge or gate scale. |
+| Altar Magus | Area 4 position boss. | Robed caster with orbiting seal shards. | Magic circles form before damage. | Cool magic circles visible without dark mush. |
+| Seal King | Final boss. | Crowned sword/magic figure, not copied royalty trope. | Sword, magic, and phase-change tells are distinct. | Light/dark seal collapse sells finale. |
+
+## Historical Concept Reuse
+
+| Historical Asset | Keep As | Do Not Use As |
 | --- | --- | --- |
-| H09 Relic Duelist | Part library | Keep hooded field-worker mass and relic weight; do not keep weapon-first identity. |
-| F01 Halberd Matron | Part library | Keep pale veil/crest and polearm readability; convert armor into field uniform. |
-| H07 Judgement Axe | Enemy/boss backup | Most readable impact/weight, but too rugged for first hero. |
-| F03 Bell Root | Strong region motif | Use bell-root ecology for NPC, elite enemy, or boss-adjacent caster. |
-| H02 Pincer Knight | Keep for reuse | Strong silhouette, but leans heavily armored/monster; better as elite or alternate class. |
-| H08 Threadbinder | Keep for later | Novel, but thread readability and production risk are high. |
-| F02 Glass Moth | Keep with caution | Good image, but wing/ninja/fairy read risks IP/generic drift and thin silhouette issues. |
+| `h07-white-charcoal-judgement-axe-sheet.png` | Greatsword/boss impact mass reference. | Final hero direction. |
+| `h02-black-iron-pincer-knight-sheet.png` | Elite or fortress enemy mass. | Main protagonist. |
+| `h08-navy-lantern-threadbinder-sheet.png` | VFX/prop or spirit motif reference. | Current hero or Threadlight revival. |
+| `h09-veiled-oath-relic-duelist-sheet.png` | Hood/cloak/relic weight part library. | Direct copied outfit or weapon. |
+| `f01-ash-veil-halberd-matron-sheet.png` | Veil/crest value separation and polearm read. | Required heroine direction. |
+| `f02-glass-moth-duelist-sheet.png` | Dodge/rogue silhouette study. | Ninja/fairy/cyber read. |
+| `f03-bell-root-hex-huntress-sheet.png` | Bell/root enemy, prop, or area motif. | Main product identity. |
+
+## Meshy/Maya Prompt Gate
+
+New prompts must start from:
+
+- solo third-person swordfighter protagonist
+- four weapon family readability
+- small fiend / shield soldier / Sealing Guardian
+- ancient sealed kingdom material language
+- Unreal gameplay-camera evidence
+
+Do not start new prompts from Threadlight Surveyor, route tool, light-moth,
+loom-gate, cooperative reliquary, or weapon-only fantasy.

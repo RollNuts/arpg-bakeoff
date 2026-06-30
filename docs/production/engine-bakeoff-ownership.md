@@ -1,47 +1,48 @@
-# Engine Bakeoff Ownership
+# Unreal Production Ownership
 
-Status: proposed ownership plan.
+Status: proposed PR ownership plan.
 
 ## Scope
 
-- Unity fresh slice と Unreal 5.8 fresh slice を、**別PR・別担当**で実装する。
-- いずれも既存資産を持ち越さない。既存 Unity モック、既存 Unreal ホテルプロジェクトは新規 ARPG スタートラインに再利用しない。
+The project is Unreal-first. Split work by production proof, not by parallel
+Unity/Unreal comparison.
 
-## Non-reuse Rule
+## PR Ownership
 
-- `Unity mock` のシーン、プレハブ、スクリプト、素材配置は読み取り専用参照に留め、`Bakeoff` の実装に取り込まない。
-- 既存の `Unreal` ホテルプロジェクト（1人称・別ジャンル）は、ARPG の制作基盤に転用しない。  
-  既存構成の再利用で済ませることは不可。
-- 両エンジンとも同一デザイン要件と同一素材候補（free/owned）を使って比較可能性を担保する。
+- PR-Product: product bible, scope, done criteria, and anti-copy rules.
+- PR-Asset-Gate: asset ledger format, legal source shortlist, Maya/Meshy gate.
+- PR-Unreal-Setup: fresh Unreal project, input, camera scaffold, capture path.
+- PR-Environment: dressed Sealing Temple test space, lighting, fog, materials,
+  and screenshot proof.
+- PR-Hero: swordfighter controller, animation states, camera/lock-on, VFX/SFX
+  hooks.
+- PR-Enemy: first two enemies with telegraphs, hit reactions, and death.
+- PR-Boss: Sealing Guardian boss, entrance, HP UI, phase change, retry, defeat.
+- PR-Capture: 10-second and 30-second capture evidence plus screenshot set.
 
-## Evidence Requirements Per Engine
+## Evidence Requirements Per Gameplay PR
 
-各エンジンの PR は、最低限以下を提出することを義務化する。
+Every gameplay PR must include:
 
-- gameplay screenshot（全体プレイ感）
-- close attack screenshot（近接攻撃の可読性）
-- 10-second capture（10秒の挙動録画）
-- asset ledger（素材元、ライセンス、取得先、改変有無）
+- gameplay screenshot
+- close readability screenshot where relevant
+- short capture or playtest note
+- asset ledger changes for visible assets
+- known placeholder/mock-looking areas and what was improved
 
-## Engine Decision Gate
+## Merge Order Request
 
-- `Unity fresh slice` と `Unreal 5.8 fresh slice` の両方が、上記証拠を満たしていることを前提とする。
-- 次の条件を `all green` したものを「採用候補」とする。
-  - コマーシャル基準のビジュアル到達度（画面品質・雰囲気・可読性）
-  - 10秒内のプレイ体験の一貫性
-  - チーム工数に対する再現容易性
-- 2候補の比較は、Evidenceベースで評価し、最終判断は Veripsa のレビューを要する。
+The preferred order is:
 
-## PR/Task Ownership
+1. Product
+2. Asset-Gate
+3. Unreal-Setup
+4. Environment
+5. Hero
+6. Enemy
+7. Boss
+8. Capture
 
-- PR-Unity: Unity fresh slice のみを担当。  
-  対象: gameplay + close attack + 10s capture + asset ledger（Unity向け）。
-- PR-Unreal: Unreal 5.8 fresh slice のみを担当。  
-  対象: gameplay + close attack + 10s capture + asset ledger（Unreal向け）。
-
-## PR Order Request to Veripsa
-
-- PRの提出順序は、Veripsa に判断依頼する。  
-  特に `Engine decision gate` の評価前提として、以下を確認するための merge 順序レビューを依頼する。
-
-- `plan/market-research-and-task-split` の運用方針を踏襲し、上記2 PRの先行順を最終決定してもらう。
+If multiple PRs are open, merge order should preserve this dependency chain:
+product direction before asset decisions, asset legality before screenshot use,
+environment before combat capture, hero before enemy/boss tuning.

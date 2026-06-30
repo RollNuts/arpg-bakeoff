@@ -1,72 +1,72 @@
-# 30秒キャプチャ受け入れ条件
+# 30-Second Capture Acceptance
 
-このドキュメントは `plan/market-research-and-task-split` 配下で実施する
-30秒キャプチャレビューの受け入れ条件を定義する。
+This document defines the acceptance gate for the first Steam-facing gameplay
+capture.
 
-## 対象
+## Pre-Capture Gate
 
-- 30秒の連続キャプチャ（編集なしのゲームプレイ映像）を1本作成すること
-- 30fps以上、1920x1080以上で撮影すること
-- 出力はゲーム実行中の最終版データを使用し、編集ソフトでのカット編集を行わないこと
+- Unreal playable build or PIE session unless a Unity exception memo has been
+  accepted.
+- Solo playable combat, not cinematic-only playback.
+- No debug cheats required to reproduce the shown sequence.
+- No graybox, default floor, default sky, mannequin-only character, or debug UI.
+- All visible assets are approved in the asset ledger.
+- Capture is continuous gameplay footage. No cut editing inside the 30 seconds.
+- Minimum 30 fps, 1920x1080.
 
-## タイムライン要件
+## Timeline Requirements
 
-- 0-2s（Hero Read）
-  - Hero が画面に明瞭に認識できること（体型、装備、カラー、方向）
-  - 敵/障害物と混ざらないコントラストが成立していること
-  - UI がある場合、体力やクールダウンが読み取れること
-- 2-6s（Movement and First Hit）
-  - Hero が意思決定に沿って移動を開始し、最初の敵接近/接敵が見えること
-  - 1回以上攻撃入力が成立し、命中判定または明確なヒット演出があること
-  - 接近、回避、攻撃のうち最低2種類の行動が可視化されること
-- 6-10s（Signature VFX Shape）
-  - Hero もしくは敵の主要ビジュアル・ダメージ表現が成立していること
-  - 目線を誘導する“シグネチャな視覚効果”が判読できること
-  - 1回以上のエフェクトが画面中央付近に収まり、見えやすく再生されること
-- 10-15s（Enemy Density Ramp）
-  - 画面内の敵数が明確に増加していること（初期の1体〜複数体以上）
-  - 反応が追える程度の密度で、行動間の衝突や詰みが生じるほど密すぎないこと
-  - 攻撃と被弾のテンポが上昇していること
-- 15-20s（Medium Enemy or Mini-Boss）
-  - ミドルボス級または中位敵を1体以上提示し、通常敵とは行動/見た目で差別化されていること
-  - ヒット・回避・ノックバックなどの戦闘コアが同一映像内で観測できること
-- 20-24s（Reward/Build Choice）
-  - 敵撃破報酬（ドロップ/選択UI/イベントなど）を提示すること
-  - 報酬の差分が1フレームで判断しないように、選択意思が起きる時間を持つこと
-  - 画面上で「何を選ぶか」の認識が可能な情報を提示すること
-- 24-28s（Selected Upgrade Changes Combat）
-  - 20-24s の報酬/選択が戦闘挙動へ反映されること（明確な火力・範囲・防御・移動改善）
-  - 反映前後で、攻撃成功率、範囲、回避余地などの1項目以上で違いが観測されること
-- 28-30s（Highest-Density Frame + Title/CTA）
-  - 最後の2秒で最も密度の高い戦闘瞬間を提示すること
-  - タイトル/CTA（例: 「Build or die in 30s」）が画面に映ること
-  - CTA は読み取り可能なサイズ・コントラストで表示すること
+- `0-3s` Hero And World Read
+  - The hero is clearly visible: body, weapon, facing, and value contrast.
+  - The Sealing Temple or ancient kingdom identity is readable.
+  - The frame already looks like a game product, not a test map.
+- `3-6s` Movement And Camera
+  - The hero runs or strafes with camera support.
+  - Lock-on or assisted framing does not hide the enemy.
+- `6-10s` First Telegraph And Response
+  - One enemy windup is readable.
+  - The player dodges, guards, or attacks in response.
+  - At least one hit or clear near-miss is visible.
+- `10-15s` Impact Feel
+  - Hit stop, flinch, knockback, impact VFX, and SFX intent are visible/audible.
+  - HP/stamina/heal UI reads without looking like debug text.
+- `15-20s` Second Decision
+  - A second enemy behavior, shield read, altar, shortcut, or sealed gate changes
+    the moment.
+  - This must prove ARPG space, not only a combat animation test.
+- `20-26s` Guardian Or Boss Promise
+  - A guardian, boss gate, or boss entrance appears.
+  - Scale, name/HP UI, or windup makes the larger threat clear.
+- `26-30s` Peak Frame And CTA
+  - End on the strongest readable combat frame.
+  - Title or CTA is readable if shown.
 
 ## Audio Minimums
 
-以下がすべて再生されること:
+All must be present:
 
-- 攻撃SFX
-- 被弾/ヒットSFX（hero または enemy）
-- 回避または回避反応のSFX
-- 敵撃破SFX
-- 報酬/選択時のSFX
-- 環境音や薄いBGM（ノイズでないこと）
-- 同時に再生される効果音数が過剰で潰れない混ざり具合（クラッタなし）
+- attack SFX
+- hit or guard SFX
+- dodge or movement SFX
+- enemy hit/death or boss threat SFX
+- UI/altar/reward SFX if shown
+- ambience or BGM that is not a debug placeholder
+- mix clarity: hit sounds are not buried by music
 
-## 追加チェック項目
+## Additional Checks
 
-- UI/音量レベルは全体的に読める値にあること
-- 画面端だけでイベントが発生せず、主体は基本的に中央領域に収まること
-- フレームレート低下や過剰なポップインにより主要イベントが見えなくならないこと
-- チェックリストの項目は録画後の手元メモとして残すこと
+- Events occur in the central readable area, not only at screen edges.
+- No major pop-in or frame drop hides the main action.
+- UI and VFX do not overlap the combat read.
+- Screenshot candidates can be extracted from the capture.
+- A short note records one visually weak/mock-looking area that was improved.
 
-## Rejection Conditions（開発テスト臭）
+## Rejection Conditions
 
-- 直近3秒以内の内容が再現できないループ編集（カット差し替え）を行っている
-- Hero の行動量が不足し、見ている側がほぼ1つの行動しか識別できない
-- 戦闘密度の変化がなく、全区間が同程度・同パターンのみで進行している
-- 重要イベント（first hit / boss-like enemy / reward / upgrade effect / final dense frame）が未提示
-- 音が再生されていない、または1トラックのみのデバッグ音（SE無しBGMのみ等）
-- 目視できるヒット確認なしでHPバーやダメージ計算のみで評価を仮定している
-
+- Placeholder visuals or unresolved asset legality appear on screen.
+- Multiplayer/co-op dependency is required to explain the footage.
+- Footage proves only animation playback, not playable combat.
+- Hero action is too limited to sell the game.
+- Enemy windup, hit, or boss promise is missing.
+- Audio is absent or uses a single debug track only.
+- The capture could not support a Steam store page.
