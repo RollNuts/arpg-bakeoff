@@ -55,9 +55,21 @@ The active product definition is
   floors, default skies, mannequin-only characters, debug UI, or unapproved
   asset-store pileups.
 
-## Unity Assumption
+## Unity Project
 
-`ProjectSettings/ProjectVersion.txt` is not present in this planning branch, so
-Unity version is assumed to be `2021.3 LTS` until a real Unity project is added.
-`Packages/manifest.json` is also not present, so no new package dependency is
-approved by this branch.
+`ProjectSettings/ProjectVersion.txt` is present and pins the project to Unity
+`6000.3.18f1`.
+
+`Packages/manifest.json` currently contains built-in Unity modules only. The
+approval memo is
+[`docs/production/package-approval-unity-foundation.md`](docs/production/package-approval-unity-foundation.md).
+
+The current playable foundation is generated inside Unity from:
+
+`Nightwatch Fortress > Build Wolf Forest Foundation Scene`
+
+This creates `Assets/Scenes/WolfForestFoundation.unity`, a code-generated
+moonlit `狼森` slice with player movement, local weapons, pickup/drop/throw,
+basic enemy health/posture, weapon drops, an embedded-weapon boss target, HUD,
+camera, lighting, torches, weapon rack, stream, hunter shack, and forest set
+dressing.

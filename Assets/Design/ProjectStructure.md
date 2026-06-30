@@ -1,9 +1,15 @@
 # ProjectStructure: 夜番の砦
 
-Status: intended Unity project layout.
+Status: active Unity project layout.
 
-Unity version is assumed to be `2021.3 LTS` until
-`ProjectSettings/ProjectVersion.txt` is added.
+Unity version is pinned by `ProjectSettings/ProjectVersion.txt`:
+`6000.3.18f1`.
+
+The first generated scene entry point is:
+
+`Nightwatch Fortress > Build Wolf Forest Foundation Scene`
+
+It writes `Assets/Scenes/WolfForestFoundation.unity`.
 
 ## Target Folder Layout
 
