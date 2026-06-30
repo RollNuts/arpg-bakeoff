@@ -12,12 +12,14 @@ Unity/Unreal comparison.
 - PR-Product: product bible, scope, done criteria, and anti-copy rules.
 - PR-Asset-Gate: asset ledger format, legal source shortlist, Maya/Meshy gate.
 - PR-Unreal-Setup: fresh Unreal project, input, camera scaffold, capture path.
-- PR-Environment: dressed Sealing Temple test space, lighting, fog, materials,
-  and screenshot proof.
-- PR-Hero: swordfighter controller, animation states, camera/lock-on, VFX/SFX
-  hooks.
-- PR-Enemy: first two enemies with telegraphs, hit reactions, and death.
-- PR-Boss: Sealing Guardian boss, entrance, HP UI, phase change, retry, defeat.
+- PR-Environment: dressed Sealing Temple entrance, reliquary, sacred fire,
+  weapon stand, lighting, fog, materials, and screenshot proof.
+- PR-Players: two local players, solo test controls, movement, dodge/step,
+  pickup/drop, and same-screen camera.
+- PR-Tools: sword, shield, axe, torch, and ritual implement basics.
+- PR-Reliquary: durability, runaway, movement/activation, warning UI/VFX.
+- PR-Enemies: imp, spirit, and blind guardian pressure.
+- PR-Ritual: altar phases, protect-the-chanter moment, success/failure.
 - PR-Capture: 10-second and 30-second capture evidence plus screenshot set.
 
 ## Evidence Requirements Per Gameplay PR
@@ -38,11 +40,14 @@ The preferred order is:
 2. Asset-Gate
 3. Unreal-Setup
 4. Environment
-5. Hero
-6. Enemy
-7. Boss
-8. Capture
+5. Players
+6. Tools
+7. Reliquary
+8. Enemies
+9. Ritual
+10. Capture
 
 If multiple PRs are open, merge order should preserve this dependency chain:
 product direction before asset decisions, asset legality before screenshot use,
-environment before combat capture, hero before enemy/boss tuning.
+environment before capture, players before tools, reliquary before enemy/ritual
+tuning.

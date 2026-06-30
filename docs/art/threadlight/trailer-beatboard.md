@@ -4,8 +4,8 @@ Status: superseded historical trailer planning proof.
 Date: 2026-06-30.
 
 This beatboard is retained as historical research only. It must not drive the
-current solo fantasy ARPG trailer. The active trailer direction is defined by
-`docs/research/visual-audio-benchmark.md` and
+current cooperative fantasy action trailer. The active trailer direction is
+defined by `docs/research/visual-audio-benchmark.md` and
 `docs/capture/30-second-acceptance.md`.
 
 ## Final Sheet

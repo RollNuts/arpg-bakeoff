@@ -45,11 +45,13 @@ Explicitly rejected from H09:
 
 Before Meshy preview:
 
-1. Accept `docs/product/game-definition-solo-fantasy-arpg.md`.
-2. Create protagonist and four weapon-family concept sheets.
-3. Create small fiend, shield soldier, and Sealing Guardian sheets.
-4. Run 64-128 px thumbnail and rear third-person gameplay crop tests.
-5. Choose no more than two assets that prove the first Steam screenshot.
+1. Accept `docs/product/game-definition-relic-runebound.md`.
+2. Create pilgrim/tool, holy reliquary, imp, spirit, and blind guardian concept
+   sheets.
+3. Run 64-128 px thumbnail and top-down oblique gameplay crop tests.
+4. Choose no more than two assets that prove the first Steam screenshot.
+5. Prefer holy reliquary or tool stand before a full player model if it proves
+   the cooperative objective faster.
 6. Run only Meshy preview/draft first.
 7. Do not refine, HD texture, rig, or animate until the preview survives the
    game-camera and IP-safety test.

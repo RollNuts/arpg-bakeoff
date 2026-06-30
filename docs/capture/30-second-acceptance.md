@@ -1,13 +1,14 @@
 # 30-Second Capture Acceptance
 
-This document defines the acceptance gate for the first Steam-facing gameplay
-capture.
+This document defines the acceptance gate for the first Steam-facing cooperative
+gameplay capture.
 
 ## Pre-Capture Gate
 
-- Unreal playable build or PIE session unless a Unity exception memo has been
-  accepted.
-- Solo playable combat, not cinematic-only playback.
+- Playable build or PIE session.
+- Same-screen co-op playable flow or deterministic two-player test input.
+- Solo run remains testable, but the store-facing capture should sell
+  cooperation.
 - No debug cheats required to reproduce the shown sequence.
 - No graybox, default floor, default sky, mannequin-only character, or debug UI.
 - All visible assets are approved in the asset ledger.
@@ -16,57 +17,58 @@ capture.
 
 ## Timeline Requirements
 
-- `0-3s` Hero And World Read
-  - The hero is clearly visible: body, weapon, facing, and value contrast.
-  - The Sealing Temple or ancient kingdom identity is readable.
+- `0-3s` Objective And Team Read
+  - Two pilgrims, tool stand, reliquary, and temple identity are visible.
   - The frame already looks like a game product, not a test map.
-- `3-6s` Movement And Camera
-  - The hero runs or strafes with camera support.
-  - Lock-on or assisted framing does not hide the enemy.
-- `6-10s` First Telegraph And Response
-  - One enemy windup is readable.
-  - The player dodges, guards, or attacks in response.
-  - At least one hit or clear near-miss is visible.
-- `10-15s` Impact Feel
-  - Hit stop, flinch, knockback, impact VFX, and SFX intent are visible/audible.
-  - HP/stamina/heal UI reads without looking like debug text.
-- `15-20s` Second Decision
-  - A second enemy behavior, shield read, altar, shortcut, or sealed gate changes
-    the moment.
-  - This must prove ARPG space, not only a combat animation test.
-- `20-26s` Guardian Or Boss Promise
-  - A guardian, boss gate, or boss entrance appears.
-  - Scale, name/HP UI, or windup makes the larger threat clear.
+- `3-6s` Tool Choice And Movement
+  - Players pick up different tools or demonstrate role contrast.
+  - The camera frames both players and the reliquary.
+- `6-10s` First Enemy Pressure
+  - Imps or spirits threaten a player or the reliquary.
+  - Sword/shield/torch response shows hit, block, or repel feedback.
+- `10-15s` Objective Conflict
+  - A gate, mist corridor, sacred fire, or reliquary runaway pressure appears.
+  - Fighting alone is visibly insufficient.
+- `15-20s` Role-Swap Or Tool Solution
+  - Axe, bow, torch, bell, or ritual implement solves a visible problem.
+  - Reliquary/fire UI changes in response.
+- `20-26s` Cooperation Spike
+  - Blind guardian, spirit surge, or altar ritual creates a protect/lure/guard
+    moment.
 - `26-30s` Peak Frame And CTA
-  - End on the strongest readable combat frame.
+  - End on the strongest readable cooperative save, ritual completion, or
+    failure pressure frame.
   - Title or CTA is readable if shown.
 
 ## Audio Minimums
 
-All must be present:
+All must be present if the corresponding action appears:
 
 - attack SFX
-- hit or guard SFX
-- dodge or movement SFX
-- enemy hit/death or boss threat SFX
+- hit or shield SFX
+- dodge/step or movement SFX
+- torch/fire SFX
+- holy bell or ritual SFX
+- enemy hit/death or guardian threat SFX
+- reliquary magic warning
 - UI/altar/reward SFX if shown
 - ambience or BGM that is not a debug placeholder
-- mix clarity: hit sounds are not buried by music
+- mix clarity: warnings and hit sounds are not buried by music
 
 ## Additional Checks
 
 - Events occur in the central readable area, not only at screen edges.
 - No major pop-in or frame drop hides the main action.
-- UI and VFX do not overlap the combat read.
+- UI and VFX do not overlap the objective read.
 - Screenshot candidates can be extracted from the capture.
 - A short note records one visually weak/mock-looking area that was improved.
 
 ## Rejection Conditions
 
 - Placeholder visuals or unresolved asset legality appear on screen.
-- Multiplayer/co-op dependency is required to explain the footage.
-- Footage proves only animation playback, not playable combat.
-- Hero action is too limited to sell the game.
-- Enemy windup, hit, or boss promise is missing.
+- Footage proves only animation playback, not playable gameplay.
+- Cooperation is not readable.
+- Reliquary, sacred fire, or ritual objective is missing.
+- Enemy pressure is missing.
 - Audio is absent or uses a single debug track only.
 - The capture could not support a Steam store page.

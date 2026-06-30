@@ -1,82 +1,83 @@
 # Visual And Audio Benchmark
 
-Status: research input for solo commercial ARPG production.
+Status: research input for cooperative commercial fantasy action production.
 
 ## Video Patterns
 
-- Show the game promise in the first 1-3 seconds: ruined sanctuary, lone
-  swordfighter, enemy windup, boss silhouette, sealed gate, or returning light.
-- Use third-person camera motion that makes the hero readable without hiding
-  enemy attacks.
-- Keep the player visually separated with rim light, value, cloak/weapon shape,
-  or lock-on framing.
-- Show traversal, dodge, sword impact, enemy reaction, and a boss/elite threat
-  within 30 seconds.
-- VFX must have shape, not just glow: arcs, sparks, dust cones, magic circles,
-  guard flashes, impact bursts, and lingering embers.
+- Show the game promise in the first 1-3 seconds: pilgrims, reliquary, sacred
+  fire, temple, and incoming threat.
+- Use diagonal screen motion. Fixed-ish top-down cameras still need readable
+  direction, enemy flow, and VFX shapes.
+- Keep each player visually separated by tool silhouette, value, color accent,
+  or spacing.
+- Show movement, tool choice, enemy pressure, objective pressure, and one
+  cooperative save within 30 seconds.
+- VFX must have shape, not just glow: fire circles, bell waves, shield arcs,
+  sword arcs, spirit trails, magic leaks, impact bursts, and lingering embers.
 
 ## Screenshot Patterns
 
-- A strong screenshot has one clear subject: hero combat, boss scale, ancient
-  environment, or UI/progression.
-- Combat screenshots separate hero, enemy, attack direction, danger area, and
-  stamina/HP state.
+- A strong screenshot has one clear subject: reliquary defense, sacred-fire
+  safety, tool-role action, guardian pressure, or ritual climax.
+- Combat screenshots separate players, enemies, attack direction, danger, and
+  objective state.
 - The floor has at least three layers: base material, cracks/detail, and
   lighting/decal information.
 - Edges carry world detail: light sources, rubble, doors, pillars, cloth,
-  chains, altars, cliffs, or distant architecture.
-- Boss screenshots sell scale through a small readable hero, a large silhouette,
-  and an attack windup that feels avoidable.
+  chains, altars, bells, cliffs, or distant architecture.
+- Cooperative screenshots sell through simultaneous problems, not enemy count
+  alone.
 
 ## First 30 Seconds Storyboard
 
-1. `0-3s`: ancient temple reveal, wind, cloth, bell, and lone swordfighter.
-2. `3-6s`: third-person traversal into a readable enemy patrol.
-3. `6-10s`: enemy telegraph, player dodge or guard, first clean sword hit.
-4. `10-14s`: hit stop, flinch, sparks/dust, stamina and HP UI visible.
-5. `14-18s`: second enemy type creates a different read, such as shield/facing.
-6. `18-22s`: altar or shortcut glimpse proves this is an ARPG space, not a
-   combat sandbox.
-7. `22-27s`: Sealing Guardian wakes or enters, with name/HP and boss windup.
-8. `27-30s`: strongest sword-impact or dodge frame, then title/CTA.
+1. `0-3s`: temple entrance, two pilgrims, reliquary, weapon stand, sacred fire.
+2. `3-6s`: players pick different tools and activate/push the reliquary.
+3. `6-10s`: imps attack; sword/shield or torch response reads clearly.
+4. `10-14s`: reliquary runaway or fire warning creates objective pressure.
+5. `14-18s`: axe/bow/torch/bell solves a blocker or safety problem.
+6. `18-22s`: spirit surge or blind guardian creates a role-specific threat.
+7. `22-27s`: ritual implement holder chants while another player protects them.
+8. `27-30s`: sealing success/failure peak, bell hit, title/CTA.
 
 ## Audio Direction
 
 Music:
 
 - low stone-chamber drone
-- restrained metal percussion
+- restrained metal/skin percussion
+- sacred bell motif
 - distant choir or breath-like pad
-- bell motif for sealed kingdom identity
-- boss layer that adds low drums and harsh strings without drowning SFX
+- ritual layer that raises pressure without burying warnings
 
-Combat SFX:
+Combat/Tool SFX:
 
-- light attack = blade air + steel/body contact + low impact layer
-- heavy attack = slower air pull + deeper hit + debris/armor ring
-- dodge = cloth/leather/foot slide, 0.2-0.4 seconds
-- guard = metal/wood stop with low transient
-- perfect guard = bright metal flash plus short bass stop
-- enemy death = body collapse plus ember/soul tail
-- player death = low drop, breath stop, momentary BGM duck
-- altar = stone shift, flame rise, soft choir interval
-- reward = short sacred chime, not long fanfare
+- sword attack = blade air + contact slash + low body/armor layer
+- axe = slower air pull + deeper hit + debris/wood/stone ring
+- shield = heavy metal/wood stop with low transient
+- bow = short draw creak and string snap
+- torch = constant small fire plus flare on spirit repel
+- holy bell = clear tonal ping plus directional wave tail
+- reliquary warning = unstable magic hum and crackle
+- ritual = chant pulse, stone resonance, fire lift
+- success = bell, choir lift, magic calm
+- failure = relic crack, white surge, bass drop
 
 Minimum audio set:
 
-- 3 loopable music beds: exploration, combat, boss
+- 3 loopable music beds: exploration, combat pressure, ritual/guardian
 - one 30-second trailer arrangement
-- 40-60 combat SFX
-- 15-20 UI/reward SFX
+- 40-60 combat/tool SFX
+- 15-20 UI/reward/warning SFX
 - 5-8 ambience loops
 
 ## Mock Smell To Reject
 
 - flat floor with evenly spaced prefabs
-- hero, enemies, VFX, and floor at the same value
-- round glow sprites with no attack shape
+- players, enemies, VFX, and floor at the same value
+- tools too small to read
+- round glow sprites with no gameplay shape
 - inconsistent UI fonts, frames, or icon resolution
-- no knockback, hit stop, death reaction, or reward feedback
-- 30 seconds of the same enemy, same attack, same floor
-- camera hides the enemy windup
+- no knockback, hit stop, block, fire, bell, or ritual feedback
+- 30 seconds of only fighting with no reliquary/fire/ritual objective
+- camera hides the reliquary, fire, or player roles
 - audio feels like a debug beep or a single music track with no hit layers
