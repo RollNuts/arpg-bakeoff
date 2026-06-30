@@ -1,183 +1,152 @@
 # 2D To 3D Character Workflow
 
-Status: production workflow note for using 2D concept images as the starting
-point for Meshy/Maya/engine character creation.
+Status: production workflow note for using 2D concept images as starting points
+for Meshy/Maya/Unreal character creation.
 
 ## Direct Answer
 
-Maya should not be treated as a one-click "2D character image to commercial 3D
-game character" converter.
+Maya is not a one-click "2D character image to commercial 3D game character"
+converter.
 
-What Maya can do well:
+Maya can:
 
 - place 2D concept art as image planes for modeling reference
-- trace silhouettes or hard-surface motifs into curves
-- extrude flat logos, shields, blades, reliefs, and symbols from curves
-- use height/displacement/normal-style images for surface relief
-- clean, retopo, UV, rig, skin, pose-test, and export the resulting model
+- trace hard-surface motifs into curves
+- extrude shields, blades, reliefs, and symbols
+- use grayscale maps for surface relief
+- clean, retopo, UV, rig, skin, pose-test, and export models
 
-What should use AI/Meshy first:
+Meshy or another generator can help with:
 
 - rough 3D shape from one concept image
 - better rough 3D shape from multiple concept views
-- early comparison of several silhouettes before manual cleanup
+- early silhouette comparison before manual cleanup
 
-What must still be done by hand or at least human-reviewed:
+Human review is still required for:
 
-- top-down silhouette judgement
-- production topology around shoulders, elbows, knees, hands, cloth, and weapon
-- UV layout and material separation
-- skin weights
-- attack animation timing
-- game-camera readability
+- third-person gameplay readability
+- rear and side silhouette
+- shoulder, elbow, knee, hand, cloth, and weapon topology
+- UV and material separation
+- weapon socketing
+- attack, dodge, guard, hit, and death timing
 - legal/IP similarity review
+- Steam screenshot readiness
 
 ## Practical Route For This Project
 
 Use 2D images as a gate before any paid 3D generation.
 
-1. Create 2D concept sheets for 3 hero candidates:
-   - `H07 White-Charcoal Judgement Axe`
-   - `H02 Black-Iron Pincer Knight`
-   - `H08 Navy-Lantern Threadbinder`
-2. Each sheet must include:
-   - black silhouette strip
-   - front view
-   - back view
-   - side or 3/4 view
-   - top-down gameplay readability crop
-   - weapon close-up
-   - material/value swatches
-   - explicit reject notes
-3. Run a 64-128 px thumbnail test before 3D generation.
-4. Use Meshy Image-to-3D or Multi-Image-to-3D for preview only.
-5. Bring the preview into Maya.
-6. Clean the mesh, split parts, fix weapon thickness, and verify top-down shape.
-7. Only then spend on refine, texture, rig, animation, or engine import.
+First batch:
+
+1. one fixed swordfighter protagonist sheet
+2. four weapon-family stance sheets:
+   - one-handed sword
+   - greatsword
+   - spear
+   - sword and shield
+3. two enemy sheets:
+   - small fiend
+   - shield soldier
+4. one boss blockout sheet:
+   - Sealing Guardian
+
+Each sheet must include:
+
+- black silhouette strip
+- front view
+- back view
+- side or 3/4 view
+- rear three-quarter gameplay crop
+- weapon/attack close-up
+- material/value swatches
+- explicit reject notes
+
+Run a 64-128 px thumbnail test and a third-person gameplay crop before 3D
+generation. Do not refine, texture, rig, or animate until the preview survives
+the game-camera test.
 
 ## 2D Sheet Requirements
 
 Every candidate sheet must answer these questions without text labels:
 
 - Which direction is the character facing?
-- What is the weapon?
-- What is the class fantasy?
-- Where is the head?
-- Where are the shoulders?
-- What one shape makes this character different from any other dark knight?
-- Does the silhouette survive when reduced to 96 px tall?
+- What weapon or threat type is readable?
+- Where is the head and shoulder line?
+- What one shape makes it distinct?
+- Can the design animate attack, dodge, guard, hit, and death?
+- Does the silhouette survive as a Steam trailer thumbnail crop?
+- Does it avoid known franchise resemblance?
 
 If the answer is unclear, do not generate 3D.
 
-## Candidate 2D Prompts
+## Current Prompt Pattern
 
-These prompts are for creating 2D concept sheets. They are intentionally not
-final game art prompts.
-
-### H07 White-Charcoal Judgement Axe
+Use this only as a starting structure; each generation still needs asset-ledger
+notes and review.
 
 ```text
-dark fantasy top-down ARPG playable hero concept sheet, white-charcoal
-execution axe warrior, one oversized arm, one huge one-sided axe head wider
-than the shoulders, charcoal black body, white ash cracks, dark red cloth,
-clear black silhouette strip, front view, back view, side view, top-down
-gameplay readability crop, weapon close-up, material swatches, practical game
-character design, readable at small size
+solo third-person fantasy action RPG protagonist concept sheet, unnamed
+swordfighter of an ancient sealed kingdom, practical weathered armor and cloth,
+readable rear three-quarter silhouette, one-handed sword baseline, clear head
+and shoulder shape, strong cloak or torso value separation, front view, back
+view, side view, rear gameplay camera crop, weapon close-up, material swatches,
+animation pose thumbnails for idle run dodge light attack guard hit death,
+commercial game character design, low/mid-poly 3D production ready
 ```
 
 Reject:
 
 ```text
-no generic barbarian, no viking helmet, no tiny axe, no realistic bodybuilder,
-no gore, no huge fur cloak, no unreadable black blob, no excessive ornamental
-detail
-```
-
-### H02 Black-Iron Pincer Knight
-
-```text
-dark fantasy top-down ARPG playable hero concept sheet, asymmetric black-iron
-pincer knight, one huge shoulder pincer silhouette, one-handed great shears
-weapon, short shield blade, rust red cloth, pale scar edge lines, clear black
-silhouette strip, front view, back view, side view, top-down gameplay
-readability crop, weapon close-up, material swatches, practical game character
-design, readable at small size
-```
-
-Reject:
-
-```text
-no literal crab body, no robot armor, no tiny scissors, no hidden weapon, no
-long cape covering legs, no excessive spikes, no merged hands, no extra arms,
-no gore
-```
-
-### H08 Navy-Lantern Threadbinder
-
-```text
-dark fantasy top-down ARPG playable hero concept sheet, navy-lantern
-threadbinder, small pale lantern floating above the head, black lacquer armor,
-dark navy cloth, visible thick magical thread loops around the hands, compact
-body silhouette, fingertip blade shapes, clear black silhouette strip, front
-view, back view, side view, top-down gameplay readability crop, material
-swatches, practical game character design, readable at small size
-```
-
-Reject:
-
-```text
-no puppet master cliche, no thin invisible threads, no dolls, no anime school
-outfit, no cyber wires, no wings, no face-detail focus, no huge robe blob
+no copied franchise costume, no recognizable famous weapon, no anime school
+outfit, no generic horned dark knight, no excessive spikes, no giant fur cloak,
+no face-detail focus, no unreadable black blob, no merged hands, no hidden
+weapon, no gore
 ```
 
 ## Maya Use Cases By Asset Type
 
 | Asset Type | Best 2D Input | Maya Method | Meshy Useful? |
 | --- | --- | --- | --- |
-| Player hero | concept sheet with multiple views | image planes, blockout, cleanup, retopo, rig, skin | yes, preview only |
-| Enemy fodder | concept sheet or strong silhouette | model over reference, simplify forms | yes |
-| Boss | front/top silhouette plus attack-shape sheet | blockout in simple masses first | limited; cleanup heavy |
-| Weapon | side view and top view | curve/mesh modeling, thickness pass | sometimes |
+| Player hero | multi-view concept sheet | image planes, blockout, cleanup, retopo, rig, skin | preview only |
+| Weapon family | side/top views and grip poses | curve/mesh modeling, thickness, socket checks | sometimes |
+| Enemy fodder | silhouette and attack sheet | model over reference, simplify forms | yes |
+| Boss | front/rear/side mass plus attack shapes | blockout in simple masses first | limited; cleanup heavy |
 | Shield/emblem | vector/black shape | curve/extrude/bevel | rarely needed |
-| Floor relief | grayscale height/ornament map | displacement/normal/mesh relief | not needed |
-| UI icon | flat concept/vector | keep 2D or vector; do not force 3D | no |
+| Floor relief | grayscale ornament map | displacement/normal/mesh relief | not needed |
+| UI icon | flat concept/vector | keep 2D or vector | no |
 
 ## Preview Pass/Fail
 
 Pass:
 
 - 96 px grayscale still reads as the same role.
-- Weapon silhouette is obvious.
+- Weapon silhouette is obvious from rear/side gameplay angles.
 - Character has one dominant hook, not five small hooks.
-- Head and shoulders are separable from cape/body.
+- Head and shoulders are separable from cloak/body.
 - The design can be modeled without relying on hair-thin details.
+- It looks commercially usable after cleanup and material pass.
 
 Fail:
 
 - It only works as a full-resolution illustration.
-- The weapon disappears in top-down view.
+- The weapon disappears in third-person gameplay view.
 - The pose is doing all the work.
 - Materials are all the same dark value.
 - It depends on floating particles or VFX to identify the character.
 - It looks like a known commercial character, class skin, or franchise mascot.
 
-## First Batch Decision
+## Historical Concepts
 
-Run 2D concept exploration first, not 3D generation.
+The existing `docs/character/concepts/*.png` files are retained as historical
+part-library and IP-safety evidence. Do not adopt any sheet wholesale as the
+hero. Reuse only isolated lessons:
 
-Batch size:
-
-- 3 hero candidates
-- 2 variations each
-- 6 concept sheets total
-
-Pick one for Meshy preview only after this review:
-
-1. H07 if the goal is strongest melee impact.
-2. H02 if the goal is strongest dark-fantasy identity.
-3. H08 if the goal is novelty, accepting higher production risk.
-
-No refine/rig/animation spend until a 2D sheet passes the tiny-camera test.
+- heavy impact mass for bosses or greatsword timing
+- hooded field-worker/relic weight as silhouette reference
+- pale veil or crest for readable value separation
+- bell/root motifs for enemies or area props
+- pincer/axe forms for elite or boss mass
 
 ## Sources
 

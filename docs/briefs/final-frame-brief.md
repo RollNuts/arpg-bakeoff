@@ -1,89 +1,93 @@
-# Final Frame Brief (Issue #1 Draft)
+# Final Frame Brief
 
-## 目的
+## Purpose
 
-Unity / Unreal どちらでも30秒で比較撮影できる「最終フレーム候補」を1つ定義する。  
-評価対象: 戦闘の主張力、可読性、UIの情報設計、リズム、コストラクトの再現容易性。
+Define one commercial screenshot target for the first solo 3D fantasy ARPG
+vertical slice.
 
-## 1. 画面構成（主人公・敵・床・UI・VFX・カメラ）
+This is no longer a Unity/Unreal comparison frame. The default execution path is
+Unreal. Unity work requires an explicit exception memo.
 
-- 主人公  
-  - top-down 45°固定角度で読める中サイズモデル。  
-  - 見た目は「黒曜石の鎧 + 焼け焦げた赤茶の戦闘武器」。  
-  - 武器方向、攻撃前後方位、被弾状態が一目で分かる。  
-  - アニメは `Idle / Run / Dodge / Melee1 / Hit / Death` を想定。
+Evaluation target:
 
-- 敵  
-  - 1種類だけ採用（例: 2体同時配置）。  
-  - 体積が主人公より1.2倍以上、色相は明るい銅/灰白寄りで識別。  
-  - 行動は「警戒→警告表示→突進 or 斬撃、同時にノックバック/ヒットリアクション」。  
-  - 倒れる挙動は短い崩壊＋残光で明示。
+- Steam screenshot strength
+- third-person combat readability
+- enemy telegraph clarity
+- hero silhouette and weapon direction
+- UI quality
+- lighting, VFX, and environment density
 
-- 床  
-  - 3層構成: ベース素材（石板/泥板）、局所ディテール（傷・割れ・苔）、光学層（リムライト反射）。  
-  - エッジ側に明るいガイドライトを置き、カメラの奥行きを読ませる。  
-  - 敵生成は画面外縁（上・左右）から開始、中央に向かう流れを作る。
+## Frame Composition
 
-- UI  
-  - 画面上部: HP/スタミナゲージ、クイックスロット(2セル)。  
-  - 右下: 敵警戒バーと現在のコンボ段階。  
-  - 取得時ポップ: 画面中央寄り下の一時表示（1.2秒）。  
-  - 情報は1画面1テーマ（3種類以内）で、余白を固定しない。
+Hero:
 
-- VFX  
-  - 攻撃: 割り当て色を1色＋補助色1色、形状は「円弧・楕円・短鎖状」。  
-  - ヒット: 接触径2層＋短い残光、死亡: 黒煙→火花。  
-  - 敵警戒: 地面に広がる波紋（2段階）で先読みに使う。  
-  - エフェクトは「見せたい形が先」「綺麗さは次」という順番で実装する。
+- solo swordfighter, rear three-quarter third-person read
+- readable cloak/torso/shoulders/weapon direction
+- one-handed sword baseline
+- lock-on stance or mid-swing pose
+- animation set target: `Idle / Run / Dodge / LightAttack / HeavyAttack /
+  Guard / Hit / Heal / Death`
 
-- カメラ  
-  - 固定トップダウン 45°、軽く追従（カメラ揺れは最小）。  
-  - 画面比率は16:9、重要演出は中央 65%、周辺 35%を空ける。  
-  - 0.5秒ごとの軽いリトルパンで位置変化を抑え、画面外からの敵流入が見えるようにする。  
-  - キャプチャは 30秒固定 1-shots で開始から撮影し、カットインやCG差し替えは行わない。
+Enemy:
 
-## 2. 30秒キャプチャ展開（タイムライン）
+- one small fiend or shield soldier in the foreground action read
+- one guardian or boss landmark in the background or arena threshold
+- telegraph visible through pose, ground mark, weapon lift, shield angle, or
+  glow, not through text
 
-1. `0–6秒`: 主人公単独登場、床スケールと武器方向の可読性確認。  
-2. `6–12秒`: 敵1体目が画面外縁から接近、警戒表示→攻撃→ヒット。  
-3. `12–18秒`: 2体目が同時加入、回避→反撃→回復UI反映。  
-4. `18–24秒`: 敵の威圧と撤退動線を見せる中距離コンボ。  
-5. `24–30秒`: 高リスク連続攻撃、最後の倒れる瞬間で報酬/選択UIを短く提示。  
+Environment:
 
-この順でどちらのエンジンでも同一尺・同一被写体で撮影可能。
+- Sealing Temple stone floor with cracks, moss/dust, and lit edges
+- broken pillars, hanging cloth, chains, bell, altar, or sealed door
+- fog and magical light kept readable
+- no default sky, default floor, graybox blocks, or unadjusted material spam
 
-## 3. 参照作（抽象品質基準）
+UI:
 
-- **可読性**: 3秒で「誰が攻撃中か」が判別できること。  
-- **戦闘主張**: 武器方向・敵危険域・被弾反応が一目で分かること。  
-- **画面リズム**: 30秒で少なくとも2回「接近→警戒→反撃」の循環が成立。  
-- **空間設計**: 床ディテール、ライト、UIが重ならずに同時に読めること。  
-- **コスト**: 無償またはCC0基盤で再現可能（後段のコスト増に先回りで抵触しない）。  
+- HP, stamina, heal count, and equipped weapon
+- boss HP only if guardian is active in frame
+- objective prompt only if it does not weaken the image
+- stone/metal/parchment/magic-mark visual language
 
-上記は「完成作の直接模写」ではなく品質基準の参照に限定する。
+VFX:
 
-## 4. Anti-Copy Constraints
+- sword arc with one primary color and one secondary contact color
+- hit effect with core, debris, and short afterglow
+- enemy telegraph shape that shows avoid/guard timing
+- restrained camera impulse; no unreadable screen shake
 
-- 既存Unityモックや既存Unrealプロジェクトの再利用・流用禁止。  
-- 市場有名作のロゴ/衣装/色配分/シルエット/UIテンプレートの明示的再現禁止。  
-- 既存IP由来の固有武器形状・顔面デザイン・生物輪郭の踏襲禁止。  
-- 同時に2つ以上の作品から同一構図を借用して「テンプレ化」することを禁止。  
-- 参照は要件ベース（可読性・間合い・情報階層）に限定し、特定素材のトレースを禁止。
+Camera:
 
-## 5. 採用 / 却下チェックリスト
+- third-person camera, slightly above shoulder/back
+- important action in central 65% of the frame
+- boss or sealed architecture visible enough to sell scale
+- no wall occlusion over hero or telegraph
 
-### 採用
+## 30-Second Capture Outline
 
-- [ ] 主人公、敵、床、UI、VFX、カメラが上記仕様どおり記述可能で、実装見積もりが妥当。  
-- [ ] 30秒の連続時系列で、敵の警戒・ヒット・死亡・報酬演出まで成立。  
-- [ ] どの要素も1画面で重なりなく判読可能。  
-- [ ] 参照基準は抽象であり、特定作品の直接模写意図がない。  
-- [ ] 同一シーンを2エンジンで同一尺比較できる設計。
+1. `0-3s`: temple reveal and hero read.
+2. `3-6s`: run toward first enemy, camera holds readable framing.
+3. `6-10s`: enemy telegraph, dodge or guard, first hit.
+4. `10-15s`: second combat beat with hit stop, flinch, and heal/stamina read.
+5. `15-20s`: shortcut, altar, or sealed gate briefly proves exploration loop.
+6. `20-26s`: guardian entrance or boss windup.
+7. `26-30s`: strongest sword impact or dodge frame, title/CTA.
 
-### 却下
+## Acceptance Checklist
 
-- [ ] モック資産、既存ホテル/既存モックの再利用、または既知ゲームの決定的模写が必要。  
-- [ ] 30秒の流れで敵数・演出・UIが未成立（ただし演算/最適化失敗で見えなくなる場合を含む）。  
-- [ ] 床やエフェクトが主役を隠す、または視認性を下げる。  
-- [ ] 参照作を素材複写と誤解される形で具体例固定（URLだけで再現指示する等）。  
-- [ ] Veripsa Coreレビューで実在性・違反可能性が高いと判定される場合。
+- [ ] Screenshot reads as a commercial fantasy game at thumbnail size.
+- [ ] Hero, enemy, attack direction, and danger are readable without explanation.
+- [ ] Environment has at least three visible material/detail/light layers.
+- [ ] UI is not default white debug text.
+- [ ] All visible assets are ledger-approved.
+- [ ] Frame does not copy a known game costume, weapon, UI, boss, or composition.
+- [ ] One mock-looking area was identified and improved before completion.
+
+## Rejection Checklist
+
+- [ ] Default floor, default sky, mannequin, graybox, or unlit asset pile.
+- [ ] Camera hides the windup or hero action.
+- [ ] VFX covers the enemy or player.
+- [ ] UI looks like placeholder text.
+- [ ] Screenshot could be mistaken for a tutorial sandbox rather than a product.
+- [ ] Asset provenance or commercial-use rights are unresolved.

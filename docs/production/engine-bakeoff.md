@@ -1,38 +1,48 @@
-# Engine Bakeoff
+# Engine Direction
 
-Status: proposed plan.
+Status: Unreal-first decision note.
 
-## Goal
+## Decision
 
-Pick the engine that produces a commercial-looking top-down ARPG prototype
-fastest without carrying over the old Unity mock or the existing first-person
-Unreal hotel project.
+Unreal Engine is the default production path for the first commercial-quality
+solo 3D fantasy ARPG vertical slice.
 
-## Candidates
+Reason:
 
-| Candidate | Use | Risk |
-| --- | --- | --- |
-| Unity fresh slice | Existing code knowledge and fast C# iteration. | Old mock inertia; visual ceiling may stay low. |
-| Unreal 5.8 fresh slice | Stronger out-of-box lighting, materials, camera, post process. | Gameplay setup may delay proof. |
-| Existing Unreal hotel project | Reference only. | Wrong genre, camera, input, content, and mood. Do not reuse as ARPG base. |
+- stronger early leverage on lighting, materials, post process, VFX, cameras,
+  animation presentation, and screenshot quality
+- better fit for third-person 3D melee combat proof
+- lower risk of returning to the old Unity mock visual language
 
-## Bakeoff Rules
+## Non-Reuse Rule
 
-- No new Maya/Meshy/API spend.
-- No existing Unity scene copy.
-- No existing hotel project copy.
-- Start from the same design brief and same free/owned asset candidates.
-- Produce comparable evidence:
-  - gameplay-distance screenshot
-  - close attack/readability screenshot
-  - 10-second movement/attack capture if possible
-  - asset/source ledger
+- Do not copy the existing Unity mock scene, prefabs, scripts, or asset
+  placement into the new vertical slice.
+- Do not reuse the existing first-person Unreal hotel project as the ARPG base.
+  It is the wrong camera, genre, input model, content style, and mood.
+- Prior work may be used only as research history or failure evidence.
 
-## Decision Gate
+## Unreal Acceptance Evidence
 
-Choose Unreal only if it makes the same hero/combat target materially more
-commercial within one day of work.
+The first Unreal production PR stack must produce:
 
-Choose Unity only if it reaches playable feel and screenshot quality faster
-without returning to the old mock style.
+- gameplay-distance screenshot
+- close attack/readability screenshot
+- lock-on combat screenshot
+- 10-second playable movement/attack capture
+- asset ledger for visible assets
+- note identifying at least one mock-looking area that was improved before
+  completion
 
+## Unity Exception Gate
+
+Unity is allowed only with a written exception memo showing that it can reach
+the same commercial screenshot and combat-feel bar faster.
+
+The memo must include:
+
+- screenshot evidence
+- capture evidence
+- asset ledger
+- explanation of how it avoids the old mock style
+- rollback plan if the visual bar is not met

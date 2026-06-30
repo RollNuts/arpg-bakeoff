@@ -1,11 +1,14 @@
 # Threadlight World Contact Sheet
 
-Status: visual proof for the Threadlight Pilgrimage world gate.
+Status: superseded historical visual research.
 Date: 2026-06-30.
 
-This is the first visual gate after the weapon-first character exploration was
-paused. The goal is to test whether the game can be sold by world rule,
-profession, hub, and emotional promise rather than by a weapon silhouette.
+This sheet is retained as visual research and part-library evidence only. It is
+not the active product direction. The active product is the solo fantasy ARPG in
+`docs/product/game-definition-solo-fantasy-arpg.md`.
+
+The useful lesson is still valid: do not sell only a weapon silhouette. Sell a
+role, a world, and a screen that looks commercial.
 
 ## Final Sheet
 
