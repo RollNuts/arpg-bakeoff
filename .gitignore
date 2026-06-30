@@ -13,3 +13,10 @@
 
 # Local analysis outputs
 /local-evidence/
+
+# Unreal generated folders
+/Unreal/**/Binaries/
+/Unreal/**/DerivedDataCache/
+/Unreal/**/Intermediate/
+/Unreal/**/Saved/
+/Unreal/**/.vs/

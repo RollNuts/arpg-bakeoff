@@ -1,18 +1,24 @@
 # Engine Bakeoff
 
-Status: Unity-first production note for `夜番の砦`.
+Status: reopened for Unreal visual spike after `夜番の砦` visual target review.
 
 ## Current Decision
 
-Use Unity for the first vertical slice unless a specific blocker appears.
+Do not commit to Unity as the production engine until Unreal has been tested
+against the same `狼森` first-screen target.
 
 Reason:
 
-- third-person character control can be built quickly
-- physics overlaps and rigid-body style weapon interaction are straightforward
-- editor tooling can generate weapon-rack and Wolf Forest test scenes
-- local weapon pickup/drop/throw/embed can be iterated without a full content
-  pipeline first
+- Unity already has a useful local-weapon gameplay scaffold in this repo.
+- The product's selling constraint is visual credibility: night lighting, wet
+  material response, fog, a heroic hunter silhouette, readable weapons, and a
+  giant wolf boss must sell the game in one screenshot.
+- Unreal 5.8 is installed locally and is likely stronger for this visual target.
+- The next decision must be based on rendered evidence, not engine habit.
+
+See:
+
+`docs/production/unreal-visual-spike.md`
 
 ## Required First Proof
 
@@ -42,8 +48,14 @@ The first scene must be dressed enough to read as `狼森`:
 
 ## Unity Version Rule
 
-`ProjectSettings/ProjectVersion.txt` is the source of truth once created. Until
-then, AGENTS.md requires assuming `2021.3 LTS` and marking that as an assumption.
+For the Unity scaffold, `ProjectSettings/ProjectVersion.txt` is the source of
+truth and currently pins Unity `6000.3.18f1`.
+
+## Unreal Version Rule
+
+For the Unreal spike, the local engine is:
+
+`/Users/murakaminaoya/Epic Games/UE_5.8`
 
 ## Package Rule
 
