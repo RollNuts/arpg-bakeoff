@@ -1,0 +1,3 @@
+asset_id,source_name,source_url,author,license,acquired_date,format,intended_use,modifications,attribution_required,redistribution_notes,ai_tool_input_allowed,status
+sample_arpg_001,Quaternius,https://quaternius.com/,Quaternius,CC0,2026-06-29,FBX;OBJ,環境プロップ試作,ポリゴン簡素化/UV再整理,false,再配布不可（元素材のそのまま再配布は行わない）,false,pending-review
+sample_arpg_002,Kenney,https://www.kenney.nl/,Kenney,CC0,2026-06-29,PNG;SVG;FBX,UIベース素材,配色調整/コライダ追加,false,原素材の再配布回避、改変後アセットのみ共有,true,pending-review
