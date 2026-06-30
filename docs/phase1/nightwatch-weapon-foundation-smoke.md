@@ -39,6 +39,7 @@ Scope: first Unity foundation for `夜番の砦`.
 - HUD shows HP, stamina, active weapon, sub weapon, durability, and nearest
   pickup.
 - Weapon pickup, slot swap, drop, and throw happen without exceptions.
+- Small wolf and weapon goblin approach the player and can reduce HP if ignored.
 - Thrown spear or sword can damage the small enemy and can embed into the large
   wolf leg target.
 - Embedded weapon can be pulled free with `E`.
