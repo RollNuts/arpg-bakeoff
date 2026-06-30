@@ -57,6 +57,18 @@ For the Unreal spike, the local engine is:
 
 `/Users/murakaminaoya/Epic Games/UE_5.8`
 
+Run the current Unreal proof with:
+
+```bash
+bash Unreal/NightwatchFortress/Scripts/run_wolf_forest_visual_spike.sh
+```
+
+If the commandlet stalls before producing a log, open the project manually:
+
+```bash
+bash Unreal/NightwatchFortress/Scripts/open_nightwatch_unreal_editor.sh
+```
+
 ## Package Rule
 
 `Packages/manifest.json` is the package source of truth. No package beyond the
