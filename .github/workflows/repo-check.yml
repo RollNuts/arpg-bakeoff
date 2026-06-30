@@ -26,5 +26,5 @@ jobs:
       - name: Reject obvious copied-reference wording
         run: |
           ! grep -RInE "clone Hades|copy Hades|copy V Rising|copy Diablo|copy Path of Exile|copy Final Fantasy|copy Dragon Quest" . \
-            --exclude-dir=.git
-
+            --exclude-dir=.git \
+            --exclude=repo-check.yml

@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Small ARPG bakeoff task
+about: Small Color-Eater Crown production task
 title: ""
 labels: task
 assignees: ""
@@ -16,4 +16,3 @@ assignees: ""
 - [ ] No existing game identity is copied
 
 ## Notes
-

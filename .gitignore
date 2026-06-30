@@ -1,0 +1,22 @@
+# Unity generated folders
+/Library/
+/Temp/
+/Logs/
+/UserSettings/
+/MemoryCaptures/
+/Recordings/
+
+# Local OS/editor files
+.DS_Store
+*.swp
+*.swo
+
+# Local analysis outputs
+/local-evidence/
+
+# Unreal generated folders
+/Unreal/**/Binaries/
+/Unreal/**/DerivedDataCache/
+/Unreal/**/Intermediate/
+/Unreal/**/Saved/
+/Unreal/**/.vs/
