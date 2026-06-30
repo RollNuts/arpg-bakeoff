@@ -26,10 +26,13 @@ namespace NightwatchFortress.EditorTools
             BuildWolfForest(root);
 
             GameObject player = CreatePlayer(new Vector3(0f, 0.08f, -5.8f));
+            PlayerVitals playerVitals = player.GetComponent<PlayerVitals>();
             EnemyBase wolf = CreateEnemy("小型狼 - fast pressure", new Vector3(-1.35f, 0.05f, -1.6f), 58, 48f, new Color(0.16f, 0.18f, 0.15f, 1f), null);
+            AddPursuitAI(wolf, playerVitals, 3.8f, 1.15f, 1.32f, 7, 0.92f);
             WeaponInstance goblinDrop = CreateWeapon(WeaponType.Spear, WeaponDurabilityState.Chipped, new Vector3(4f, 0.4f, -1.2f), Quaternion.Euler(90f, 0f, 0f), false);
             goblinDrop.gameObject.SetActive(false);
             EnemyBase goblin = CreateEnemy("武器持ち小鬼 - drops spear", new Vector3(1.45f, 0.05f, -0.5f), 72, 62f, new Color(0.23f, 0.18f, 0.12f, 1f), goblinDrop);
+            AddPursuitAI(goblin, playerVitals, 2.25f, 1.45f, 1.65f, 10, 1.18f);
             AddCarriedWeapon(goblin.transform, WeaponType.Spear, new Vector3(0.36f, 1.0f, -0.12f), Quaternion.Euler(62f, 0f, -20f));
             EnemyBase garm = CreateGarmTarget(new Vector3(0f, 0.2f, 2.8f));
 
@@ -176,6 +179,12 @@ namespace NightwatchFortress.EditorTools
             EnemyBase enemy = root.AddComponent<EnemyBase>();
             enemy.Configure(name, hp, posture, renderer, particles, dropPrefab);
             return enemy;
+        }
+
+        private static void AddPursuitAI(EnemyBase enemy, PlayerVitals target, float speed, float stopDistance, float attackRange, int damage, float cooldown)
+        {
+            EnemyPursuitAI ai = enemy.gameObject.AddComponent<EnemyPursuitAI>();
+            ai.Configure(target, speed, stopDistance, attackRange, damage, cooldown);
         }
 
         private static EnemyBase CreateGarmTarget(Vector3 position)
