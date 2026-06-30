@@ -12,7 +12,7 @@ Maya can:
 
 - place 2D concept art as image planes for modeling reference
 - trace hard-surface motifs into curves
-- extrude shields, blades, reliefs, and symbols
+- extrude shields, blades, bells, reliquary panels, reliefs, and symbols
 - use grayscale maps for surface relief
 - clean, retopo, UV, rig, skin, pose-test, and export models
 
@@ -24,12 +24,12 @@ Meshy or another generator can help with:
 
 Human review is still required for:
 
-- third-person gameplay readability
-- rear and side silhouette
-- shoulder, elbow, knee, hand, cloth, and weapon topology
+- top-down oblique gameplay readability
+- held-tool silhouette
+- shoulder, elbow, knee, hand, cloth, and tool topology
 - UV and material separation
-- weapon socketing
-- attack, dodge, guard, hit, and death timing
+- tool socketing
+- attack, block, carry, light, chant, hit, and death timing
 - legal/IP similarity review
 - Steam screenshot readiness
 
@@ -39,17 +39,21 @@ Use 2D images as a gate before any paid 3D generation.
 
 First batch:
 
-1. one fixed swordfighter protagonist sheet
-2. four weapon-family stance sheets:
-   - one-handed sword
-   - greatsword
-   - spear
-   - sword and shield
-3. two enemy sheets:
-   - small fiend
-   - shield soldier
-4. one boss blockout sheet:
-   - Sealing Guardian
+1. one pilgrim body sheet with held-tool variants
+2. seven tool sheets:
+   - sword
+   - great shield
+   - axe
+   - bow
+   - torch
+   - holy bell
+   - ritual implement
+3. holy reliquary sheet
+4. two enemy sheets:
+   - imp
+   - spirit
+5. one guardian blockout sheet:
+   - blind guardian
 
 Each sheet must include:
 
@@ -57,24 +61,24 @@ Each sheet must include:
 - front view
 - back view
 - side or 3/4 view
-- rear three-quarter gameplay crop
-- weapon/attack close-up
+- top-down oblique gameplay crop
+- tool/attack/interact close-up
 - material/value swatches
 - explicit reject notes
 
-Run a 64-128 px thumbnail test and a third-person gameplay crop before 3D
-generation. Do not refine, texture, rig, or animate until the preview survives
-the game-camera test.
+Run a 64-128 px thumbnail test and a gameplay-camera crop before 3D generation.
+Do not refine, texture, rig, or animate until the preview survives the
+game-camera test.
 
 ## 2D Sheet Requirements
 
 Every candidate sheet must answer these questions without text labels:
 
 - Which direction is the character facing?
-- What weapon or threat type is readable?
+- What tool is being carried?
 - Where is the head and shoulder line?
-- What one shape makes it distinct?
-- Can the design animate attack, dodge, guard, hit, and death?
+- Can another player tell the role at a glance?
+- Can the design animate attack, block, carry, light, chant, hit, and death?
 - Does the silhouette survive as a Steam trailer thumbnail crop?
 - Does it avoid known franchise resemblance?
 
@@ -86,13 +90,14 @@ Use this only as a starting structure; each generation still needs asset-ledger
 notes and review.
 
 ```text
-solo third-person fantasy action RPG protagonist concept sheet, unnamed
-swordfighter of an ancient sealed kingdom, practical weathered armor and cloth,
-readable rear three-quarter silhouette, one-handed sword baseline, clear head
-and shoulder shape, strong cloak or torso value separation, front view, back
-view, side view, rear gameplay camera crop, weapon close-up, material swatches,
-animation pose thumbnails for idle run dodge light attack guard hit death,
-commercial game character design, low/mid-poly 3D production ready
+cooperative top-down fantasy action pilgrim concept sheet, shrine expedition
+worker escorting a holy reliquary, practical weathered cloth and light armor,
+readable top-down oblique silhouette, held-tool variants for sword shield axe
+torch bell ritual implement, clear head and shoulder shape, strong cloak or
+torso value separation, front view, back view, side view, gameplay camera crop,
+tool close-ups, material swatches, animation pose thumbnails for run attack
+block carry light chant hit death, commercial game character design,
+low/mid-poly 3D production ready
 ```
 
 Reject:
@@ -101,17 +106,18 @@ Reject:
 no copied franchise costume, no recognizable famous weapon, no anime school
 outfit, no generic horned dark knight, no excessive spikes, no giant fur cloak,
 no face-detail focus, no unreadable black blob, no merged hands, no hidden
-weapon, no gore
+tool, no gore
 ```
 
 ## Maya Use Cases By Asset Type
 
 | Asset Type | Best 2D Input | Maya Method | Meshy Useful? |
 | --- | --- | --- | --- |
-| Player hero | multi-view concept sheet | image planes, blockout, cleanup, retopo, rig, skin | preview only |
-| Weapon family | side/top views and grip poses | curve/mesh modeling, thickness, socket checks | sometimes |
+| Player pilgrim | multi-view concept sheet with tools | image planes, blockout, cleanup, retopo, rig, skin | preview only |
+| Tool set | side/top views and grip poses | curve/mesh modeling, thickness, socket checks | sometimes |
+| Reliquary | front/side/top and material panels | hard-surface blockout, bevels, sockets, VFX anchors | sometimes |
 | Enemy fodder | silhouette and attack sheet | model over reference, simplify forms | yes |
-| Boss | front/rear/side mass plus attack shapes | blockout in simple masses first | limited; cleanup heavy |
+| Guardian | front/top mass plus charge/lure shapes | blockout in simple masses first | limited; cleanup heavy |
 | Shield/emblem | vector/black shape | curve/extrude/bevel | rarely needed |
 | Floor relief | grayscale ornament map | displacement/normal/mesh relief | not needed |
 | UI icon | flat concept/vector | keep 2D or vector | no |
@@ -121,7 +127,7 @@ weapon, no gore
 Pass:
 
 - 96 px grayscale still reads as the same role.
-- Weapon silhouette is obvious from rear/side gameplay angles.
+- Held tool silhouette is obvious from gameplay angles.
 - Character has one dominant hook, not five small hooks.
 - Head and shoulders are separable from cloak/body.
 - The design can be modeled without relying on hair-thin details.
@@ -130,23 +136,23 @@ Pass:
 Fail:
 
 - It only works as a full-resolution illustration.
-- The weapon disappears in third-person gameplay view.
+- The tool disappears in gameplay view.
 - The pose is doing all the work.
 - Materials are all the same dark value.
-- It depends on floating particles or VFX to identify the character.
+- It depends on floating particles or VFX to identify the role.
 - It looks like a known commercial character, class skin, or franchise mascot.
 
 ## Historical Concepts
 
 The existing `docs/character/concepts/*.png` files are retained as historical
 part-library and IP-safety evidence. Do not adopt any sheet wholesale as the
-hero. Reuse only isolated lessons:
+player character. Reuse only isolated lessons:
 
-- heavy impact mass for bosses or greatsword timing
+- heavy impact mass for axe/guardian timing
 - hooded field-worker/relic weight as silhouette reference
 - pale veil or crest for readable value separation
 - bell/root motifs for enemies or area props
-- pincer/axe forms for elite or boss mass
+- pincer/axe forms for guardian mass
 
 ## Sources
 

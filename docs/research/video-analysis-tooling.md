@@ -144,14 +144,15 @@ ffmpeg \
 
 For each reference trailer/gameplay clip:
 
-- first readable hero frame time
+- first readable player/team frame time
 - first enemy-threat frame time
 - first hit/impact frame time
-- first boss/guardian frame time
-- first altar/shortcut/exploration-loop frame time
+- first objective/reliquary frame time
+- first sacred-fire or role-tool frame time
+- first guardian/ritual pressure frame time
 - camera distance and character screen-height percentage
-- third-person hero readability from rear and side angles
-- boss/player scale contrast
+- top-down player/tool readability
+- objective/player/enemy scale contrast
 - screen center occupancy by character/enemy/VFX vs empty floor
 - audio presence in first 3 seconds
 - mean/max loudness from `volumedetect`
@@ -160,9 +161,11 @@ For each reference trailer/gameplay clip:
 For our own capture:
 
 - reject silent clips for store-facing evidence
-- reject clips where the hero is not readable in extracted frames
+- reject clips where players, held tools, or reliquary are not readable in
+  extracted frames
 - reject clips where the first 5 seconds show only floor/idle motion
-- reject clips where the camera hides enemy windups or boss attacks
+- reject clips where the camera hides the reliquary, sacred fire, enemy pressure,
+  or tool roles
 - reject clips whose best frame cannot support a Steam screenshot
 - always produce a contact sheet and a waveform alongside any video PR
 

@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Small solo fantasy ARPG production task
+about: Small cooperative fantasy action production task
 title: ""
 labels: task
 assignees: ""

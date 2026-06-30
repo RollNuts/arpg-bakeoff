@@ -2,92 +2,102 @@
 
 ## Purpose
 
-Define one commercial screenshot target for the first solo 3D fantasy ARPG
-vertical slice.
-
-This is no longer a Unity/Unreal comparison frame. The default execution path is
-Unreal. Unity work requires an explicit exception memo.
+Define one commercial screenshot target for the first cooperative top-down
+fantasy action vertical slice.
 
 Evaluation target:
 
 - Steam screenshot strength
-- third-person combat readability
-- enemy telegraph clarity
-- hero silhouette and weapon direction
+- same-screen cooperative readability
+- reliquary and sacred fire objective clarity
+- tool-role silhouettes
+- enemy pressure readability
 - UI quality
 - lighting, VFX, and environment density
 
 ## Frame Composition
 
-Hero:
+Players:
 
-- solo swordfighter, rear three-quarter third-person read
-- readable cloak/torso/shoulders/weapon direction
-- one-handed sword baseline
-- lock-on stance or mid-swing pose
-- animation set target: `Idle / Run / Dodge / LightAttack / HeavyAttack /
-  Guard / Hit / Heal / Death`
+- two pilgrims visible at gameplay scale
+- one holding a shield or sword near the reliquary
+- one holding torch, axe, bow, bell, or ritual implement
+- carried tools read without labels
+- solo variant may show one pilgrim near a tool stand with clear role-swap path
 
-Enemy:
+Objective:
 
-- one small fiend or shield soldier in the foreground action read
-- one guardian or boss landmark in the background or arena threshold
-- telegraph visible through pose, ground mark, weapon lift, shield angle, or
-  glow, not through text
+- holy reliquary is central and obviously important
+- durability/runaway state is visible through UI and visual cracks/glow
+- sacred fire circle or brazier range is readable on the floor
+
+Enemies:
+
+- imps approaching reliquary or player
+- spirit near mist/fire boundary, if fire system is in frame
+- blind guardian or sealed courtyard landmark in background if available
+- telegraphs visible through pose, ground mark, sound cue VFX, or charge line
 
 Environment:
 
 - Sealing Temple stone floor with cracks, moss/dust, and lit edges
+- weapon/tool stand at entrance or side
 - broken pillars, hanging cloth, chains, bell, altar, or sealed door
 - fog and magical light kept readable
 - no default sky, default floor, graybox blocks, or unadjusted material spam
 
 UI:
 
-- HP, stamina, heal count, and equipped weapon
-- boss HP only if guardian is active in frame
-- objective prompt only if it does not weaken the image
+- reliquary durability
+- magic runaway gauge
+- sacred fire remaining
+- current objective
+- player tool icons
+- ritual progress if in altar frame
 - stone/metal/parchment/magic-mark visual language
 
 VFX:
 
-- sword arc with one primary color and one secondary contact color
+- sacred fire range with warm edge
+- blue-white magic leak from reliquary
 - hit effect with core, debris, and short afterglow
-- enemy telegraph shape that shows avoid/guard timing
+- enemy telegraph shape that shows avoid/block/lure timing
 - restrained camera impulse; no unreadable screen shake
 
 Camera:
 
-- third-person camera, slightly above shoulder/back
-- important action in central 65% of the frame
-- boss or sealed architecture visible enough to sell scale
-- no wall occlusion over hero or telegraph
+- fixed-ish 3D top-down oblique camera
+- objective and players in central 70% of frame
+- enough surrounding space to read incoming threats
+- no occlusion over players, reliquary, fire, or telegraphs
 
 ## 30-Second Capture Outline
 
-1. `0-3s`: temple reveal and hero read.
-2. `3-6s`: run toward first enemy, camera holds readable framing.
-3. `6-10s`: enemy telegraph, dodge or guard, first hit.
-4. `10-15s`: second combat beat with hit stop, flinch, and heal/stamina read.
-5. `15-20s`: shortcut, altar, or sealed gate briefly proves exploration loop.
-6. `20-26s`: guardian entrance or boss windup.
-7. `26-30s`: strongest sword impact or dodge frame, title/CTA.
+1. `0-3s`: temple entrance, weapon stand, two pilgrims, reliquary read.
+2. `3-6s`: players pick tools and activate/push reliquary.
+3. `6-10s`: imps attack; sword/shield response with hit/block feedback.
+4. `10-15s`: closed gate or mist corridor shows tool objective pressure.
+5. `15-20s`: torch/fire or axe/bow solution while reliquary pressure rises.
+6. `20-26s`: blind guardian, spirit surge, or final altar ritual pressure.
+7. `26-30s`: strongest cooperative save, ritual success/failure beat, title/CTA.
 
 ## Acceptance Checklist
 
-- [ ] Screenshot reads as a commercial fantasy game at thumbnail size.
-- [ ] Hero, enemy, attack direction, and danger are readable without explanation.
+- [ ] Screenshot reads as a cooperative fantasy action game at thumbnail size.
+- [ ] Players, held tools, reliquary, enemies, and danger are readable.
+- [ ] Objective is clearer than generic combat.
 - [ ] Environment has at least three visible material/detail/light layers.
 - [ ] UI is not default white debug text.
 - [ ] All visible assets are ledger-approved.
-- [ ] Frame does not copy a known game costume, weapon, UI, boss, or composition.
+- [ ] Frame does not copy a known game costume, weapon, UI, boss, map, or
+      composition.
 - [ ] One mock-looking area was identified and improved before completion.
 
 ## Rejection Checklist
 
 - [ ] Default floor, default sky, mannequin, graybox, or unlit asset pile.
-- [ ] Camera hides the windup or hero action.
-- [ ] VFX covers the enemy or player.
+- [ ] Camera hides the reliquary, fire, players, or incoming enemy.
+- [ ] VFX covers the objective.
 - [ ] UI looks like placeholder text.
 - [ ] Screenshot could be mistaken for a tutorial sandbox rather than a product.
 - [ ] Asset provenance or commercial-use rights are unresolved.
